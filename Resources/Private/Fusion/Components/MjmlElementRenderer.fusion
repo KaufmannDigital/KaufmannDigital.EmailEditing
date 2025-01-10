@@ -1,0 +1,5 @@
+prototype(KaufmannDigital.EmailEditing:MjmlElementRenderer) < prototype(Neos.Fusion:Component) {
+  @class = 'KaufmannDigital\\EmailEditing\\Fusion\\FusionObjects\\MjmlElementRendererImplementation'
+
+  mjmlSource = ''
+}

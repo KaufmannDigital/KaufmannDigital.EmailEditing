@@ -1,0 +1,20 @@
+'KaufmannDigital.EmailEditing:Document.EmailLayout':
+  superTypes:
+    'Neos.Neos:Document': true
+  ui:
+    label: 'Email-Layout'
+    icon: 'envelope'
+    group: special
+    inspector:
+      groups:
+        emailLayout:
+          label: 'E-Mail Layout'
+          icon: 'envelope'
+  properties:
+    logo:
+      type: 'Neos\Media\Domain\Model\ImageInterface'
+      ui:
+        label: 'Logo'
+        reloadIfChanged: true
+        inspector:
+          group: emailLayout

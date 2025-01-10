@@ -1,0 +1,30 @@
+'KaufmannDigital.EmailEditing:Content.Text':
+  superTypes:
+    'Neos.Neos:Content': true
+    'KaufmannDigital.EmailEditing:Mixin.TextAttributes.FontColor': true
+    'KaufmannDigital.EmailEditing:Mixin.TextAttributes.FontFamily': true
+    'KaufmannDigital.EmailEditing:Mixin.TextAttributes.FontSize': true
+    'KaufmannDigital.EmailEditing:Mixin.TextAttributes.FontStyle': true
+    'KaufmannDigital.EmailEditing:Mixin.TextAttributes.FontWeight': true
+    'KaufmannDigital.EmailEditing:Mixin.TextAttributes.LineHeight': true
+    'KaufmannDigital.EmailEditing:Mixin.TextAttributes.LetterSpacing': true
+    'KaufmannDigital.EmailEditing:Mixin.TextAttributes.TextDecoration': true
+    'KaufmannDigital.EmailEditing:Mixin.TextAttributes.TextTransform': true
+    'KaufmannDigital.EmailEditing:Mixin.TextAttributes.TextAlign': true
+    'KaufmannDigital.EmailEditing:Mixin.Attributes.Padding': true
+  ui:
+    label: 'Text'
+    icon: 'icon-file-alt'
+    group: special
+  properties:
+    text:
+      type: string
+      ui:
+        inlineEditable: true
+        inline:
+          editorOptions:
+            placeholder: 'Text pflegen...'
+            formatting:
+              strong: true
+              a: true
+

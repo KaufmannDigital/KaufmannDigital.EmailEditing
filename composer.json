@@ -1,0 +1,13 @@
+{
+    "name": "kaufmanndigital/email-editing",
+    "type": "neos-package",
+    "require": {
+        "neos/neos": "*",
+        "flowpack/nodetemplates": "^2.1.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "KaufmannDigital\\EmailEditing\\": "Classes"
+        }
+    }
+}

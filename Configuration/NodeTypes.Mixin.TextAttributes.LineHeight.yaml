@@ -1,0 +1,16 @@
+'KaufmannDigital.EmailEditing:Mixin.TextAttributes.LineHeight':
+  abstract: true
+  superTypes:
+    'KaufmannDigital.EmailEditing:Mixin.Groups': true
+  properties:
+    lineHeight:
+      type: string
+      defaultValue: 1
+      ui:
+        label: 'Line-Height'
+        help:
+          message: 'line-height (CSS) als numerischer Wert.'
+        reloadIfChanged: true
+        inspector:
+          group: textOptions
+

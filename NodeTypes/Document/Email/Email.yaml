@@ -1,0 +1,15 @@
+'KaufmannDigital.EmailEditing:Document.Email':
+  superTypes:
+    'Neos.Neos:Document': true
+  ui:
+    label: 'Email'
+    icon: 'envelope'
+    group: special
+    position: 20
+  childNodes:
+    main:
+      type: 'Neos.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          '*': false
+          'KaufmannDigital.EmailEditing:Content.Section': true

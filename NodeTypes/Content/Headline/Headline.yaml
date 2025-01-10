@@ -1,0 +1,30 @@
+'KaufmannDigital.EmailEditing:Content.Headline':
+  superTypes:
+    'Neos.Neos:Content': true
+    'KaufmannDigital.EmailEditing:Mixin.TextAttributes.FontColor': true
+    'KaufmannDigital.EmailEditing:Mixin.TextAttributes.FontFamily': true
+    'KaufmannDigital.EmailEditing:Mixin.TextAttributes.FontSize': true
+    'KaufmannDigital.EmailEditing:Mixin.TextAttributes.FontStyle': true
+    'KaufmannDigital.EmailEditing:Mixin.TextAttributes.FontWeight': true
+    'KaufmannDigital.EmailEditing:Mixin.TextAttributes.LineHeight': true
+    'KaufmannDigital.EmailEditing:Mixin.TextAttributes.LetterSpacing': true
+    'KaufmannDigital.EmailEditing:Mixin.TextAttributes.TextDecoration': true
+    'KaufmannDigital.EmailEditing:Mixin.TextAttributes.TextTransform': true
+    'KaufmannDigital.EmailEditing:Mixin.TextAttributes.TextAlign': true
+    'KaufmannDigital.EmailEditing:Mixin.Attributes.Padding': true
+  ui:
+    label: 'Headline'
+    icon: 'header'
+    group: special
+  properties:
+    headline:
+      type: string
+      defaultValue: ''
+      ui:
+        inlineEditable: true
+        inline:
+          editorOptions:
+            placeholder: 'Headline pflegen...'
+    fontSize:
+      defaultValue: '24px'
+

@@ -1,0 +1,10 @@
+prototype(KaufmannDigital.EmailEditing:Component.Spacer) < prototype(Neos.Fusion:Component) {
+
+  height = 200
+
+  renderer = afx`
+    <mj-spacer
+      height={props.height + 'px'}
+    />
+  `
+}

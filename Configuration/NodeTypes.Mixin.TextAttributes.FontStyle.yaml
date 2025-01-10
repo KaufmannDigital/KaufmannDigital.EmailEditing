@@ -1,0 +1,25 @@
+'KaufmannDigital.EmailEditing:Mixin.TextAttributes.FontStyle':
+  abstract: true
+  superTypes:
+    'KaufmannDigital.EmailEditing:Mixin.Groups': true
+  properties:
+    fontStyle:
+      type: string
+      defaultValue: 'normal'
+      ui:
+        label: 'Schrift-Dicke'
+        reloadIfChanged: true
+        inspector:
+          group: textOptions
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            placeholder: 'Bitte wählen...'
+            allowEmpty: true
+            values:
+              'normal':
+                label: 'Normal'
+              'italic':
+                label: 'Italic'
+              'oblique':
+                label: 'Oblique'
+

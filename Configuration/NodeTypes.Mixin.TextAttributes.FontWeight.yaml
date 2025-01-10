@@ -1,0 +1,16 @@
+'KaufmannDigital.EmailEditing:Mixin.TextAttributes.FontWeight':
+  abstract: true
+  superTypes:
+    'KaufmannDigital.EmailEditing:Mixin.Groups': true
+  properties:
+    fontWeight:
+      type: integer
+      defaultValue: ''
+      ui:
+        label: 'Schrift-Typ'
+        help:
+          message: 'Font-Weight (CSS). Zum Beispiel "bolder" oder "500"'
+        reloadIfChanged: true
+        inspector:
+          group: textOptions
+

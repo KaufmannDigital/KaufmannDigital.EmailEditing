@@ -1,0 +1,66 @@
+prototype(KaufmannDigital.EmailEditing:Content.Headline) < prototype(KaufmannDigital.EmailEditing:ContentComponent.DualRendering) {
+
+  mjmlRendering {
+    renderer = afx`
+
+    `
+  }
+
+  htmlRendering {
+    headline = Neos.Neos:Editable {
+      property = 'headline'
+    }
+
+    fontColor = ${q(node).property('fontColor')}
+    fontColor.@if.notEmpty = ${q(node).property('fontColor') != ''}
+
+    fontFamily = ${q(node).property('fontFamily')}
+    fontFamily.@if.notEmpty = ${q(node).property('fontFamily') != ''}
+
+    fontSize = ${q(node).property('fontSize')}
+    fontSize.@if.notEmpty = ${q(node).property('fontSize') != ''}
+
+    fontStyle = ${q(node).property('fontStyle')}
+    fontStyle.@if.notEmpty = ${q(node).property('fontStyle') != ''}
+
+    fontWeight = ${q(node).property('fontWeight')}
+    fontWeight.@if.notEmpty = ${q(node).property('fontWeight') != ''}
+
+    lineHeight = ${q(node).property('lineHeight')}
+    lineHeigh.@if.notEmptyt = ${q(node).property('lineHeight') != ''}
+
+    letterSpacing = ${q(node).property('letterSpacing')}
+    letterSpacing.@if.notEmpty = ${q(node).property('letterSpacing') != ''}
+
+    textDecoration = ${q(node).property('textDecoration')}
+    textDecoration.@if.notEmpty = ${q(node).property('textDecoration') != ''}
+
+    textTransform = ${q(node).property('textTransform')}
+    textTransform.@if.notEmpty = ${q(node).property('textTransform') != ''}
+
+    textAlign = ${q(node).property('textAlign')}
+    textAlign.@if.notEmpty = ${q(node).property('textAlign') != ''}
+
+    padding = ${q(node).property('padding') || null}
+
+    renderer = KaufmannDigital.EmailEditing:MjmlElementRenderer {
+      mjmlSource = afx`
+        <mj-text
+          color={props.fontColor}
+          font-family={props.fontFamily}
+          font-size={props.fontSize}
+          font-style={props.fontStyle}
+          font-weight={props.fontWeight}
+          line-height={props.lineHeight}
+          letter-spacing={props.letterSpacing}
+          text-decoration={props.textDecoration}
+          text-transform={props.textTransform}
+          align={props.textAlign}
+          padding={props.padding}
+        >
+          {props.headline}
+        </mj-text>
+      `
+    }
+  }
+}

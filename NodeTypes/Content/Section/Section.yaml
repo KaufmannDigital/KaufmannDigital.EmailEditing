@@ -1,0 +1,20 @@
+'KaufmannDigital.EmailEditing:Content.Section':
+  superTypes:
+    'Neos.Neos:Content': true
+    'Neos.Neos:ContentCollection': true
+    'KaufmannDigital.EmailEditing:Mixin.Background.BackgroundImage': true
+  constraints:
+    nodeTypes:
+      '*': false
+      'KaufmannDigital.EmailEditing:Content.Column': true
+  options:
+    template:
+      childNodes:
+        column1:
+          type: 'KaufmannDigital.EmailEditing:Content.Column'
+  ui:
+    label: 'Section'
+    icon: 'box'
+    group: special
+    position: 20
+

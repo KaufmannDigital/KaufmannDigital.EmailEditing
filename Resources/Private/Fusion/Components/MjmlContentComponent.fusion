@@ -1,0 +1,25 @@
+prototype(KaufmannDigital.EmailEditing:ContentComponent.DualRendering) < prototype(Neos.Fusion:Component) {
+
+  mjmlRendering = Neos.Fusion:Component {
+    prototype(KaufmannDigital.EmailEditing:MjmlElementRenderer) {
+      skipRendering = true
+    }
+  }
+
+  htmlRendering = Neos.Neos:ContentComponent {
+
+    inlineStyles = Neos.Fusion:DataStructure
+    @context.inlineStyles = ${this.inlineStyles}
+
+    @process.augmentInlineStyles = Neos.Fusion:Augmenter {
+      style = Neos.Fusion:Loop {
+        items = ${inlineStyles}
+        itemRenderer = ${itemKey + ': ' + item + ';'}
+      }
+    }
+  }
+
+
+  renderer = ${props.htmlRendering} #TODO: Case for Rendering MJML only
+
+}

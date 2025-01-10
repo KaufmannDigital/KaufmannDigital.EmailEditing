@@ -1,0 +1,15 @@
+'KaufmannDigital.EmailEditing:Mixin.Attributes.Padding':
+  abstract: true
+  superTypes:
+    'KaufmannDigital.EmailEditing:Mixin.Groups': true
+  properties:
+    padding:
+      type: string
+      defaultValue: ''
+      ui:
+        label: 'Padding'
+        help:
+          message: 'padding (CSS). Akzeptiert bis zu 4 Werte mit Leerzeichen getrennt. z.B. "10px", "10px 20px", "10px 20px 30px", "10px 20px 30px 40px"'
+        reloadIfChanged: true
+        inspector:
+          group: positionOptions

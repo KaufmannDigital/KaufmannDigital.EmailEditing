@@ -1,0 +1,21 @@
+'KaufmannDigital.EmailEditing:Content.Spacer':
+  superTypes:
+    'Neos.Neos:Content': true
+  ui:
+    label: 'Spacer'
+    icon: 'fas fa-arrows-alt-v'
+    group: special
+    inspector:
+      groups:
+        spacerOptions:
+          label: 'Spacer (in px)'
+          icon: 'fas fa-arrows-alt-v'
+  properties:
+    height:
+      type: integer
+      defaultValue: 20
+      ui:
+        label: 'Höhe'
+        reloadIfChanged: true
+        inspector:
+          group: spacerOptions

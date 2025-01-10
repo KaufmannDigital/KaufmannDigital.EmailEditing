@@ -1,0 +1,16 @@
+prototype(KaufmannDigital.EmailEditing:Component.Divider) < prototype(Neos.Neos:ContentComponent) {
+
+  borderColor = '#000000'
+  borderStyle = 'solid'
+  borderWidth = 4
+  padding = '5px 20px'
+
+  renderer = afx`
+    <mj-divider
+      border-color={props.borderColor}
+      border-style={props.borderStyle}
+      border-width={props.borderWidth + 'px'}
+      padding={props.padding}
+    />
+  `
+}

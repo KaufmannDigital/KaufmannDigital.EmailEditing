@@ -1,0 +1,17 @@
+body {
+  background: rgb(34, 34, 34);
+}
+
+.email-editing-page {
+  width: 800px;
+  margin: 0 auto;
+  background: lightyellow;
+  #TODO: REMOVE;
+}
+
+.email-section {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/*# sourceMappingURL=EmailEditing.css.map */

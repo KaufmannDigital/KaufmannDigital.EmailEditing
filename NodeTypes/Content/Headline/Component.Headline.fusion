@@ -1,0 +1,33 @@
+prototype(KaufmannDigital.EmailEditing:Component.Headline) < prototype(Neos.Fusion:Component) {
+
+  fontColor = ''
+  fontFamily = ''
+  fontSize = ''
+  fontStyle = ''
+  fontWeight = ''
+  lineHeight = ''
+  letterSpacing = ''
+  textDecoration = ''
+  textTransform = ''
+  textAlign = ''
+  padding = ''
+
+
+  renderer = afx`
+    <mj-text
+      color={props.fontColor}
+      font-family={props.fontFamily}
+      font-size={props.fontSize}
+      font-style={props.fontStyle}
+      font-weight={props.fontWeight}
+      line-height={props.lineHeight}
+      letter-spacing={props.letterSpacing}
+      text-decoration={props.textDecoration}
+      text-transform={props.textTransform}
+      align={props.textAlign}
+      padding={props.padding}
+    >
+      {props.headline}
+    </mj-text>
+  `
+}

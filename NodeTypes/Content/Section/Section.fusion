@@ -1,0 +1,19 @@
+prototype(KaufmannDigital.EmailEditing:Content.Section) < prototype(KaufmannDigital.EmailEditing:ContentComponent.DualRendering) {
+
+  htmlRendering {
+    contents = Neos.Neos:ContentCollection {
+      attributes.class = 'email-section'
+    }
+
+    inlineStyles {
+      background = Neos.Fusion:Value {
+        imageUrl = Neos.Neos:ImageUri {
+          asset = ${q(node).property('backgroundImage')}
+        }
+        value = ${"url(" + this.imageUrl + ") center top / cover no-repeat"}
+      }
+    }
+
+    renderer = ${props.contents}
+  }
+}

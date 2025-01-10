@@ -1,0 +1,16 @@
+prototype(KaufmannDigital.EmailEditing:Content.Divider) < prototype(KaufmannDigital.EmailEditing:ContentComponent.DualRendering) {
+
+  htmlRendering {
+    renderer = KaufmannDigital.EmailEditing:MjmlElementRenderer {
+      mjmlSource = KaufmannDigital.EmailEditing:Component.Divider {
+        borderColor = ${q(node).property('borderColor')}
+        borderStyle = ${q(node).property('borderStyle')}
+        borderWidth = ${q(node).property('borderWidth')}
+        padding = ${q(node).property('padding')}
+      }
+    }
+  }
+}
+
+
+

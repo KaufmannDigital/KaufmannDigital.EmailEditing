@@ -1,0 +1,15 @@
+'KaufmannDigital.EmailEditing:Mixin.Background.BackgroundImage':
+  abstract: true
+  superTypes:
+    'KaufmannDigital.EmailEditing:Mixin.Groups': true
+  properties:
+    backgroundImage:
+      type: 'Neos\Media\Domain\Model\ImageInterface'
+      defaultValue: ''
+      ui:
+        label: 'Hintergrundbild'
+        help:
+          message: 'Bild, welches im Hintergrund der Section flächenfüllend liegt.'
+        reloadIfChanged: true
+        inspector:
+          group: background

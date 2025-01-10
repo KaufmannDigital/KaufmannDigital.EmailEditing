@@ -1,0 +1,19 @@
+'KaufmannDigital.EmailEditing:Content.Column':
+  superTypes:
+    'Neos.Neos:Content': true
+    'Neos.Neos:ContentCollection': true
+  constraints:
+    nodeTypes:
+      '*': false
+      'KaufmannDigital.EmailEditing:Content.Headline': true
+      'KaufmannDigital.EmailEditing:Content.Text': true
+      'KaufmannDigital.EmailEditing:Content.Divider': true
+      'KaufmannDigital.EmailEditing:Content.Button': true
+      'KaufmannDigital.EmailEditing:Content.Image': true
+      'KaufmannDigital.EmailEditing:Content.Spacer': true
+  ui:
+    label: 'Column'
+    icon: 'box'
+    group: special
+    position: 20
+

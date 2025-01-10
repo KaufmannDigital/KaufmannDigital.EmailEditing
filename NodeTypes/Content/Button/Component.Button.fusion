@@ -1,0 +1,34 @@
+prototype(KaufmannDigital.EmailEditing:Component.Button) < prototype(Neos.Fusion:Component) {
+
+  padding = ''
+  label = ''
+  color = 'white'
+
+
+  renderer = afx`
+    <mj-button
+      align={props.align}
+      background-color={props.backgroundColor}
+      border={props.border}
+      border-radius={props.borderRadius}
+      color={props.color}
+      font-family={props.fontFamily}
+      font-size={props.fontSize}
+      font-style={props.fontStyle}
+      font-weight={props.fontWeight}
+      line-height={props.lineHeight}
+      letter-spacing={props.letterSpacing}
+      text-decoration={props.textDecoration}
+      text-transform={props.textTransform}
+      padding={props.padding}
+      inner-padding={props.innerPadding}
+      href={props.href}
+      rel={props.rel}
+      target={props.target}
+      title={props.title}
+    >
+      <mj-raw>{props.label}</mj-raw>
+    </mj-button>
+  `
+
+}

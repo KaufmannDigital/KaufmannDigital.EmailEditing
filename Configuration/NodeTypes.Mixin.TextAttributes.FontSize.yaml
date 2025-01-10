@@ -1,0 +1,13 @@
+'KaufmannDigital.EmailEditing:Mixin.TextAttributes.FontSize':
+  abstract: true
+  superTypes:
+    'KaufmannDigital.EmailEditing:Mixin.Groups': true
+  properties:
+    fontSize:
+      type: string
+      defaultValue: '14px'
+      ui:
+        label: 'Schritgröße'
+        reloadIfChanged: true
+        inspector:
+          group: textOptions

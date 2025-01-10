@@ -1,0 +1,15 @@
+'KaufmannDigital.EmailEditing:Mixin.TextAttributes.FontFamily':
+  abstract: true
+  superTypes:
+    'KaufmannDigital.EmailEditing:Mixin.Groups': true
+  properties:
+    fontFamily:
+      type: string
+      defaultValue: 'Ubuntu, Helvetica, Arial, sans-serif'
+      ui:
+        label: 'Schriftfarbe'
+        help:
+          message: 'Die Font-Family für diesen Text inklusive Fallbacks in CSS-Schreibweise. Zum Beispiel: "Ubuntu, Helvetica, Arial, sans-serif"'
+        reloadIfChanged: true
+        inspector:
+          group: textOptions

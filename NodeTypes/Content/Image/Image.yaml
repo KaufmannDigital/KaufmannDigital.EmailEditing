@@ -1,0 +1,20 @@
+'KaufmannDigital.EmailEditing:Content.Image':
+  superTypes:
+    'Neos.Neos:Content': true
+  ui:
+    label: 'Bild'
+    icon: 'icon-image'
+    group: special
+    inspector:
+      groups:
+        image:
+          label: 'Bild'
+          icon: 'icon-image'
+  properties:
+    image:
+      type: 'Neos\Media\Domain\Model\ImageInterface'
+      ui:
+        label: 'Bild'
+        reloadIfChanged: true
+        inspector:
+          group: image

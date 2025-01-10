@@ -1,0 +1,2 @@
+include: nodetypes://KaufmannDigital.EmailEditing/**/*.fusion
+include: **/*.fusion

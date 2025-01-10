@@ -1,0 +1,52 @@
+'KaufmannDigital.EmailEditing:Content.Divider':
+  superTypes:
+    'Neos.Neos:Content': true
+    'KaufmannDigital.EmailEditing:Mixin.Attributes.Padding': true
+  ui:
+    label: 'Trennlinie'
+    icon: 'fas fa-grip-lines'
+    group: special
+    inspector:
+      groups:
+        dividerOptions:
+          label: 'Trennlinie'
+          icon: 'fas fa-grip-lines'
+  properties:
+    borderColor:
+      type: string
+      defaultValue: '#000000'
+      ui:
+        label: 'Linienfarbe'
+        reloadIfChanged: true
+        inspector:
+          group: dividerOptions
+    borderStyle:
+      type: string
+      defaultValue: 'solid'
+      ui:
+        label: 'Linien-Art'
+        reloadIfChanged: true
+        inspector:
+          group: dividerOptions
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            placeholder: 'Bitte wählen...'
+            values:
+              'solid':
+                label: 'solide'
+              'dotted':
+                label: 'gepunktet'
+              'dashed':
+                label: 'gestrichelt'
+    borderWidth:
+      type: integer
+      defaultValue: 4
+      ui:
+        label: 'Linien-Dicke'
+        reloadIfChanged: true
+        inspector:
+          group: dividerOptions
+    padding:
+      defaultValue: '5px 20px'
+
+

@@ -1,0 +1,18 @@
+prototype(KaufmannDigital.EmailEditing:Content.Column) < prototype(KaufmannDigital.EmailEditing:ContentComponent.DualRendering) {
+
+
+  htmlRendering {
+
+    inlineStyles = Neos.Fusion:DataStructure {
+      width = ${100 / q(q(node).parents().get(0)).children('[instanceof KaufmannDigital.EmailEditing:Content.Column]').count() + '%'}
+    }
+
+    contents = Neos.Neos:ContentCollection
+
+    renderer = afx`
+        <div class="email-column">
+          {props.contents}
+        </div>
+    `
+  }
+}

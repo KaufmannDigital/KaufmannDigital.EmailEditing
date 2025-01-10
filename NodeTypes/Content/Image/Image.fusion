@@ -1,0 +1,17 @@
+prototype(KaufmannDigital.EmailEditing:Content.Image) < prototype(KaufmannDigital.EmailEditing:ContentComponent.DualRendering) {
+
+
+
+
+  htmlRendering {
+    imageUrl = Neos.Neos:ImageUri {
+      asset = ${q(node).property('image')}
+    }
+
+    renderer = KaufmannDigital.EmailEditing:MjmlElementRenderer {
+      mjmlSource = afx`
+        <mj-image align="left" width="300px" src={props.imageUrl} />
+      `
+    }
+  }
+}

@@ -1,0 +1,14 @@
+'KaufmannDigital.EmailEditing:Mixin.Groups':
+  abstract: true
+  ui:
+    inspector:
+      groups:
+        textOptions:
+          label: 'Text'
+          icon: 'fas fa-heading'
+        positionOptions:
+          label: 'Position'
+          icon: 'fas fa-heading'
+        background:
+          label: 'Hintergrund'
+          icon: 'fas fa-image'

@@ -1,0 +1,26 @@
+'KaufmannDigital.EmailEditing:Mixin.TextAttributes.TextAlign':
+  abstract: true
+  superTypes:
+    'KaufmannDigital.EmailEditing:Mixin.Groups': true
+  properties:
+    textAlign:
+      type: string
+      defaultValue: ''
+      ui:
+        label: 'Text-Ausrichtung'
+        reloadIfChanged: true
+        inspector:
+          group: textOptions
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            placeholder: 'Bitte wählen...'
+            allowEmpty: true
+            values:
+              'left':
+                label: 'Linksbündig'
+              'right':
+                label: 'Rechtsbündig'
+              'center':
+                label: 'Zentriert'
+              'justify':
+                label: 'Blocksatz'

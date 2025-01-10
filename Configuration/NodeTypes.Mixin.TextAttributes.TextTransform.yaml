@@ -1,0 +1,24 @@
+'KaufmannDigital.EmailEditing:Mixin.TextAttributes.TextTransform':
+  abstract: true
+  superTypes:
+    'KaufmannDigital.EmailEditing:Mixin.Groups': true
+  properties:
+    textTransform:
+      type: string
+      defaultValue: ''
+      ui:
+        label: 'Text-Transformation'
+        reloadIfChanged: true
+        inspector:
+          group: textOptions
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            placeholder: 'Bitte wählen...'
+            allowEmpty: true
+            values:
+              'uppercase':
+                label: 'Großbuchstaben'
+              'lowercase':
+                label: 'Kleinbuchstaben'
+              'capitalize':
+                label: 'Erster Buchstabe Groß'
