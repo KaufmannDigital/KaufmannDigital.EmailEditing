@@ -6,6 +6,11 @@
     icon: 'envelope'
     group: special
     position: 20
+    inspector:
+      groups:
+        email:
+          label: 'E-Mail'
+          icon: 'envelope'
   childNodes:
     main:
       type: 'Neos.Neos:ContentCollection'
@@ -13,3 +18,14 @@
         nodeTypes:
           '*': false
           'KaufmannDigital.EmailEditing:Content.Section': true
+  properties:
+    emailLayout:
+      type: reference
+      ui:
+        label: 'E-Mail Layout'
+        reloadPageIfChanged: true
+        showInCreationDialog: true
+        inspector:
+          group: email
+          editorOptions:
+            nodeTypes: ['KaufmannDigital.EmailEditing:Document.EmailLayout']

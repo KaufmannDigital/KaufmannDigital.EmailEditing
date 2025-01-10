@@ -1,16 +1,17 @@
 prototype(KaufmannDigital.EmailEditing:Component.Headline) < prototype(Neos.Fusion:Component) {
 
-  fontColor = ''
-  fontFamily = ''
-  fontSize = ''
-  fontStyle = ''
-  fontWeight = ''
-  lineHeight = ''
-  letterSpacing = ''
-  textDecoration = ''
-  textTransform = ''
-  textAlign = ''
-  padding = ''
+  color = null
+  font-family = null
+  font-size = null
+  font-style = null
+  font-weight = null
+  line-height = null
+  letter-spacing = null
+  text-decoration = null
+  text-transform = null
+  align = null
+  padding = null
+  headline = null
 
 
   renderer = afx`

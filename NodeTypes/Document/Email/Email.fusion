@@ -1,28 +1,18 @@
 prototype(KaufmannDigital.EmailEditing:Document.Email) < prototype(Neos.Fusion:Component) {
 
-  contentCollection =  Neos.Neos:ContentCollection {
-    nodePath = 'main'
-  }
+  renderer = KaufmannDigital.EmailEditing:Component.NewsletterPage {
 
-  renderer = KaufmannDigital.EmailEditing:Document.EmailLayout {
-    @context.node = ${q(site).find('#cf8ae409-a3d7-45ae-9b00-6b343f083a2d').get(0)}
-    @context.documentNode = ${q(site).find('#cf8ae409-a3d7-45ae-9b00-6b343f083a2d').get(0)}
-    content = ${props.contentCollection}
-  }
+    header = Neos.Neos:ContentCollection {
+      @context.node = ${q(q(documentNode).property('emailLayout')).children('header').get(0)}
+    }
 
-//  renderer = Neos.Neos:Page {
-//    head {
-//      stylesheets = afx`
-//        <link rel="stylesheet" type="text/css" href={StaticResource.uri('KaufmannDigital.EmailEditing', 'Public/Styles/EmailEditing.css')}/>
-//      `
-//    }
-//
-//    body = Neos.Fusion:Tag {
-//      attributes.class = 'email-editing-page'
-//
-//      content = Neos.Neos:ContentCollection {
-//        nodePath = 'main'
-//      }
-//    }
-//  }
+    content = Neos.Neos:ContentCollection {
+      nodePath = 'main'
+    }
+
+    footer = Neos.Neos:ContentCollection {
+      @context.node = ${q(q(documentNode).property('emailLayout')).children('footer').get(0)}
+    }
+
+  }
 }

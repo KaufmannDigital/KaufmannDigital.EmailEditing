@@ -1,0 +1,41 @@
+prototype(KaufmannDigital.EmailEditing:Component.NewsletterPage) < prototype(Neos.Fusion:Component) {
+
+  title = 'Newsletter Page'
+  bodyContents = 'Content'
+
+  header = ''
+
+  content = ''
+
+  footer = ''
+
+  #TODO: Completely replace Page?
+  renderer = Neos.Neos:Page {
+
+    head {
+      titleTag>
+      titleTag = afx`
+        <title>{props.title}</title>
+      `
+      styles = afx`
+        <link rel="stylesheet" href={StaticResource.uri("KaufmannDigital.EmailEditing", "Public/Styles/EmailEditing.css")} />
+        `
+    }
+
+    bodyTag >
+    body >
+    closingBodyTag >
+
+    body = afx`
+        <body class="email-editing-page">
+          {props.header}
+          {props.content}
+          {props.footer}
+        </body>
+    `
+
+    lastVisitedNodeScript >
+
+    @cache >
+  }
+}

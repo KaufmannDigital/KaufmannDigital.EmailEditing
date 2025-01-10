@@ -14,6 +14,7 @@ prototype(KaufmannDigital.EmailEditing:Content.Section) < prototype(KaufmannDigi
       }
     }
 
+    renderer >
     renderer = ${props.contents}
   }
 }

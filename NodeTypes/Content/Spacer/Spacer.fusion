@@ -1,5 +1,12 @@
 prototype(KaufmannDigital.EmailEditing:Content.Spacer) < prototype(KaufmannDigital.EmailEditing:ContentComponent.DualRendering) {
 
+  mjmlRendering {
+    renderer = KaufmannDigital.EmailEditing:Component.Spacer {
+      height = ${q(node).property('height')}
+
+    }
+  }
+
   htmlRendering {
     renderer = KaufmannDigital.EmailEditing:MjmlElementRenderer {
       mjmlSource = KaufmannDigital.EmailEditing:Component.Spacer {

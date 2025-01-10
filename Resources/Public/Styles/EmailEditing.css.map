@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["../../../NodeTypes/Document/EmailLayout/EmailLayout.scss","../../../NodeTypes/Document/Email/Email.scss","../../../NodeTypes/Content/Section/Section.scss"],"names":[],"mappings":"AAAA;EACC;;;ACDD;EACC;EACA;EAEA;EAAyB;;;ACJ1B;EACC;EACA","file":"EmailEditing.css"}
+{"version":3,"sourceRoot":"","sources":["../../../NodeTypes/Document/EmailLayout/EmailLayout.scss","../../../NodeTypes/Content/Section/Section.scss"],"names":[],"mappings":"AAAA;EACC;EACA;EAEA;EACA;;;ACLD;EACC;EACA","file":"EmailEditing.css"}

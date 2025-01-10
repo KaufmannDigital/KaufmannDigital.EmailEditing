@@ -1,9 +1,9 @@
-prototype(KaufmannDigital.EmailEditing:Component.Divider) < prototype(Neos.Neos:ContentComponent) {
+prototype(KaufmannDigital.EmailEditing:Component.Divider) < prototype(Neos.Fusion:Component) {
 
-  borderColor = '#000000'
-  borderStyle = 'solid'
-  borderWidth = 4
-  padding = '5px 20px'
+  borderColor = null
+  borderStyle = null
+  borderWidth = null
+  padding = null
 
   renderer = afx`
     <mj-divider
@@ -13,4 +13,5 @@ prototype(KaufmannDigital.EmailEditing:Component.Divider) < prototype(Neos.Neos:
       padding={props.padding}
     />
   `
+
 }

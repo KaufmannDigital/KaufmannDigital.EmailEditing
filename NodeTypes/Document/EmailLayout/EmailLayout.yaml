@@ -10,6 +10,19 @@
         emailLayout:
           label: 'E-Mail Layout'
           icon: 'envelope'
+  childNodes:
+    header:
+      type: 'Neos.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          '*': false
+          'KaufmannDigital.EmailEditing:Content.Section': true
+    footer:
+      type: 'Neos.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          '*': false
+          'KaufmannDigital.EmailEditing:Content.Section': true
   properties:
     logo:
       type: 'Neos\Media\Domain\Model\ImageInterface'

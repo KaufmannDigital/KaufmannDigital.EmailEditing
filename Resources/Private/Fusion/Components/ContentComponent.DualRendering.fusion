@@ -1,0 +1,31 @@
+prototype(KaufmannDigital.EmailEditing:ContentComponent.DualRendering) < prototype(Neos.Fusion:Component) {
+
+  mjmlRendering = Neos.Fusion:Component {
+    renderer = '#Renderer is not defined#'
+  }
+  @context.mjmlRendering = ${this.mjmlRendering}
+
+  htmlRendering = Neos.Neos:ContentComponent {
+
+    inlineStyles = Neos.Fusion:DataStructure
+    @context.inlineStyles = ${this.inlineStyles}
+
+    @process.augmentInlineStyles = Neos.Fusion:Augmenter {
+      style = Neos.Fusion:Loop {
+        items = ${inlineStyles}
+        itemRenderer = ${itemKey + ': ' + item + ';'}
+      }
+    }
+
+    renderer = ''
+
+    //TODO: Better solution as default-fallback, than having both renders defined in every element. But did not work :( Fix!
+//    renderer = KaufmannDigital.EmailEditing:MjmlElementRenderer {
+//      mjmlSource = ${mjmlSource}
+//    }
+  }
+
+
+  renderer = ${props.htmlRendering} #TODO: New Root-Endpoint, wich overrides this to use mjmlRenderer. Then implement a service, which uses that and returns mjml for CleverReach etc.
+
+}
