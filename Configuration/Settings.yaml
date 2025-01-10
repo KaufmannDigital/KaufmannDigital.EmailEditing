@@ -8,6 +8,11 @@ Neos:
         autoInclude:
           KaufmannDigital.EmailEditing:
             - 'NodeTypes/*'
+    nodeTypes:
+      groups:
+        emailEditing:
+          label: 'Email-Editing'
+          icon: 'envelope'
   Fusion:
     defaultContext:
       MJML: KaufmannDigital\EmailEditing\Fusion\Helper\MjmlHelper
