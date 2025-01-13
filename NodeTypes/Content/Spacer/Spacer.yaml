@@ -4,7 +4,7 @@
   ui:
     label: 'Spacer'
     icon: 'fas fa-arrows-alt-v'
-    group: special
+    group: emailEditing
     inspector:
       groups:
         spacerOptions:

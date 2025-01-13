@@ -15,7 +15,7 @@
   ui:
     label: 'Text'
     icon: 'icon-file-alt'
-    group: special
+    group: emailEditing
   properties:
     text:
       type: string

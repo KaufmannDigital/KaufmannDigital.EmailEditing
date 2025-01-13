@@ -4,7 +4,7 @@
   ui:
     label: 'Bild'
     icon: 'icon-image'
-    group: special
+    group: emailEditing
     inspector:
       groups:
         image:

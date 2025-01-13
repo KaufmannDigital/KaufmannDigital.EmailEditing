@@ -14,6 +14,6 @@
   ui:
     label: 'Column'
     icon: 'box'
-    group: special
+    group: emailEditing
     position: 20
 
