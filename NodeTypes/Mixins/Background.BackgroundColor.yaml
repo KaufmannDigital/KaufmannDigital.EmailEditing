@@ -1,0 +1,12 @@
+'KaufmannDigital.EmailEditing:Mixin.Background.BackgroundColor':
+  abstract: true
+  superTypes:
+    'KaufmannDigital.EmailEditing:Mixin.Groups': true
+  properties:
+    backgroundColor:
+      type: string
+      ui:
+        label: 'Hintergrundfarbe'
+        reloadIfChanged: true
+        inspector:
+          group: background

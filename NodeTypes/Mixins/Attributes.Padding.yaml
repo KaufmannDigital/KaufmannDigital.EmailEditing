@@ -5,7 +5,6 @@
   properties:
     padding:
       type: string
-      defaultValue: ''
       ui:
         label: 'Padding'
         help:

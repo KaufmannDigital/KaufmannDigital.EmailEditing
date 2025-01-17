@@ -1,0 +1,14 @@
+'KaufmannDigital.EmailEditing:Mixin.Attributes.Width':
+  abstract: true
+  superTypes:
+    'KaufmannDigital.EmailEditing:Mixin.Groups': true
+  properties:
+    width:
+      type: string
+      ui:
+        label: 'Breite'
+        help:
+          message: 'Breite in Prozent oder Pixel. Die Summe der Breiten darf nicht die Breite der Section überschreiten.'
+        reloadIfChanged: true
+        inspector:
+          group: positionOptions

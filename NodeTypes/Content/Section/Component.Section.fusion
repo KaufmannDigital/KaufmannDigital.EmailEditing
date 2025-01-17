@@ -1,0 +1,18 @@
+prototype(KaufmannDigital.EmailEditing:Component.Section) < prototype(Neos.Fusion:Component) {
+
+  content = null
+  backgroundUrl = null
+  backgroundColor = null
+  fullWidth = null
+
+  renderer = afx`
+    <mj-section
+      full-width={props.fullWidth ? 'full-width' : null}
+      background-position='center top'
+      background-size='cover'
+      background-repeat='no-repeat'
+    >
+      {props.content}
+    </mj-section>
+  `
+}

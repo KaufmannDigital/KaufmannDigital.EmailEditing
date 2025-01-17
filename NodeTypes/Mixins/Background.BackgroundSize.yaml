@@ -1,0 +1,15 @@
+'KaufmannDigital.EmailEditing:Mixin.Background.BackgroundSize':
+  abstract: true
+  superTypes:
+    'KaufmannDigital.EmailEditing:Mixin.Groups': true
+
+  properties:
+    backgroundSize:
+      type: string
+      defaultValue: 'auto'
+      ui:
+        label: 'Hintergrundgröße'
+        reloadIfChanged: true
+        inspector:
+          group: background
+

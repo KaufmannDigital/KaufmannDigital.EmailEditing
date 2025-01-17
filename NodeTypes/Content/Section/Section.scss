@@ -1,5 +1,10 @@
 .email-section {
 	display: flex;
 	flex-wrap: wrap;
+  margin: auto;
+  max-width: var(--max-width);
 
+  &--fullWidth {
+    width: 100%;
+  }
 }

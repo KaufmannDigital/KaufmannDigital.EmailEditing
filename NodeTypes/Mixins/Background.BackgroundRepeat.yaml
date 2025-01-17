@@ -1,0 +1,29 @@
+'KaufmannDigital.EmailEditing:Mixin.Background.BackgroundRepeat':
+  abstract: true
+  superTypes:
+    'KaufmannDigital.EmailEditing:Mixin.Groups': true
+  properties:
+    backgroundRepeat:
+      type: string
+      defaultValue: 'repeat'
+      ui:
+        label: 'Hintergrund Wiederholung'
+        reloadIfChanged: true
+        inspector:
+          group: 'background'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              repeat:
+                label: 'Wiederholen'
+                value: 'repeat'
+              no-repeat:
+                label: 'Nicht wiederholen'
+                value: 'no-repeat'
+              repeat-x:
+                label: 'Wiederholung horizontal'
+                value: 'repeat-x'
+              repeat-y:
+                label: 'Wiederholung vertikal'
+                value: 'repeat-y'
+

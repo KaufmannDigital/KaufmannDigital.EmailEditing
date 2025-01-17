@@ -9,3 +9,9 @@ In den Dateien sind noch diverse TODOs mit den noch notwendigen Schritten formul
 - Bei Section / Column / Image fehlen noch Properties
 - Properties global auf dem Layout konfigurieren und vererben, wenn nicht overwritten
 - Übersetzungen
+
+## CSS Building
+
+```sh
+sass --watch DistributionPackages/EmailEditing/Resources/Private/Scss/EmailEditing.scss DistributionPackages/EmailEditing/Resources/Public/Styles/EmailEditing.css
+```

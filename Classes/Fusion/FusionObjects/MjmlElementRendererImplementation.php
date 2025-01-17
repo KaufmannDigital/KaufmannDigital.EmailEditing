@@ -17,6 +17,21 @@ class MjmlElementRendererImplementation extends AbstractFusionObject
         return $this->fusionValue('mjmlSource');
     }
 
+    /**
+     * @return string
+     */
+    public function getMaxWidth()
+    {
+        return $this->fusionValue('maxWidth') ?? '600px';
+    }
+    /**
+     * @return string
+     */
+    public function getBackgroundColor()
+    {
+        return $this->fusionValue('backgroundColor') ?? '#ffffff';
+    }
+
     public function evaluate()
     {
         $mjmlSource = $this->getMjmlSource();
@@ -26,7 +41,7 @@ class MjmlElementRendererImplementation extends AbstractFusionObject
 
         $mjml = '
             <mjml>
-                <mj-body>
+                <mj-body width="' . $this->getMaxWidth() . '" background-color="' . $this->getBackgroundColor() . '">
                 ' . $mjmlSource . '
                 </mj-body>
             </mjml>

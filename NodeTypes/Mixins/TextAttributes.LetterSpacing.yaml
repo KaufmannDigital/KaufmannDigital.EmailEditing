@@ -1,15 +1,14 @@
-'KaufmannDigital.EmailEditing:Mixin.TextAttributes.LineHeight':
+'KaufmannDigital.EmailEditing:Mixin.TextAttributes.LetterSpacing':
   abstract: true
   superTypes:
     'KaufmannDigital.EmailEditing:Mixin.Groups': true
   properties:
-    lineHeight:
+    letterSpacing:
       type: string
-      defaultValue: 1
       ui:
-        label: 'Line-Height'
+        label: 'Letter-Spacing'
         help:
-          message: 'line-height (CSS) als numerischer Wert.'
+          message: 'letter-spacing (CSS) in px oder em'
         reloadIfChanged: true
         inspector:
           group: textOptions

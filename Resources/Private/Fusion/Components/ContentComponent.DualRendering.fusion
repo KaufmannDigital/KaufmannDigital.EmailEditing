@@ -1,11 +1,11 @@
-prototype(KaufmannDigital.EmailEditing:ContentComponent.DualRendering) < prototype(Neos.Fusion:Component) {
+prototype(KaufmannDigital.EmailEditing:ContentComponent.DualRendering) < prototype(Neos.Neos:ContentComponent) {
 
   mjmlRendering = Neos.Fusion:Component {
     renderer = '#Renderer is not defined#'
   }
   @context.mjmlRendering = ${this.mjmlRendering}
 
-  htmlRendering = Neos.Neos:ContentComponent {
+  htmlRendering = Neos.Fusion:Component {
 
     inlineStyles = Neos.Fusion:DataStructure
     @context.inlineStyles = ${this.inlineStyles}
@@ -19,13 +19,50 @@ prototype(KaufmannDigital.EmailEditing:ContentComponent.DualRendering) < prototy
 
     renderer = ''
 
-    //TODO: Better solution as default-fallback, than having both renders defined in every element. But did not work :( Fix!
-//    renderer = KaufmannDigital.EmailEditing:MjmlElementRenderer {
-//      mjmlSource = ${mjmlSource}
+//    @cache {
+//      mode = 'uncached'
+//
+//      context {
+//        1 = 'node'
+//        2 = 'documentNode'
+//        3 = 'componentProps'
+//        4 = 'templateNode'
+//      }
 //    }
   }
 
+  # Final output of the component. By default htmlRendering for Neos
+  #TODO: New Root-Endpoint, wich overrides this to use mjmlRenderer.
+  # Then implement a service, which uses that and returns mjml for CleverReach etc.
+  # renderer = ${props.htmlRendering || private.htmlRendering}
 
-  renderer = ${props.htmlRendering} #TODO: New Root-Endpoint, wich overrides this to use mjmlRenderer. Then implement a service, which uses that and returns mjml for CleverReach etc.
+  renderer = ${props.htmlRendering}
 
+//  renderer = Neos.Fusion:Case {
+//    hasHtmlRendering {
+//      condition = ${props.htmlRendering}
+//      renderer = ${props.htmlRendering}
+//    }
+//    default {
+//      condition = true
+//      renderer = Neos.Neos:ContentComponent {
+//        @apply.outperProps = ${props}
+//
+//        inlineStyles = Neos.Fusion:DataStructure
+//        @context.inlineStyles = ${this.inlineStyles}
+//
+//        @process.augmentInlineStyles = Neos.Fusion:Augmenter {
+//          style = Neos.Fusion:Loop {
+//            items = ${inlineStyles}
+//            itemRenderer = ${itemKey + ': ' + item + ';'}
+//          }
+//        }
+//
+//        //TODO: Better solution for default-fallback, than having both renders defined in every element. But did not work :( Fix!
+//        renderer = KaufmannDigital.EmailEditing:MjmlElementRenderer {
+//          mjmlSource = ${mjmlRendering}
+//        }
+//      }
+//    }
+//  }
 }

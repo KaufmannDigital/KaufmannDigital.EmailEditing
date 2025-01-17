@@ -1,20 +1,92 @@
 prototype(KaufmannDigital.EmailEditing:Content.Section) < prototype(KaufmannDigital.EmailEditing:ContentComponent.DualRendering) {
 
+  componentProps = Neos.Fusion:DataStructure {
+    @context {
+      templateNode = KaufmannDigital.EmailEditing:TemplateNodeSelector
+    }
+
+    backgroundUrl = Neos.Neos:ImageUri {
+      asset = ${q(node).property('backgroundImage')}
+    }
+    backgroundColor = ${q(node).property('backgroundColor') || q(templateNode).property('sectionBackgroundColor') || null}
+    fullWidth = ${q(node).property('backgroundFullWidth') || null}
+    backgroundRepeat = ${q(node).property('backgroundRepeat') || q(templateNode).property('sectionBackgroundRepeat') || null}
+    backgroundPosition = ${q(node).property('backgroundPosition') || q(templateNode).property('sectionBackgroundPosition') || null}
+    backgroundSize = ${q(node).property('backgroundSize') || q(templateNode).property('sectionBackgroundSize') || null}
+    backgroundPositionX = ${q(node).property('backgroundPositionX') || q(templateNode).property('sectionBackgroundPositionX') || null}
+    backgroundPositionY = ${q(node).property('backgroundPositionY') || q(templateNode).property('sectionBackgroundPositionY') || null}
+    padding = ${q(node).property('padding') || q(templateNode).property('sectionPadding') || null}
+  }
+
+  @context.componentProps = ${this.componentProps}
+
+  mjmlRendering {
+    renderer = KaufmannDigital.EmailEditing:Component.Section {
+      content = Neos.Neos:ContentCollection
+      @apply.componentProps = ${componentProps}
+    }
+  }
+
+  // we cant convert mjml to html for this component bc it would break the backend
   htmlRendering {
     contents = Neos.Neos:ContentCollection {
       attributes.class = 'email-section'
     }
 
     inlineStyles {
-      background = Neos.Fusion:Value {
-        imageUrl = Neos.Neos:ImageUri {
-          asset = ${q(node).property('backgroundImage')}
-        }
-        value = ${"url(" + this.imageUrl + ") center top / cover no-repeat"}
-      }
+      background-color = ${componentProps.backgroundColor}
+      background-color.@if.isSet = ${componentProps.backgroundColor}
+
+      background-image = ${"url(" + componentProps.backgroundUrl + ")"}
+      background-image.@if.isSet = ${componentProps.backgroundUrl}
+
+      background-position = ${componentProps.backgroundPosition}
+      background-position.@if.isSet = ${componentProps.backgroundPosition}
+
+      background-position-x = ${componentProps.backgroundPositionX}
+      background-position-x.@if.isSet = ${componentProps.backgroundPositionX}
+
+      background-position-y = ${componentProps.backgroundPositionY}
+      background-position-y.@if.isSet = ${componentProps.backgroundPositionY}
+
+      background-repeat = ${componentProps.backgroundRepeat}
+      background-repeat.@if.isSet = ${componentProps.backgroundRepeat}
+
+      background-size = ${componentProps.backgroundSize}
+      background-size.@if.isSet = ${componentProps.backgroundSize}
+
+      padding = ${componentProps.padding}
+      padding.@if.isSet = ${componentProps.padding}
+
+      width = ${q(node).property('backgroundFullWidth') ? '100%' : 'var(--max-width)'}
     }
 
+
     renderer >
-    renderer = ${props.contents}
+    renderer = Neos.Fusion:Case {
+      fullWidth {
+        condition = ${q(node).property('backgroundFullWidth')}
+        renderer = afx`
+          <div class="email-section--fullWidth">
+            {props.contents}
+          </div>
+        `
+      }
+      default {
+        condition = true
+        renderer = ${props.contents}
+      }
+    }
   }
+
+  @cache {
+    mode = 'uncached'
+    context {
+      node = "node"
+      documentNode = "documentNode"
+      componentProps = "componentProps"
+    }
+  }
+
 }
+

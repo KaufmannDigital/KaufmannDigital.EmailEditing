@@ -1,0 +1,18 @@
+prototype(KaufmannDigital.EmailEditing:TemplateNodeSelector) < prototype(Neos.Fusion:Component) {
+  templateNode = Neos.Fusion:Case {
+    onEmailPage {
+      condition = ${documentNode.nodeType.name == 'KaufmannDigital.EmailEditing:Document.Email'}
+      renderer = ${q(documentNode).property('emailLayout')}
+    }
+    onTemplatePage {
+      condition = ${documentNode.nodeType.name == 'KaufmannDigital.EmailEditing:Document.EmailLayout'}
+      renderer = ${documentNode}
+    }
+    default {
+      condition = true
+      renderer = null
+    }
+  }
+
+  renderer = ${props.templateNode}
+}

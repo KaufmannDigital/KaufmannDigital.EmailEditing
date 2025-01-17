@@ -1,7 +1,7 @@
 prototype(KaufmannDigital.EmailEditing:Content.Divider) < prototype(KaufmannDigital.EmailEditing:ContentComponent.DualRendering) {
 
-  mjmlRendering {
-    renderer = KaufmannDigital.EmailEditing:Component.Divider {
+  @context {
+    componentProps = Neos.Fusion:DataStructure {
       borderColor = ${q(node).property('borderColor') || null}
       borderStyle = ${q(node).property('borderStyle') || null}
       borderWidth = ${q(node).property('borderWidth') || null}
@@ -9,13 +9,16 @@ prototype(KaufmannDigital.EmailEditing:Content.Divider) < prototype(KaufmannDigi
     }
   }
 
+  mjmlRendering {
+    renderer = KaufmannDigital.EmailEditing:Component.Divider {
+      @apply.componentProps = ${componentProps}
+    }
+  }
+
   htmlRendering {
     renderer = KaufmannDigital.EmailEditing:MjmlElementRenderer {
       mjmlSource = KaufmannDigital.EmailEditing:Component.Divider {
-        borderColor = ${q(node).property('borderColor') || null}
-        borderStyle = ${q(node).property('borderStyle') || null}
-        borderWidth = ${q(node).property('borderWidth') || null}
-        padding = ${q(node).property('padding') || null}
+        @apply.componentProps = ${componentProps}
       }
     }
   }

@@ -13,6 +13,7 @@ Neos:
         emailEditing:
           label: 'Email-Editing'
           icon: 'envelope'
+          position: end
   Fusion:
     defaultContext:
       MJML: KaufmannDigital\EmailEditing\Fusion\Helper\MjmlHelper

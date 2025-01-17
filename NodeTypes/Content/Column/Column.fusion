@@ -1,18 +1,51 @@
 prototype(KaufmannDigital.EmailEditing:Content.Column) < prototype(KaufmannDigital.EmailEditing:ContentComponent.DualRendering) {
 
+  componentProps = Neos.Fusion:DataStructure {
+    @context {
+      templateNode = KaufmannDigital.EmailEditing:TemplateNodeSelector
+    }
+
+    backgroundColor = ${q(node).property('backgroundColor') || q(templateNode).property('columnBackgroundColor') || null}
+    padding = ${q(node).property('padding') || q(templateNode).property('columnPadding') || null}
+    width = ${q(node).property('width') || null}
+  }
+
+  @context.componentProps = ${this.componentProps}
+
+  mjmlRendering {
+    renderer = KaufmannDigital.EmailEditing:Component.Column {
+      @apply.componentProps = ${componentProps}
+
+      content = Neos.Neos:ContentCollection
+    }
+  }
 
   htmlRendering {
 
     inlineStyles = Neos.Fusion:DataStructure {
-      width = ${100 / q(q(node).parents().get(0)).children('[instanceof KaufmannDigital.EmailEditing:Content.Column]').count() + '%'}
+      width = ${componentProps.width || (100 / q(q(node).parents().get(0)).children('[instanceof KaufmannDigital.EmailEditing:Content.Column]').count() + '%')}
+
+      background-color = ${componentProps.backgroundColor}
+      background-color.@if.isSet = ${componentProps.backgroundColor}
+
+      padding = ${componentProps.padding}
+      padding.@if.isSet = ${componentProps.padding}
     }
 
-    contents = Neos.Neos:ContentCollection
-
+    content = Neos.Neos:ContentCollection
     renderer = afx`
-        <div class="email-column">
-          {props.contents}
-        </div>
+      <div class="email-column">
+        {props.content}
+      </div>
     `
+  }
+
+  @cache {
+    mode = 'uncached'
+    context {
+      node = "node"
+      documentNode = "documentNode"
+      componentProps = "componentProps"
+    }
   }
 }

@@ -1,13 +1,19 @@
 body.email-editing-page {
-  width: 800px;
   margin: 0 auto;
-  background: lightyellow;
-  #TODO: REMOVE;
 }
 
 .email-section {
   display: flex;
   flex-wrap: wrap;
+  margin: auto;
+  max-width: var(--max-width);
+}
+.email-section--fullWidth {
+  width: 100%;
+}
+
+.email-column {
+  margin: 0 auto;
 }
 
 /*# sourceMappingURL=EmailEditing.css.map */

@@ -1,44 +1,65 @@
 prototype(KaufmannDigital.EmailEditing:Content.Headline) < prototype(KaufmannDigital.EmailEditing:ContentComponent.DualRendering) {
-
-  mjmlRendering {
-    renderer = KaufmannDigital.EmailEditing:Component.Headline {
-      headline = Neos.Neos:Editable {
-        property = 'headline'
+  componentProps = Neos.Fusion:DataStructure {
+    @context {
+      templateNode = Neos.Fusion:Case {
+        onEmailPage {
+          condition = ${documentNode.nodeType.name == 'KaufmannDigital.EmailEditing:Document.Email'}
+          renderer = ${q(documentNode).property('emailLayout')}
+        }
+        onTemplatePage {
+          condition = ${documentNode.nodeType.name == 'KaufmannDigital.EmailEditing:Document.EmailLayout'}
+          renderer = ${documentNode}
+        }
+        default {
+          condition = true
+          renderer = null
+        }
       }
-
-      fontColor = ${q(node).property('fontColor') || null}
-      fontFamily = ${q(node).property('fontFamily') || null}
-      fontSize = ${q(node).property('fontSize') || null}
-      fontStyle = ${q(node).property('fontStyle') || null}
-      fontWeight = ${q(node).property('fontWeight') || null}
-      lineHeight = ${q(node).property('lineHeight') || null}
-      letterSpacing = ${q(node).property('letterSpacing') || null}
-      textDecoration = ${q(node).property('textDecoration') || null}
-      textTransform = ${q(node).property('textTransform') || null}
-      textAlign = ${q(node).property('textAlign') || null}
-      padding = ${q(node).property('padding') || null}
     }
+
+    fontColor = ${q(node).property('fontColor') || q(templateNode).property('headlineFontColor') || null}
+    fontFamily = ${q(node).property('fontFamily') || q(templateNode).property('headlineFontFamily') || null}
+    fontSize = ${q(node).property('fontSize') || q(templateNode).property('headlineFontSize') || null}
+    fontStyle = ${q(node).property('fontStyle') || q(templateNode).property('headlineFontStyle') || null}
+    fontWeight = ${q(node).property('fontWeight') || q(templateNode).property('headlineFontWeight') || null}
+    lineHeight = ${q(node).property('lineHeight') || q(templateNode).property('headlineLineHeight') || null}
+    letterSpacing = ${q(node).property('letterSpacing') ||  q(templateNode).property('headlineLetterSpacing') ||null}
+    textDecoration = ${q(node).property('textDecoration') ||  q(templateNode).property('headlineTextDecoration') || null}
+    textTransform = ${q(node).property('textTransform') || q(templateNode).property('headlineTextTransform') || null}
+    textAlign = ${q(node).property('textAlign') || q(templateNode).property('headlineTextAlign') || null}
+    padding = ${q(node).property('padding') || q(templateNode).property('headlinePadding') || null}
   }
+  @context.componentProps = ${this.componentProps}
 
   htmlRendering {
     renderer = KaufmannDigital.EmailEditing:MjmlElementRenderer {
       mjmlSource = KaufmannDigital.EmailEditing:Component.Headline {
+        @apply.componentProps = ${componentProps}
+
         headline = Neos.Neos:Editable {
           property = 'headline'
         }
-
-        fontColor = ${q(node).property('fontColor') || null}
-        fontFamily = ${q(node).property('fontFamily') || null}
-        fontSize = ${q(node).property('fontSize') || null}
-        fontStyle = ${q(node).property('fontStyle') || null}
-        fontWeight = ${q(node).property('fontWeight') || null}
-        lineHeight = ${q(node).property('lineHeight') || null}
-        letterSpacing = ${q(node).property('letterSpacing') || null}
-        textDecoration = ${q(node).property('textDecoration') || null}
-        textTransform = ${q(node).property('textTransform') || null}
-        textAlign = ${q(node).property('textAlign') || null}
-        padding = ${q(node).property('padding') || null}
       }
+    }
+  }
+
+  mjmlRendering {
+    renderer = KaufmannDigital.EmailEditing:Component.Headline {
+      @apply.componentProps = ${componentProps}
+
+      headline = Neos.Neos:Editable {
+        property = 'headline'
+      }
+    }
+  }
+
+
+  @cache {
+    mode = 'uncached'
+    context {
+      node = "node"
+      documentNode = "documentNode"
+      componentProps = "componentProps"
     }
   }
 }

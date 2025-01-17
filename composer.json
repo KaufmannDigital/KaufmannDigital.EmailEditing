@@ -2,7 +2,7 @@
     "name": "kaufmanndigital/email-editing",
     "type": "neos-package",
     "require": {
-        "neos/neos": "~8.2.0",
+        "neos/neos": "~8.3.0",
         "flowpack/nodetemplates": "^2.1.1",
         "spatie/mjml-php": "~1.2.0"
     },

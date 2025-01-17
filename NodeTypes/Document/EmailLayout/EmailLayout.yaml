@@ -10,6 +10,18 @@
         emailLayout:
           label: 'E-Mail Layout'
           icon: 'envelope'
+        headlines:
+          label: 'Überschriften'
+          icon: 'heading'
+        texts:
+          label: 'Texte'
+          icon: 'font'
+        sections:
+          label: 'Sections'
+          icon: 'box'
+        columns:
+          label: 'Spalten'
+          icon: 'columns'
   childNodes:
     header:
       type: 'Neos.Neos:ContentCollection'
@@ -24,6 +36,7 @@
           '*': false
           'KaufmannDigital.EmailEditing:Content.Section': true
   properties:
+    #region Layout
     logo:
       type: 'Neos\Media\Domain\Model\ImageInterface'
       ui:
@@ -31,3 +44,448 @@
         reloadIfChanged: true
         inspector:
           group: emailLayout
+
+    width:
+      type: string
+      defaultValue: '600px'
+      ui:
+        label: 'Breite'
+        reloadPageIfChanged: true
+        inspector:
+          group: emailLayout
+
+    backgroundColor:
+      type: string
+      defaultValue: '#ffffff'
+      ui:
+        label: 'Hintergrundfarbe'
+        reloadPageIfChanged: true
+        inspector:
+          group: emailLayout
+    #endregion
+
+    #region Headlines
+    headlineFontColor:
+      type: 'string'
+      defaultValue: '#000000'
+      ui:
+        label: 'Schriftfarbe'
+        reloadPageIfChanged: true
+        inspector:
+          group: headlines
+
+    headlineFontFamily:
+      type: 'string'
+      defaultValue: 'Ubuntu, Helvetica, Arial, sans-serif'
+      ui:
+        label: 'Schriftfamilie'
+        help:
+          message: 'Die Font-Family für diesen Text inklusive Fallbacks in CSS-Schreibweise. Zum Beispiel: "Ubuntu, Helvetica, Arial, sans-serif"'
+        reloadPageIfChanged: true
+        inspector:
+          group: headlines
+
+    headlineFontSize:
+      type: 'string'
+      defaultValue: '24px'
+      ui:
+        label: 'Schriftgröße'
+        reloadPageIfChanged: true
+        inspector:
+          group: headlines
+
+    headlineFontStyle:
+      type: 'string'
+      defaultValue: 'normal'
+      ui:
+        label: 'Schriftschnitt'
+        reloadPageIfChanged: true
+        inspector:
+          group: headlines
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            placeholder: 'Bitte wählen...'
+            allowEmpty: true
+            values:
+              'normal':
+                label: 'Normal'
+              'italic':
+                label: 'Italic'
+              'oblique':
+                label: 'Oblique'
+
+    headlineFontWeight:
+      type: integer
+      defaultValue: 400
+      ui:
+        label: 'Schrift-Dicke'
+        help:
+          message: 'Font-Weight (CSS).'
+        reloadPageIfChanged: true
+        inspector:
+          group: headlines
+
+    headlineLineHeight:
+      type: 'string'
+      defaultValue: '1'
+      ui:
+        label: 'Zeilenabstand'
+        help:
+          message: 'line-height (CSS) als numerischer Wert.'
+        reloadPageIfChanged: true
+        inspector:
+          group: headlines
+
+    headlineLetterSpacing:
+      type: 'string'
+      defaultValue: ''
+      ui:
+        label: 'Letter-Spacing'
+        help:
+          message: 'letter-spacing (CSS) in px oder em'
+        reloadPageIfChanged: true
+        inspector:
+          group: headlines
+
+    headlineTextDecoration:
+      type: 'string'
+      defaultValue: ''
+      ui:
+        label: 'Text-Decoration'
+        help:
+          message: 'text-decoration (CSS) in CSS-Schreibweise.'
+        reloadPageIfChanged: true
+        inspector:
+          group: headlines
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            placeholder: 'Bitte wählen...'
+            allowEmpty: true
+            values:
+              'none':
+                label: 'keine'
+              'underline':
+                label: 'Unterstrichen'
+              'overline':
+                label: 'Überstrichen'
+              'line-through':
+                label: 'Durchgestrichen'
+
+    headlineTextTransform:
+      type: 'string'
+      defaultValue: ''
+      ui:
+        label: 'Text-Transformation'
+        help:
+          message: 'text-transform (CSS) in CSS-Schreibweise.'
+        reloadPageIfChanged: true
+        inspector:
+          group: headlines
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            placeholder: 'Bitte wählen...'
+            allowEmpty: true
+            values:
+              'uppercase':
+                label: 'Großbuchstaben'
+              'lowercase':
+                label: 'Kleinbuchstaben'
+              'capitalize':
+                label: 'Erster Buchstabe Groß'
+    headlineTextAlign:
+      type: 'string'
+      defaultValue: ''
+      ui:
+        label: 'Text-Ausrichtung'
+        help:
+          message: 'text-align (CSS) in CSS-Schreibweise.'
+        reloadPageIfChanged: true
+        inspector:
+          group: headlines
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            placeholder: 'Bitte wählen...'
+            allowEmpty: true
+            values:
+              'left':
+                label: 'Linksbündig'
+              'right':
+                label: 'Rechtsbündig'
+              'center':
+                label: 'Zentriert'
+              'justify':
+                label: 'Blocksatz'
+
+    headlinePadding:
+      type: 'string'
+      defaultValue: ''
+      ui:
+        label: 'Abstände'
+        help:
+          message: 'padding (CSS). Akzeptiert bis zu 4 Werte mit Leerzeichen getrennt. z.B. "10px", "10px 20px", "10px 20px 30px", "10px 20px 30px 40px"'
+        reloadPageIfChanged: true
+        inspector:
+          group: headlines
+    #endregion
+
+    #region Texts
+    textFontColor:
+      type: 'string'
+      defaultValue: '#000000'
+      ui:
+        label: 'Schriftfarbe'
+        reloadPageIfChanged: true
+        inspector:
+          group: texts
+
+    textFontFamily:
+      type: 'string'
+      defaultValue: 'Ubuntu, Helvetica, Arial, sans-serif'
+      ui:
+        label: 'Schriftfamilie'
+        help:
+          message: 'Die Font-Family für diesen Text inklusive Fallbacks in CSS-Schreibweise. Zum Beispiel: "Ubuntu, Helvetica, Arial, sans-serif"'
+        reloadPageIfChanged: true
+        inspector:
+          group: texts
+
+    textFontSize:
+      type: 'string'
+      defaultValue: '14px'
+      ui:
+        label: 'Schriftgröße'
+        reloadPageIfChanged: true
+        inspector:
+          group: texts
+
+    textFontStyle:
+      type: 'string'
+      defaultValue: 'normal'
+      ui:
+        label: 'Schriftschnitt'
+        reloadPageIfChanged: true
+        inspector:
+          group: texts
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            placeholder: 'Bitte wählen...'
+            allowEmpty: true
+            values:
+              'normal':
+                label: 'Normal'
+              'italic':
+                label: 'Italic'
+              'oblique':
+                label: 'Oblique'
+
+    textFontWeight:
+      type: integer
+      defaultValue: 400
+      ui:
+        label: 'Schrift-Dicke'
+        help:
+          message: 'Font-Weight (CSS).'
+        reloadPageIfChanged: true
+        inspector:
+          group: texts
+
+    textLineHeight:
+      type: 'string'
+      defaultValue: '1'
+      ui:
+        label: 'Zeilenabstand'
+        help:
+          message: 'line-height (CSS) als numerischer Wert.'
+        reloadPageIfChanged: true
+        inspector:
+          group: texts
+
+    textLetterSpacing:
+      type: 'string'
+      defaultValue: ''
+      ui:
+        label: 'Letter-Spacing'
+        help:
+          message: 'letter-spacing (CSS) in px oder em'
+        reloadPageIfChanged: true
+        inspector:
+          group: texts
+
+    textTextDecoration:
+      type: 'string'
+      defaultValue: ''
+      ui:
+        label: 'Text-Decoration'
+        help:
+          message: 'text-decoration (CSS) in CSS-Schreibweise.'
+        reloadPageIfChanged: true
+        inspector:
+          group: texts
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            placeholder: 'Bitte wählen...'
+            allowEmpty: true
+            values:
+              'none':
+                label: 'keine'
+              'underline':
+                label: 'Unterstrichen'
+              'overline':
+                label: 'Überstrichen'
+              'line-through':
+                label: 'Durchgestrichen'
+
+    textTextTransform:
+      type: 'string'
+      defaultValue: ''
+      ui:
+        label: 'Text-Transformation'
+        help:
+          message: 'text-transform (CSS) in CSS-Schreibweise.'
+        reloadPageIfChanged: true
+        inspector:
+          group: texts
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            placeholder: 'Bitte wählen...'
+            allowEmpty: true
+            values:
+              'uppercase':
+                label: 'Großbuchstaben'
+              'lowercase':
+                label: 'Kleinbuchstaben'
+              'capitalize':
+                label: 'Erster Buchstabe Groß'
+    textTextAlign:
+      type: 'string'
+      defaultValue: ''
+      ui:
+        label: 'Text-Ausrichtung'
+        help:
+          message: 'text-align (CSS) in CSS-Schreibweise.'
+        reloadPageIfChanged: true
+        inspector:
+          group: texts
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            placeholder: 'Bitte wählen...'
+            allowEmpty: true
+            values:
+              'left':
+                label: 'Linksbündig'
+              'right':
+                label: 'Rechtsbündig'
+              'center':
+                label: 'Zentriert'
+              'justify':
+                label: 'Blocksatz'
+
+    textPadding:
+      type: 'string'
+      defaultValue: ''
+      ui:
+        label: 'Abstände'
+        help:
+          message: 'padding (CSS). Akzeptiert bis zu 4 Werte mit Leerzeichen getrennt. z.B. "10px", "10px 20px", "10px 20px 30px", "10px 20px 30px 40px"'
+        reloadPageIfChanged: true
+        inspector:
+          group: texts
+    #endregion
+
+    #region Sections
+    sectionBackgroundColor:
+      type: string
+      ui:
+        label: 'Hintergrundfarbe'
+        reloadIfChanged: true
+        inspector:
+          group: sections
+
+    sectionBackgroundRepeat:
+      type: string
+      defaultValue: 'repeat'
+      ui:
+        label: 'Hintergrund Wiederholung'
+        reloadIfChanged: true
+        inspector:
+          group: sections
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              repeat:
+                label: 'Wiederholen'
+                value: 'repeat'
+              no-repeat:
+                label: 'Nicht wiederholen'
+                value: 'no-repeat'
+              repeat-x:
+                label: 'Wiederholung horizontal'
+                value: 'repeat-x'
+              repeat-y:
+                label: 'Wiederholung vertikal'
+                value: 'repeat-y'
+
+    sectionBackgroundPosition:
+      type: string
+      defaultValue: 'top center'
+      ui:
+        label: 'Hintergrund-Position'
+        reloadIfChanged: true
+        inspector:
+          group: sections
+
+    sectionBackgroundPositionX:
+      type: string
+      ui:
+        label: 'Hintergrund-Position (X-Achse)'
+        reloadIfChanged: true
+        inspector:
+          group: sections
+
+    sectionBackgroundPositionY:
+      type: string
+      ui:
+        label: 'Hintergrund-Position (Y-Achse)'
+        reloadIfChanged: true
+        inspector:
+          group: sections
+
+    sectionBackgroundSize:
+      type: string
+      defaultValue: 'auto'
+      ui:
+        label: 'Hintergrundgröße'
+        reloadIfChanged: true
+        inspector:
+          group: sections
+
+    sectionPadding:
+      type: string
+      ui:
+        label: 'Padding'
+        help:
+          message: 'padding (CSS). Akzeptiert bis zu 4 Werte mit Leerzeichen getrennt. z.B. "10px", "10px 20px", "10px 20px 30px", "10px 20px 30px 40px"'
+        reloadIfChanged: true
+        inspector:
+          group: sections
+    #endregion
+
+    #region Columns
+    columnPadding:
+      type: string
+      ui:
+        label: 'Padding'
+        help:
+          message: 'padding (CSS). Akzeptiert bis zu 4 Werte mit Leerzeichen getrennt. z.B. "10px", "10px 20px", "10px 20px 30px", "10px 20px 30px 40px"'
+        reloadPageIfChanged: true
+        inspector:
+          group: columns
+
+    columnBackgroundColor:
+      type: string
+      ui:
+        label: 'Hintergrundfarbe'
+        reloadPageIfChanged: true
+        inspector:
+          group: columns
+    #endregion

@@ -8,12 +8,15 @@ prototype(KaufmannDigital.EmailEditing:Document.EmailLayout) < prototype(Neos.Fu
 
     header = Neos.Neos:ContentCollection {
       nodePath = 'header'
+      attributes.class = 'header'
     }
 
+    // todo: make this pretty and add translation
     content = '<div style="padding: 50px; width: 100%; margin: 0 auto; text-align: center;">content goes here...</div>'
 
     footer = Neos.Neos:ContentCollection {
       nodePath = 'footer'
+      attributes.class = 'footer'
     }
   }
 }

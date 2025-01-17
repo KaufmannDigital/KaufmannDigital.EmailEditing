@@ -1,17 +1,28 @@
 prototype(KaufmannDigital.EmailEditing:Content.Button) < prototype(KaufmannDigital.EmailEditing:ContentComponent.DualRendering) {
 
+  componentProps = Neos.Fusion:DataStructure {
+    label = ${q(node).property('buttonLabel')}
+   padding = ${q(node).property('padding')}
+   padding.@if.notEmpty = ${q(node).property('padding')}
+  }
+
+  mjmlRendering {
+    renderer = KaufmannDigital.EmailEditing:Component.Button {
+      @apply.componentProps = ${componentProps}
+
+      label = ${props.label}
+    }
+  }
+
   htmlRendering {
+
     label = Neos.Neos:Editable {
       property = 'buttonLabel'
     }
 
-    test = 'Niklas'
-
     renderer = KaufmannDigital.EmailEditing:MjmlElementRenderer {
       mjmlSource = KaufmannDigital.EmailEditing:Component.Button {
-//        padding = ${q(node).property('padding')}
-//        padding.@if.notEmpty = ${q(node).property('padding')}
-
+        @apply.componentProps = ${componentProps}
         label = ${props.label}
       }
     }

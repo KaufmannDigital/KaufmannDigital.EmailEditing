@@ -1,13 +1,15 @@
-'KaufmannDigital.EmailEditing:Mixin.TextAttributes.FontColor':
+'KaufmannDigital.EmailEditing:Mixin.TextAttributes.LineHeight':
   abstract: true
   superTypes:
     'KaufmannDigital.EmailEditing:Mixin.Groups': true
   properties:
-    fontColor:
+    lineHeight:
       type: string
-      defaultValue: '#000000'
       ui:
-        label: 'Schriftfarbe'
+        label: 'Zeilenabstand'
+        help:
+          message: 'line-height (CSS) als numerischer Wert.'
         reloadIfChanged: true
         inspector:
           group: textOptions
+

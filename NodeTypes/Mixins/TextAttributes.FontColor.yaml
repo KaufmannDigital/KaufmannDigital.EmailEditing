@@ -1,0 +1,12 @@
+'KaufmannDigital.EmailEditing:Mixin.TextAttributes.FontColor':
+  abstract: true
+  superTypes:
+    'KaufmannDigital.EmailEditing:Mixin.Groups': true
+  properties:
+    fontColor:
+      type: string
+      ui:
+        label: 'Schriftfarbe'
+        reloadIfChanged: true
+        inspector:
+          group: textOptions

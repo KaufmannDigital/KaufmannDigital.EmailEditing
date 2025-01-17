@@ -1,0 +1,29 @@
+'KaufmannDigital.EmailEditing:Mixin.Background.BackgroundPosition':
+  abstract: true
+  superTypes:
+    'KaufmannDigital.EmailEditing:Mixin.Groups': true
+  properties:
+    backgroundPosition:
+      type: string
+      defaultValue: 'top center'
+      ui:
+        label: 'Hintergrund-Position'
+        reloadIfChanged: true
+        inspector:
+          group: background
+
+    backgroundPositionX:
+      type: string
+      ui:
+        label: 'Hintergrund-Position (X-Achse)'
+        reloadIfChanged: true
+        inspector:
+          group: background
+
+    backgroundPositionY:
+      type: string
+      ui:
+        label: 'Hintergrund-Position (Y-Achse)'
+        reloadIfChanged: true
+        inspector:
+          group: background

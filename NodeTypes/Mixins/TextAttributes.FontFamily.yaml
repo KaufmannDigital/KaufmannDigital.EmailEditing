@@ -5,9 +5,8 @@
   properties:
     fontFamily:
       type: string
-      defaultValue: 'Ubuntu, Helvetica, Arial, sans-serif'
       ui:
-        label: 'Schriftfarbe'
+        label: 'Schriftfamilie'
         help:
           message: 'Die Font-Family für diesen Text inklusive Fallbacks in CSS-Schreibweise. Zum Beispiel: "Ubuntu, Helvetica, Arial, sans-serif"'
         reloadIfChanged: true

@@ -1,13 +1,12 @@
-'KaufmannDigital.EmailEditing:Mixin.TextAttributes.TextAlign':
+'KaufmannDigital.EmailEditing:Mixin.TextAttributes.TextTransform':
   abstract: true
   superTypes:
     'KaufmannDigital.EmailEditing:Mixin.Groups': true
   properties:
-    textAlign:
+    textTransform:
       type: string
-      defaultValue: ''
       ui:
-        label: 'Text-Ausrichtung'
+        label: 'Text-Transformation'
         reloadIfChanged: true
         inspector:
           group: textOptions
@@ -16,11 +15,9 @@
             placeholder: 'Bitte wählen...'
             allowEmpty: true
             values:
-              'left':
-                label: 'Linksbündig'
-              'right':
-                label: 'Rechtsbündig'
-              'center':
-                label: 'Zentriert'
-              'justify':
-                label: 'Blocksatz'
+              'uppercase':
+                label: 'Großbuchstaben'
+              'lowercase':
+                label: 'Kleinbuchstaben'
+              'capitalize':
+                label: 'Erster Buchstabe Groß'

@@ -1,64 +1,63 @@
 prototype(KaufmannDigital.EmailEditing:Content.Text) < prototype(KaufmannDigital.EmailEditing:ContentComponent.DualRendering) {
 
-  //TODO: inherit fontSize into both renderers (not working?)
-  //TODO: Get Fallback size from Layout
+  componentProps = Neos.Fusion:DataStructure {
+    @context {
+      templateNode = Neos.Fusion:Case {
+        onEmailPage {
+          condition = ${documentNode.nodeType.name == 'KaufmannDigital.EmailEditing:Document.Email'}
+          renderer = ${q(documentNode).property('emailLayout')}
+        }
+        onTemplatePage {
+          condition = ${documentNode.nodeType.name == 'KaufmannDigital.EmailEditing:Document.EmailLayout'}
+          renderer = ${documentNode}
+        }
+        default {
+          condition = true
+          renderer = null
+        }
+      }
+    }
+
+    fontColor = ${q(node).property('fontColor') || q(templateNode).property('textFontColor') || null}
+    fontFamily = ${q(node).property('fontFamily') || q(templateNode).property('textFontFamily') || null}
+    fontSize = ${q(node).property('fontSize') || q(templateNode).property('textFontSize') || null}
+    fontStyle = ${q(node).property('fontStyle') || q(templateNode).property('textFontStyle') || null}
+    fontWeight = ${q(node).property('fontWeight') || q(templateNode).property('textFontWeight') || null}
+    lineHeight = ${q(node).property('lineHeight') || q(templateNode).property('textLineHeight') || null}
+    letterSpacing = ${q(node).property('letterSpacing') || q(templateNode).property('textLetterSpacing') || null}
+    textDecoration = ${q(node).property('textDecoration') || q(templateNode).property('textTextDecoration') || null}
+    textTransform = ${q(node).property('textTransform') || q(templateNode).property('textTextTransform') || null}
+    textAlign = ${q(node).property('textAlign') || q(templateNode).property('textTextAlign') || null}
+    padding = ${q(node).property('padding') || q(templateNode).property('textPadding') || null}
+  }
+  @context.componentProps = ${this.componentProps}
 
   htmlRendering {
     content = Neos.Neos:Editable {
       property = 'text'
     }
 
-    fontColor = ${q(node).property('fontColor')}
-    fontColor.@if.notEmpty = ${q(node).property('fontColor') != ''}
-
-    fontFamily = ${q(node).property('fontFamily')}
-    fontFamily.@if.notEmpty = ${q(node).property('fontFamily') != ''}
-
-    fontSize = ${q(node).property('fontSize')}
-    fontSize.@if.notEmpty = ${q(node).property('fontSize') != ''}
-
-    fontStyle = ${q(node).property('fontStyle')}
-    fontStyle.@if.notEmpty = ${q(node).property('fontStyle') != ''}
-
-    fontWeight = ${q(node).property('fontWeight')}
-    fontWeight.@if.notEmpty = ${q(node).property('fontWeight') != ''}
-
-    lineHeight = ${q(node).property('lineHeight')}
-    lineHeigh.@if.notEmptyt = ${q(node).property('lineHeight') != ''}
-
-    letterSpacing = ${q(node).property('letterSpacing')}
-    letterSpacing.@if.notEmpty = ${q(node).property('letterSpacing') != ''}
-
-    textDecoration = ${q(node).property('textDecoration')}
-    textDecoration.@if.notEmpty = ${q(node).property('textDecoration') != ''}
-
-    textTransform = ${q(node).property('textTransform')}
-    textTransform.@if.notEmpty = ${q(node).property('textTransform') != ''}
-
-    textAlign = ${q(node).property('textAlign')}
-    textAlign.@if.notEmpty = ${q(node).property('textAlign') != ''}
-
-    padding = ${q(node).property('padding')}
-    padding.@if.notEmpty = ${q(node).property('padding') != ''}
-
     renderer = KaufmannDigital.EmailEditing:MjmlElementRenderer {
-      mjmlSource = afx`
-        <mj-text
-          color={props.fontColor}
-          font-family={props.fontFamily}
-          font-size={props.fontSize}
-          font-style={props.fontStyle}
-          font-weight={props.fontWeight}
-          line-height={props.lineHeight}
-          letter-spacing={props.letterSpacing}
-          text-decoration={props.textDecoration}
-          text-transform={props.textTransform}
-          align={props.textAlign}
-          padding={props.padding}
-        >
-          {props.content}
-        </mj-text>
-      `
+      mjmlSource = KaufmannDigital.EmailEditing:Component.Text {
+        @apply.componentProps = ${componentProps}
+        content = ${props.content}
+      }
+    }
+  }
+
+  mjmlRendering {
+    renderer = KaufmannDigital.EmailEditing:Component.Text {
+      @apply.componentProps = ${componentProps}
+      content = ${q(node).property('text')}
+    }
+  }
+
+  @cache {
+    mode = 'uncached'
+    context {
+      node = "node"
+      documentNode = "documentNode"
+      componentProps = "componentProps"
     }
   }
 }

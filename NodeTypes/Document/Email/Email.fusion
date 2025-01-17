@@ -3,7 +3,11 @@ prototype(KaufmannDigital.EmailEditing:Document.Email) < prototype(Neos.Fusion:C
   renderer = KaufmannDigital.EmailEditing:Component.NewsletterPage {
 
     header = Neos.Neos:ContentCollection {
+      attributes.class = 'header'
       @context.node = ${q(q(documentNode).property('emailLayout')).children('header').get(0)}
+      prototype(Neos.Neos:ContentElementWrapping) {
+        @if.disable = false
+      }
     }
 
     content = Neos.Neos:ContentCollection {
@@ -11,7 +15,11 @@ prototype(KaufmannDigital.EmailEditing:Document.Email) < prototype(Neos.Fusion:C
     }
 
     footer = Neos.Neos:ContentCollection {
+      attributes.class = 'footer'
       @context.node = ${q(q(documentNode).property('emailLayout')).children('footer').get(0)}
+      prototype(Neos.Neos:ContentElementWrapping) {
+        @if.disable = false
+      }
     }
 
   }

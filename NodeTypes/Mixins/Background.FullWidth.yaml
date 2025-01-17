@@ -1,0 +1,13 @@
+'KaufmannDigital.EmailEditing:Mixin.Background.FullWidth':
+  abstract: true
+  superTypes:
+    'KaufmannDigital.EmailEditing:Mixin.Groups': true
+  properties:
+    backgroundFullWidth:
+      type: boolean
+      defaultValue: false
+      ui:
+        label: 'Hintergrund auf voller Breite'
+        reloadIfChanged: true
+        inspector:
+          group: background

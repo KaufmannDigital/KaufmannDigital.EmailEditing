@@ -1,13 +1,12 @@
-'KaufmannDigital.EmailEditing:Mixin.TextAttributes.FontStyle':
+'KaufmannDigital.EmailEditing:Mixin.TextAttributes.TextDecoration':
   abstract: true
   superTypes:
     'KaufmannDigital.EmailEditing:Mixin.Groups': true
   properties:
-    fontStyle:
+    textDecoration:
       type: string
-      defaultValue: 'normal'
       ui:
-        label: 'Schrift-Dicke'
+        label: 'Text-Decoration'
         reloadIfChanged: true
         inspector:
           group: textOptions
@@ -16,10 +15,11 @@
             placeholder: 'Bitte wählen...'
             allowEmpty: true
             values:
-              'normal':
-                label: 'Normal'
-              'italic':
-                label: 'Italic'
-              'oblique':
-                label: 'Oblique'
-
+              'none':
+                label: 'keine'
+              'underline':
+                label: 'Unterstrichen'
+              'overline':
+                label: 'Überstrichen'
+              'line-through':
+                label: 'Durchgestrichen'

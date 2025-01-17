@@ -1,17 +1,27 @@
 prototype(KaufmannDigital.EmailEditing:Content.Image) < prototype(KaufmannDigital.EmailEditing:ContentComponent.DualRendering) {
 
-
-
-
-  htmlRendering {
-    imageUrl = Neos.Neos:ImageUri {
-      asset = ${q(node).property('image')}
-    }
-
-    renderer = KaufmannDigital.EmailEditing:MjmlElementRenderer {
-      mjmlSource = afx`
-        <mj-image align="left" width="300px" src={props.imageUrl} />
-      `
+  @context {
+    componentProps = Neos.Fusion:DataStructure {
+      imageUrl = Neos.Neos:ImageUri {
+        asset = ${q(node).property('image')}
+      }
     }
   }
+
+  mjmlRendering {
+    @apply.componentProps = ${componentProps}
+    renderer = KaufmannDigital.EmailEditing:Component.Image {
+      imageUrl = ${props.imageUrl}
+    }
+  }
+
+  htmlRendering {
+    @apply.componentProps = ${componentProps}
+    renderer = KaufmannDigital.EmailEditing:MjmlElementRenderer {
+      mjmlSource = KaufmannDigital.EmailEditing:Component.Image {
+        imageUrl = ${props.imageUrl}
+      }
+    }
+  }
+
 }

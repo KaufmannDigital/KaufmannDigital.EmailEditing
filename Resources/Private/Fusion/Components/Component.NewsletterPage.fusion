@@ -3,6 +3,10 @@ prototype(KaufmannDigital.EmailEditing:Component.NewsletterPage) < prototype(Neo
   title = 'Newsletter Page'
   bodyContents = 'Content'
 
+  templateNode = KaufmannDigital.EmailEditing:TemplateNodeSelector
+  width = ${q(this.templateNode).property('width')}
+  backgroundColor = ${q(this.templateNode).property('backgroundColor')}
+
   header = ''
 
   content = ''
@@ -27,7 +31,7 @@ prototype(KaufmannDigital.EmailEditing:Component.NewsletterPage) < prototype(Neo
     closingBodyTag >
 
     body = afx`
-        <body class="email-editing-page">
+        <body class="email-editing-page" style={"--max-width:" + props.width + "; background-color:" + props.backgroundColor}>
           {props.header}
           {props.content}
           {props.footer}

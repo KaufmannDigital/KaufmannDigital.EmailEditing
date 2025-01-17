@@ -2,7 +2,14 @@
   superTypes:
     'Neos.Neos:Content': true
     'Neos.Neos:ContentCollection': true
+    'KaufmannDigital.EmailEditing:Mixin.Background.BackgroundColor': true
+    'KaufmannDigital.EmailEditing:Mixin.Background.BackgroundRepeat': true
+    'KaufmannDigital.EmailEditing:Mixin.Background.BackgroundPosition': true
+    'KaufmannDigital.EmailEditing:Mixin.Background.BackgroundSize': true
     'KaufmannDigital.EmailEditing:Mixin.Background.BackgroundImage': true
+    'KaufmannDigital.EmailEditing:Mixin.Background.FullWidth': true
+    'KaufmannDigital.EmailEditing:Mixin.Attributes.Padding': true
+
   constraints:
     nodeTypes:
       '*': false

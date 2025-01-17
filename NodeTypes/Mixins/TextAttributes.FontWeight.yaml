@@ -5,9 +5,8 @@
   properties:
     fontWeight:
       type: integer
-      defaultValue: ''
       ui:
-        label: 'Schrift-Typ'
+        label: 'Schrift-Dicke'
         help:
           message: 'Font-Weight (CSS). Zum Beispiel "bolder" oder "500"'
         reloadIfChanged: true

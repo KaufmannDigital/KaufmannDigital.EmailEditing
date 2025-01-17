@@ -1,0 +1,17 @@
+prototype(KaufmannDigital.EmailEditing:Component.Column) < prototype(Neos.Fusion:Component) {
+  content = null
+
+  backgroundColor = null
+  padding = null
+  width = null
+
+  renderer = afx`
+    <mj-column
+      background-color={props.backgroundColor}
+      padding={props.padding}
+      width={props.width}
+    >
+      {props.content}
+    </mj-column>
+  `
+}

@@ -1,0 +1,9 @@
+prototype(KaufmannDigital.EmailEditing:Component.Image) < prototype(Neos.Fusion:Component) {
+
+  width = '300px'
+  imageUrl = null
+
+  renderer = afx`
+    <mj-image align="left" width="300px" src={props.imageUrl} />
+  `
+}
