@@ -10,5 +10,10 @@
         "psr-4": {
             "KaufmannDigital\\EmailEditing\\": "Classes"
         }
+    },
+    "scripts": {
+        "post-package-install": [
+            "KaufmannDigital\\EmailEditing\\Composer\\ComposerScripts::postPackageInstall"
+        ]
     }
 }
