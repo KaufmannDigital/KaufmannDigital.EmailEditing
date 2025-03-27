@@ -11,9 +11,9 @@
             "KaufmannDigital\\EmailEditing\\": "Classes"
         }
     },
-    "scripts": {
-        "post-package-install": [
-            "KaufmannDigital\\EmailEditing\\Composer\\ComposerScripts::postPackageInstall"
-        ]
+    "extra": {
+        "neos/flow": {
+            "post-install": "\\KaufmannDigital\\EmailEditing\\Composer\\ComposerScripts::postPackageUpdateAndInstall"
+        }
     }
 }
