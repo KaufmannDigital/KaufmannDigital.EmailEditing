@@ -13,7 +13,7 @@
     },
     "extra": {
         "neos/flow": {
-            "post-install": "\\KaufmannDigital\\EmailEditing\\Composer\\ComposerScripts::postPackageUpdateAndInstall"
+            "post-install": "\\Bl\\Cms\\Composer\\ComposerScripts::postPackageUpdateAndInstall"
         }
     }
 }
