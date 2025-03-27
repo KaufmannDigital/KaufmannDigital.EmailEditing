@@ -13,7 +13,8 @@
     },
     "extra": {
         "neos/flow": {
-            "post-install": "\\Bl\\Cms\\Composer\\ComposerScripts::postPackageUpdateAndInstall"
+            "post-install": "\\KaufmannDigital\\EmailEditing\\Composer\\ComposerScripts::mjmlNpmInitialisation",
+            "post-update": "\\KaufmannDigital\\EmailEditing\\Composer\\ComposerScripts::mjmlNpmInitialisation"
         }
     }
 }
