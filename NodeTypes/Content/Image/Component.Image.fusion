@@ -1,9 +1,10 @@
 prototype(KaufmannDigital.EmailEditing:Component.Image) < prototype(Neos.Fusion:Component) {
 
-  width = '300px'
+  width = null
+  padding = null
   imageUrl = null
 
   renderer = afx`
-    <mj-image align="left" width="300px" src={props.imageUrl} />
+    <mj-image align="left" width={props.width} padding={props.padding} src={props.imageUrl} />
   `
 }

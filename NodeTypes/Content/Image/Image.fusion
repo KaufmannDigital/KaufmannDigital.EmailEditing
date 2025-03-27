@@ -5,6 +5,9 @@ prototype(KaufmannDigital.EmailEditing:Content.Image) < prototype(KaufmannDigita
       imageUrl = Neos.Neos:ImageUri {
         asset = ${q(node).property('image')}
       }
+
+      width = ${q(node).property('imageWidth')}
+      padding = ${q(node).property('imagePadding')}
     }
   }
 
@@ -12,6 +15,8 @@ prototype(KaufmannDigital.EmailEditing:Content.Image) < prototype(KaufmannDigita
     @apply.componentProps = ${componentProps}
     renderer = KaufmannDigital.EmailEditing:Component.Image {
       imageUrl = ${props.imageUrl}
+      width = ${props.width}
+      padding = ${props.padding}
     }
   }
 
@@ -20,6 +25,8 @@ prototype(KaufmannDigital.EmailEditing:Content.Image) < prototype(KaufmannDigita
     renderer = KaufmannDigital.EmailEditing:MjmlElementRenderer {
       mjmlSource = KaufmannDigital.EmailEditing:Component.Image {
         imageUrl = ${props.imageUrl}
+        width = ${props.width}
+        padding = ${props.padding}
       }
     }
   }

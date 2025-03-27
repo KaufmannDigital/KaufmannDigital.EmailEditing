@@ -18,3 +18,19 @@
         reloadIfChanged: true
         inspector:
           group: image
+    imageWidth:
+      type: string
+      defaultValue: ''
+      ui:
+        label: 'Bild-Breite'
+        reloadIfChanged: true
+        inspector:
+          group: image
+    imagePadding:
+      type: string
+      defaultValue: ''
+      ui:
+        label: 'Padding'
+        reloadIfChanged: true
+        inspector:
+          group: image
