@@ -1,0 +1,13 @@
+'KaufmannDigital.EmailEditing:Document.EmailsFolder':
+  superTypes:
+    'Neos.Neos:Shortcut': true
+  ui:
+    label: 'Email-Folder'
+    icon: 'fas fa-folder-open'
+    group: emailEditing
+
+  constraints:
+    nodeTypes:
+      '*': false
+      'KaufmannDigital.EmailEditing:Document.EmailLayout': true
+      'KaufmannDigital.EmailEditing:Document.Email': true
