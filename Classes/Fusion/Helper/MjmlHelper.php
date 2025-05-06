@@ -44,7 +44,7 @@ class MjmlHelper implements ProtectedContextAwareInterface {
         return implode('', $styleMatches[0]) .  $bodyMatches[1];
     }
 
-    public function render($value, bool $debug = false)
+    public function renderSingle($value, bool $debug = false)
     {
 
 

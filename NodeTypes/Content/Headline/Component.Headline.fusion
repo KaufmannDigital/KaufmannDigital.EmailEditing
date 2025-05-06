@@ -11,6 +11,7 @@ prototype(KaufmannDigital.EmailEditing:Component.Headline) < prototype(Neos.Fusi
   text-transform = null
   align = null
   padding = null
+  backgroundColor = null
   headline = null
 
 
@@ -27,6 +28,7 @@ prototype(KaufmannDigital.EmailEditing:Component.Headline) < prototype(Neos.Fusi
       text-transform={props.textTransform}
       align={props.textAlign}
       padding={props.padding}
+      container-background-color={props.backgroundColor}
     >
       {props.headline}
     </mj-text>

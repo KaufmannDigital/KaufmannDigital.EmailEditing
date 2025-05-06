@@ -5,6 +5,7 @@
     label: 'Spacer'
     icon: 'fas fa-arrows-alt-v'
     group: emailEditing
+    inlineEditable: true
     inspector:
       groups:
         spacerOptions:

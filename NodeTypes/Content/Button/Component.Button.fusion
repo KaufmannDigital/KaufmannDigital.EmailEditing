@@ -3,6 +3,8 @@ prototype(KaufmannDigital.EmailEditing:Component.Button) < prototype(Neos.Fusion
   padding = ''
   label = ''
   color = 'white'
+  backgroundColor = '#414141'
+  align = 'left'
 
 
   renderer = afx`

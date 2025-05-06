@@ -6,6 +6,7 @@
     label: 'Trennlinie'
     icon: 'fas fa-grip-lines'
     group: emailEditing
+    inlineEditable: true
     inspector:
       groups:
         dividerOptions:

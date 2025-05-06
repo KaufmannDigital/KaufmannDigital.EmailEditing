@@ -47,14 +47,10 @@ class MjmlElementRendererImplementation extends AbstractFusionObject
             </mjml>
         ';
 
-       #\Neos\Flow\var_dump($mjml);
 
         $html = Mjml::new()
             ->validationLevel(ValidationLevel::Skip)
             ->toHtml($mjml);
-
-
-
 
         preg_match('/<body[^>]*>([\s\S]*?)<\/body>/', $html, $bodyMatches);
         preg_match_all('/<style[^>]*>([\s\S]*?)<\/style>/', $html, $styleMatches);
@@ -68,6 +64,5 @@ class MjmlElementRendererImplementation extends AbstractFusionObject
 
         return implode('', $styleMatches[0]) .  $body;
     }
-
 
 }

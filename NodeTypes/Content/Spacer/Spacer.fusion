@@ -9,6 +9,8 @@ prototype(KaufmannDigital.EmailEditing:Content.Spacer) < prototype(KaufmannDigit
 
   htmlRendering {
     renderer = KaufmannDigital.EmailEditing:MjmlElementRenderer {
+
+      backgroundColor = ${q(q(node).parents('[backgroundColor]').get(0)).property('backgroundColor')}
       mjmlSource = KaufmannDigital.EmailEditing:Component.Spacer {
         height = ${q(node).property('height')}
       }

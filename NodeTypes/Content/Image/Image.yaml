@@ -1,10 +1,12 @@
 'KaufmannDigital.EmailEditing:Content.Image':
   superTypes:
     'Neos.Neos:Content': true
+    'KaufmannDigital.EmailEditing:Mixin.Position.Align': true
   ui:
     label: 'Bild'
     icon: 'icon-image'
     group: emailEditing
+    inlineEditable: true
     inspector:
       groups:
         image:

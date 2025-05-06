@@ -7,7 +7,7 @@ prototype(KaufmannDigital.EmailEditing:Content.Column) < prototype(KaufmannDigit
 
     backgroundColor = ${q(node).property('backgroundColor') || q(templateNode).property('columnBackgroundColor') || null}
     padding = ${q(node).property('padding') || q(templateNode).property('columnPadding') || null}
-    width = ${q(node).property('width') || null}
+    width = ${q(node).property('width') || '100%'}
   }
 
   @context.componentProps = ${this.componentProps}
@@ -40,12 +40,5 @@ prototype(KaufmannDigital.EmailEditing:Content.Column) < prototype(KaufmannDigit
     `
   }
 
-  @cache {
-    mode = 'uncached'
-    context {
-      node = "node"
-      documentNode = "documentNode"
-      componentProps = "componentProps"
-    }
-  }
+@process.contentElementWrapping >
 }

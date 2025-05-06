@@ -12,6 +12,7 @@
     'KaufmannDigital.EmailEditing:Mixin.TextAttributes.TextTransform': true
     'KaufmannDigital.EmailEditing:Mixin.TextAttributes.TextAlign': true
     'KaufmannDigital.EmailEditing:Mixin.Attributes.Padding': true
+    'KaufmannDigital.EmailEditing:Mixin.Background.BackgroundColor': true
   ui:
     label: 'Text'
     icon: 'icon-file-alt'

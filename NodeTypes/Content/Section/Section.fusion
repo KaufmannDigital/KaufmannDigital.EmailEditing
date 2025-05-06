@@ -78,15 +78,5 @@ prototype(KaufmannDigital.EmailEditing:Content.Section) < prototype(KaufmannDigi
       }
     }
   }
-
-  @cache {
-    mode = 'uncached'
-    context {
-      node = "node"
-      documentNode = "documentNode"
-      componentProps = "componentProps"
-    }
-  }
-
 }
 

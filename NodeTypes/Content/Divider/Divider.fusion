@@ -17,6 +17,8 @@ prototype(KaufmannDigital.EmailEditing:Content.Divider) < prototype(KaufmannDigi
 
   htmlRendering {
     renderer = KaufmannDigital.EmailEditing:MjmlElementRenderer {
+
+      backgroundColor = ${q(q(node).parents('[backgroundColor]').get(0)).property('backgroundColor')}
       mjmlSource = KaufmannDigital.EmailEditing:Component.Divider {
         @apply.componentProps = ${componentProps}
       }

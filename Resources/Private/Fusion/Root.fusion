@@ -1,2 +1,38 @@
 include: nodetypes://KaufmannDigital.EmailEditing/**/*.fusion
 include: **/*.fusion
+
+MJMLRenderer = Neos.Fusion:Component {
+    renderer = Neos.Fusion:Join {
+
+        bodyTag = Neos.Fusion:Tag {
+            tagName = 'mj-body'
+            attributes.width = ${q(q(emailNode).property('emailLayout')).property('width')}
+            attributes.background-color = ${q(q(emailNode).property('emailLayout')).property('backgroundColor')}
+            omitClosingTag = true
+        }
+
+        header = KaufmannDigital.EmailEditing:MjmlNodeRenderer {
+            items = ${q(q(emailNode).property('emailLayout')).children('header').get(0).childNodes}
+        }
+
+        content = KaufmannDigital.EmailEditing:MjmlNodeRenderer {
+            items = ${emailNode.primaryChildNode.childNodes}
+        }
+
+        footer = KaufmannDigital.EmailEditing:MjmlNodeRenderer {
+            items = ${q(q(emailNode).property('emailLayout')).children('footer').get(0).childNodes}
+        }
+
+        closingBodyTag = '</mj-body>'
+    }
+}
+
+prototype(KaufmannDigital.EmailEditing:MjmlNodeRenderer) < prototype(Neos.Fusion:Loop) {
+    items = ${[]}
+    itemName = 'node'
+    itemRenderer = Neos.Fusion:Renderer {
+        type = ${node.nodeType.name}
+        @context.mjmlRenderMode = true
+        @context.documentNode = ${emailNode}
+    }
+}

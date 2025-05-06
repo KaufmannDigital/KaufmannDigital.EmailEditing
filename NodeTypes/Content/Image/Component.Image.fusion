@@ -3,8 +3,9 @@ prototype(KaufmannDigital.EmailEditing:Component.Image) < prototype(Neos.Fusion:
   width = null
   padding = null
   imageUrl = null
+  align = 'center'
 
   renderer = afx`
-    <mj-image align="left" width={props.width} padding={props.padding} src={props.imageUrl} />
+    <mj-image align={props.align} width={props.width} padding={props.padding} src={props.imageUrl} />
   `
 }

@@ -4,6 +4,7 @@ prototype(KaufmannDigital.EmailEditing:Component.Section) < prototype(Neos.Fusio
   backgroundUrl = null
   backgroundColor = null
   fullWidth = null
+  padding = null
 
   renderer = afx`
     <mj-section
@@ -11,6 +12,9 @@ prototype(KaufmannDigital.EmailEditing:Component.Section) < prototype(Neos.Fusio
       background-position='center top'
       background-size='cover'
       background-repeat='no-repeat'
+      background-color={props.backgroundColor}
+      background-color.@if.condition={props.backgroundColor}
+      padding={props.padding ? props.padding : '0px'}
     >
       {props.content}
     </mj-section>

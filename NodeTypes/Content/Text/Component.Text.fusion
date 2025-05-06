@@ -12,6 +12,7 @@ prototype(KaufmannDigital.EmailEditing:Component.Text) < prototype(Neos.Fusion:C
   textTransform = ''
   textAlign = ''
   padding = ''
+  backgroundColor = ''
 
   renderer = afx`
     <mj-text
@@ -26,6 +27,7 @@ prototype(KaufmannDigital.EmailEditing:Component.Text) < prototype(Neos.Fusion:C
       text-transform={props.textTransform}
       align={props.textAlign}
       padding={props.padding}
+      container-background-color={props.backgroundColor}
     >
       {props.content}
     </mj-text>

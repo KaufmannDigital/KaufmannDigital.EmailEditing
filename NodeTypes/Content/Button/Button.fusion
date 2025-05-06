@@ -1,16 +1,20 @@
 prototype(KaufmannDigital.EmailEditing:Content.Button) < prototype(KaufmannDigital.EmailEditing:ContentComponent.DualRendering) {
 
-  componentProps = Neos.Fusion:DataStructure {
-    label = ${q(node).property('buttonLabel')}
-   padding = ${q(node).property('padding')}
-   padding.@if.notEmpty = ${q(node).property('padding')}
+  @context {
+    componentProps = Neos.Fusion:DataStructure {
+      padding = ${q(node).property('padding')}
+      padding.@if.notEmpty = ${q(node).property('padding')}
+      backgroundColor = ${q(node).property('backgroundColor') || '#414141'}
+      color = ${q(node).property('fontColor') || '#FFFFFF'}
+      align = ${q(node).property('align') || 'left'}
+    }
   }
 
   mjmlRendering {
     renderer = KaufmannDigital.EmailEditing:Component.Button {
       @apply.componentProps = ${componentProps}
 
-      label = ${props.label}
+      label = ${label}
     }
   }
 
@@ -21,6 +25,8 @@ prototype(KaufmannDigital.EmailEditing:Content.Button) < prototype(KaufmannDigit
     }
 
     renderer = KaufmannDigital.EmailEditing:MjmlElementRenderer {
+
+      backgroundColor = ${q(q(node).parents('[backgroundColor]').get(0)).property('backgroundColor')}
       mjmlSource = KaufmannDigital.EmailEditing:Component.Button {
         @apply.componentProps = ${componentProps}
         label = ${props.label}

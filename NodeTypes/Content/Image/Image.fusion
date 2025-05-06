@@ -8,25 +8,20 @@ prototype(KaufmannDigital.EmailEditing:Content.Image) < prototype(KaufmannDigita
 
       width = ${q(node).property('imageWidth')}
       padding = ${q(node).property('imagePadding')}
+      align = ${q(node).property('align')}
     }
   }
 
   mjmlRendering {
-    @apply.componentProps = ${componentProps}
     renderer = KaufmannDigital.EmailEditing:Component.Image {
-      imageUrl = ${props.imageUrl}
-      width = ${props.width}
-      padding = ${props.padding}
+      @apply.componentProps = ${componentProps}
     }
   }
 
   htmlRendering {
-    @apply.componentProps = ${componentProps}
     renderer = KaufmannDigital.EmailEditing:MjmlElementRenderer {
       mjmlSource = KaufmannDigital.EmailEditing:Component.Image {
-        imageUrl = ${props.imageUrl}
-        width = ${props.width}
-        padding = ${props.padding}
+        @apply.componentProps = ${componentProps}
       }
     }
   }

@@ -3,7 +3,7 @@ prototype(KaufmannDigital.EmailEditing:Component.Column) < prototype(Neos.Fusion
 
   backgroundColor = null
   padding = null
-  width = null
+  width = '100%'
 
   renderer = afx`
     <mj-column

@@ -13,7 +13,7 @@ prototype(KaufmannDigital.EmailEditing:Component.NewsletterPage) < prototype(Neo
 
   footer = ''
 
-  #TODO: Completely replace Page?
+  #TODO: Completely replace Page in Frontend and use rendering like in Newsletter?
   renderer = Neos.Neos:Page {
 
     head {

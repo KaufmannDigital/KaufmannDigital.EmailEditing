@@ -28,6 +28,7 @@ prototype(KaufmannDigital.EmailEditing:Content.Headline) < prototype(KaufmannDig
     textTransform = ${q(node).property('textTransform') || q(templateNode).property('headlineTextTransform') || null}
     textAlign = ${q(node).property('textAlign') || q(templateNode).property('headlineTextAlign') || null}
     padding = ${q(node).property('padding') || q(templateNode).property('headlinePadding') || null}
+    backgroundColor = ${q(node).property('backgroundColor') || q(node).parents().property('backgroundColor') || q(templateNode).property('textPadding') || null}
   }
   @context.componentProps = ${this.componentProps}
 
@@ -53,13 +54,4 @@ prototype(KaufmannDigital.EmailEditing:Content.Headline) < prototype(KaufmannDig
     }
   }
 
-
-  @cache {
-    mode = 'uncached'
-    context {
-      node = "node"
-      documentNode = "documentNode"
-      componentProps = "componentProps"
-    }
-  }
 }

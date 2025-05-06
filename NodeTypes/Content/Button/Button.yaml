@@ -2,9 +2,12 @@
   superTypes:
     'Neos.Neos:Content': true
     'KaufmannDigital.EmailEditing:Mixin.Attributes.Padding': true
+    'KaufmannDigital.EmailEditing:Mixin.Background.BackgroundColor': true
+    'KaufmannDigital.EmailEditing:Mixin.TextAttributes.FontColor': true
+    'KaufmannDigital.EmailEditing:Mixin.Position.Align': true
   ui:
     label: 'Button'
-    icon: 'icon-file-alt'
+    icon: 'icon-link'
     group: emailEditing
   properties:
     buttonLabel:
