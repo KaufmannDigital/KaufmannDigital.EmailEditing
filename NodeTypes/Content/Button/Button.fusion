@@ -7,6 +7,8 @@ prototype(KaufmannDigital.EmailEditing:Content.Button) < prototype(KaufmannDigit
       backgroundColor = ${q(node).property('backgroundColor') || '#414141'}
       color = ${q(node).property('fontColor') || '#FFFFFF'}
       align = ${q(node).property('align') || 'left'}
+      href = ${q(node).property('target') || ''}
+      href.@process.convertUri = Neos.Neos:ConvertUris
     }
   }
 

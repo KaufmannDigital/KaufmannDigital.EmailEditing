@@ -19,4 +19,12 @@
           editorOptions:
             placeholder: 'Label hier eintippen...'
             autoparagraph: false
+    target:
+      type: string
+      defaultValue: ''
+      ui:
+        label: 'Link-Ziel'
+        inspector:
+          group: linking
+          editor: 'Neos.Neos/Inspector/Editors/LinkEditor'
 

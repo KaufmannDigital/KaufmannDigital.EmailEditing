@@ -1,5 +1,6 @@
 prototype(KaufmannDigital.EmailEditing:Component.Button) < prototype(Neos.Fusion:Component) {
 
+  href = ''
   padding = ''
   label = ''
   color = 'white'

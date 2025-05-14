@@ -12,3 +12,6 @@
         background:
           label: 'Hintergrund'
           icon: 'fas fa-image'
+        linking:
+          label: 'Verlinkung'
+          icon: 'fas fa-link'
