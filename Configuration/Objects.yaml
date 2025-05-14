@@ -1,0 +1,9 @@
+KaufmannDigital\EmailEditing\Fusion\FusionObjects\MjmlElementRendererImplementation:
+  properties:
+    mjmlCache:
+      object:
+        factoryObjectName: Neos\Flow\Cache\CacheManager
+        factoryMethodName: getCache
+        arguments:
+          1:
+            value: KaufmannDigital_EmailEditing_MJML

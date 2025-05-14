@@ -1,6 +1,7 @@
 <?php
 namespace KaufmannDigital\EmailEditing\Fusion\FusionObjects;
 
+use Neos\Cache\Frontend\StringFrontend;
 use Neos\Flow\Annotations as Flow;
 use Neos\Fusion\FusionObjects\AbstractFusionObject;
 use Spatie\Mjml\Mjml;
@@ -9,6 +10,14 @@ use Spatie\Mjml\ValidationLevel;
 
 class MjmlElementRendererImplementation extends AbstractFusionObject
 {
+
+    /**
+     * @Flow\Inject
+     * @var StringFrontend $mjmlCache
+     */
+    protected $mjmlCache;
+
+
     /**
      * @return string
      */
@@ -47,6 +56,10 @@ class MjmlElementRendererImplementation extends AbstractFusionObject
             </mjml>
         ';
 
+        $cacheKey = sha1($mjml);
+        if ($this->mjmlCache->has($cacheKey)) {
+            return $this->mjmlCache->get($cacheKey);
+        }
 
         $html = Mjml::new()
             ->validationLevel(ValidationLevel::Skip)
@@ -62,7 +75,10 @@ class MjmlElementRendererImplementation extends AbstractFusionObject
 
 
 
-        return implode('', $styleMatches[0]) .  $body;
+        $result = implode('', $styleMatches[0]) .  $body;
+        $this->mjmlCache->set($cacheKey, $result);
+
+        return $result;
     }
 
 }
