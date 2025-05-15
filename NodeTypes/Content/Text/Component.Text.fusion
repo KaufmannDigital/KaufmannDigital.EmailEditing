@@ -1,18 +1,18 @@
 prototype(KaufmannDigital.EmailEditing:Component.Text) < prototype(Neos.Fusion:Component) {
 
-  content = ''
-  fontColor = ''
-  fontFamily = ''
-  fontSize = ''
-  fontStyle = ''
-  fontWeight = ''
-  lineHeight = ''
-  letterSpacing = ''
-  textDecoration = ''
-  textTransform = ''
-  textAlign = ''
-  padding = ''
-  backgroundColor = ''
+  content = null
+  fontColor = null
+  fontFamily = null
+  fontSize = null
+  fontStyle = null
+  fontWeight = null
+  lineHeight = null
+  letterSpacing = null
+  textDecoration = null
+  textTransform = null
+  textAlign = null
+  padding = null
+  backgroundColor = null
 
   renderer = afx`
     <mj-text

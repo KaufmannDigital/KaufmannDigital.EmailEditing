@@ -1,14 +1,14 @@
 prototype(KaufmannDigital.EmailEditing:Component.Headline) < prototype(Neos.Fusion:Component) {
 
   color = null
-  font-family = null
-  font-size = null
-  font-style = null
-  font-weight = null
-  line-height = null
-  letter-spacing = null
-  text-decoration = null
-  text-transform = null
+  fontFamily = null
+  fontSize = null
+  fontStyle = null
+  fontWeight = null
+  lineHeight = null
+  letterSpacing = null
+  textDecoration = null
+  textTransform = null
   align = null
   padding = null
   backgroundColor = null
