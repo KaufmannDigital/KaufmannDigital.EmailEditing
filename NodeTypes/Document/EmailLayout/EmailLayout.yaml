@@ -1,6 +1,11 @@
 'KaufmannDigital.EmailEditing:Document.EmailLayout':
   superTypes:
     'Neos.Neos:Document': true
+  constraints:
+    nodeTypes:
+      '*': false
+      'KaufmannDigital.EmailEditing:Document.EmailLayout': true
+      'KaufmannDigital.EmailEditing:Document.Email': true
   ui:
     label: 'Email-Layout'
     icon: 'envelope'
