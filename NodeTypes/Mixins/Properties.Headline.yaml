@@ -1,0 +1,22 @@
+'KaufmannDigital.EmailEditing:Mixin.Properties.Headline':
+  abstract: true
+  superTypes:
+    'KaufmannDigital.EmailEditing:Mixin.TextAttributes.FontColor': true
+    'KaufmannDigital.EmailEditing:Mixin.TextAttributes.FontFamily': true
+    'KaufmannDigital.EmailEditing:Mixin.TextAttributes.FontSize': true
+    'KaufmannDigital.EmailEditing:Mixin.TextAttributes.FontStyle': true
+    'KaufmannDigital.EmailEditing:Mixin.TextAttributes.FontWeight': true
+    'KaufmannDigital.EmailEditing:Mixin.TextAttributes.LineHeight': true
+    'KaufmannDigital.EmailEditing:Mixin.TextAttributes.LetterSpacing': true
+    'KaufmannDigital.EmailEditing:Mixin.TextAttributes.TextDecoration': true
+    'KaufmannDigital.EmailEditing:Mixin.TextAttributes.TextTransform': true
+    'KaufmannDigital.EmailEditing:Mixin.TextAttributes.TextAlign': true
+  properties:
+    headline:
+      type: string
+      defaultValue: ''
+      ui:
+        inlineEditable: true
+        inline:
+          editorOptions:
+            placeholder: 'Headline pflegen...'

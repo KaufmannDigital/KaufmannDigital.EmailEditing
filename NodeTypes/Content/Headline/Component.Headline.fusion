@@ -13,6 +13,7 @@ prototype(KaufmannDigital.EmailEditing:Component.Headline) < prototype(Neos.Fusi
   padding = null
   backgroundColor = null
   headline = null
+  cssClass = null
 
 
   renderer = afx`
@@ -29,6 +30,7 @@ prototype(KaufmannDigital.EmailEditing:Component.Headline) < prototype(Neos.Fusi
       align={props.textAlign}
       padding={props.padding}
       container-background-color={props.backgroundColor}
+      css-class={props.cssClass}
     >
       {props.headline}
     </mj-text>
