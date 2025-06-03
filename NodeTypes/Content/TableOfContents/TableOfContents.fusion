@@ -1,0 +1,41 @@
+prototype(KaufmannDigital.EmailEditing:Content.TableOfContents) < prototype(KaufmannDigital.EmailEditing:ContentComponent.DualRendering) {
+
+    @context.componentProps = Neos.Fusion:DataStructure {
+        headline = Neos.Neos:Editable {
+            property = 'headline'
+        }
+
+        templateNode = Neos.Fusion:Case {
+            onEmailPage {
+                condition = ${documentNode.nodeType.name == 'KaufmannDigital.EmailEditing:Document.Email'}
+                renderer = ${q(documentNode).property('emailLayout')}
+            }
+            onTemplatePage {
+                condition = ${documentNode.nodeType.name == 'KaufmannDigital.EmailEditing:Document.EmailLayout'}
+                renderer = ${documentNode}
+            }
+            default {
+                condition = true
+                renderer = null
+            }
+        }
+
+        headlines = ${q(documentNode.primaryChildNode).find('[instanceof KaufmannDigital.EmailEditing:Content.Headline]').get()}
+
+        backgroundColor = ${q(node).property('backgroundColor') || q(q(node).parents('[backgroundColor]').get(0)).property('backgroundColor') || q(this.templateNode).property('backgroundColor') || null}
+    }
+
+    mjmlRendering {
+        renderer = KaufmannDigital.EmailEditing:Component.TableOfContents {
+            @apply.componentProps = ${componentProps}
+        }
+    }
+
+    htmlRendering {
+        renderer = KaufmannDigital.EmailEditing:MjmlElementRenderer {
+            mjmlSource = KaufmannDigital.EmailEditing:Component.TableOfContents {
+                @apply.componentProps = ${componentProps}
+            }
+        }
+    }
+}
