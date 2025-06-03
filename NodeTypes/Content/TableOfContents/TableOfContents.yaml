@@ -1,0 +1,13 @@
+'KaufmannDigital.EmailEditing:Content.TableOfContents':
+  superTypes:
+    'Neos.Neos:Content': true
+    'KaufmannDigital.EmailEditing:Mixin.Properties.Headline': true
+    'KaufmannDigital.EmailEditing:Mixin.Background.BackgroundColor': true
+  ui:
+    label: 'Inhaltsverzeichnis (TOC)'
+    icon: 'fas fa-lines'
+    group: emailEditing
+    inlineEditable: true
+  properties:
+    headline:
+      defaultValue: 'Das erwartet Sie in diesem Newsletter'

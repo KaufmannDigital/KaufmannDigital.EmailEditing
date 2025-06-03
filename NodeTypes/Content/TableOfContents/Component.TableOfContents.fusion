@@ -1,0 +1,44 @@
+prototype(KaufmannDigital.EmailEditing:Component.TableOfContents) < prototype(Neos.Fusion:Component) {
+
+    headline = null
+    headlineSize = '24px'
+    textSize = '14px'
+
+    headlines = ${[]}
+    @context.headlines = ${this.headlines}
+
+    headlineData = Neos.Fusion:Map {
+        items = ${headlines}
+        itemName = "headline"
+        itemRenderer = Neos.Fusion:DataStructure {
+            href = ${'#headline_' + headline.identifier}
+            text = ${q(headline).property('headline')}
+        }
+    }
+
+    styles = '
+        .table-of-contents > li {
+            background: red;
+        }
+    '
+
+    renderer = afx`
+        <KaufmannDigital.EmailEditing:Component.Headline
+                headline={props.headline}
+                fontSize={props.headlineSize}
+        />
+        <KaufmannDigital.EmailEditing:Component.Text @children="content" cssClass="table-of-contents">
+            <ol>
+                <Neos.Fusion:Loop items={props.headlines}>
+                    <li>
+                        <a href={'#' + item.identifier}>{q(item).property('headline')}</a>
+                    </li>
+                </Neos.Fusion:Loop>
+            </ol>
+        </KaufmannDigital.EmailEditing:Component.Text>
+
+        <mj-styles>
+            {props.styles}
+        </mj-styles>
+    `
+}

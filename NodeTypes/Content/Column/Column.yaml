@@ -14,6 +14,7 @@
       'KaufmannDigital.EmailEditing:Content.Button': true
       'KaufmannDigital.EmailEditing:Content.Image': true
       'KaufmannDigital.EmailEditing:Content.Spacer': true
+      'KaufmannDigital.EmailEditing:Content.TableOfContents': true
   ui:
     label: 'Column'
     icon: 'box'
