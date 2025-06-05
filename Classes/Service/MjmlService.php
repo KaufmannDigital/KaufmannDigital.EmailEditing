@@ -14,20 +14,15 @@ class MjmlService
     #[Flow\Inject]
     protected ContextFactoryInterface $contextFactory;
 
+    #[Flow\InjectConfiguration(path: 'mjmlRendering.fusionPaths')]
+    protected array $mjmlFusionIncludes;
+
     public function getMjmlSourceForEmail(NodeInterface $emailNode, ControllerContext $controllerContext)
     {
 
         $fusionView = new \Neos\Fusion\View\FusionView();
         $fusionView->setControllerContext($controllerContext);
-        $fusionView->setFusionPathPatterns(
-            [
-                'resource://Neos.Fusion/Private/Fusion',
-                'resource://Neos.Neos/Private/Fusion',
-                'resource://KaufmannDigital.EmailEditing/Private/Fusion',
-                'resource://KaufmannDigital.EmailEditing.CleverReach/Private/Fusion',
-
-            ]
-        );
+        $fusionView->setFusionPathPatterns($this->mjmlFusionIncludes);
         $fusionView->setFusionPath('MJMLRenderer');
 
 

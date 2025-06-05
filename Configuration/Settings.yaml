@@ -1,19 +1,7 @@
-Neos:
-  Neos:
-    fusion:
-      autoInclude:
-        KaufmannDigital.EmailEditing: true
-    userInterface:
-      translation:
-        autoInclude:
-          KaufmannDigital.EmailEditing:
-            - 'NodeTypes/*'
-    nodeTypes:
-      groups:
-        emailEditing:
-          label: 'Email-Editing'
-          icon: 'envelope'
-          position: end
-  Fusion:
-    defaultContext:
-      MJML: KaufmannDigital\EmailEditing\Fusion\Helper\MjmlHelper
+KaufmannDigital:
+  EmailEditing:
+    mjmlRendering:
+      fusionPaths:
+        'Neos.Fusion': 'resource://Neos.Fusion/Private/Fusion'
+        'Neos.Neos': 'resource://Neos.Neos/Private/Fusion'
+        'KaufmannDigital.EmailEditing': 'resource://KaufmannDigital.EmailEditing/Private/Fusion'

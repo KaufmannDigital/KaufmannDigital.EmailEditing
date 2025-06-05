@@ -1,0 +1,20 @@
+Neos:
+  Neos:
+    fusion:
+      autoInclude:
+        KaufmannDigital.EmailEditing: true
+    userInterface:
+      translation:
+        autoInclude:
+          KaufmannDigital.EmailEditing:
+            - 'NodeTypes/*'
+    nodeTypes:
+      groups:
+        emailEditing:
+          label: 'Email-Editing'
+          icon: 'envelope'
+          position: end
+  Fusion:
+    defaultContext:
+      MJML: KaufmannDigital\EmailEditing\Fusion\Helper\MjmlHelper
+      FallbackValue: KaufmannDigital\EmailEditing\Fusion\Helper\FallbackValueHelper
