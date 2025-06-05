@@ -26,7 +26,7 @@ prototype(KaufmannDigital.EmailEditing:ContentComponent.DualRendering) < prototy
       }
       entryTags {
         1 = ${Neos.Caching.nodeTag(node)}
-        3 = ${Neos.Caching.nodeTag(q(node).parents('[instanceof Neos.Neos:Content][backgroundColor]').get())}
+        3 = ${Neos.Caching.nodeTag(q(node).parents('[instanceof Neos.Neos:Content]').get())} //To trigger re-redingering, if backgroundColor changes
       }
     }
 

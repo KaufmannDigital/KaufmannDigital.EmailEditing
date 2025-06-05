@@ -7,31 +7,28 @@ prototype(KaufmannDigital.EmailEditing:Content.Button) < prototype(KaufmannDigit
       backgroundColor = ${q(node).property('backgroundColor') || '#414141'}
       color = ${q(node).property('fontColor') || '#FFFFFF'}
       align = ${q(node).property('align') || 'left'}
-      href = ${q(node).property('target') || ''}
-      href.@process.convertUri = Neos.Neos:ConvertUris
+      href = ${!node.context.inBackend ? (q(node).property('target') || '') : null}
+      href.@process.convertUris = Neos.Neos:ConvertUris
+
+      label = Neos.Neos:Editable {
+        property = 'buttonLabel'
+      }
     }
   }
 
   mjmlRendering {
     renderer = KaufmannDigital.EmailEditing:Component.Button {
       @apply.componentProps = ${componentProps}
-
-      label = ${label}
     }
   }
 
   htmlRendering {
 
-    label = Neos.Neos:Editable {
-      property = 'buttonLabel'
-    }
 
     renderer = KaufmannDigital.EmailEditing:MjmlElementRenderer {
-
-      backgroundColor = ${q(q(node).parents('[backgroundColor]').get(0)).property('backgroundColor')}
+      backgroundColor = ${FallbackValue.contentBackgroundColor(node)}
       mjmlSource = KaufmannDigital.EmailEditing:Component.Button {
         @apply.componentProps = ${componentProps}
-        label = ${props.label}
       }
     }
   }

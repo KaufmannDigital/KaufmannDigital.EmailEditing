@@ -20,6 +20,7 @@ prototype(KaufmannDigital.EmailEditing:Content.Image) < prototype(KaufmannDigita
 
   htmlRendering {
     renderer = KaufmannDigital.EmailEditing:MjmlElementRenderer {
+      backgroundColor = ${FallbackValue.contentBackgroundColor(node)}
       mjmlSource = KaufmannDigital.EmailEditing:Component.Image {
         @apply.componentProps = ${componentProps}
       }

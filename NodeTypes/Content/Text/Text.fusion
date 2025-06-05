@@ -29,7 +29,7 @@ prototype(KaufmannDigital.EmailEditing:Content.Text) < prototype(KaufmannDigital
     textTransform = ${q(node).property('textTransform') || q(templateNode).property('textTextTransform') || null}
     textAlign = ${q(node).property('textAlign') || q(templateNode).property('textTextAlign') || null}
     padding = ${q(node).property('padding') || q(templateNode).property('textPadding') || null}
-    backgroundColor = ${q(node).property('backgroundColor') || q(node).parents().property('backgroundColor') || q(templateNode).property('textPadding') || null}
+    backgroundColor = ${FallbackValue.contentBackgroundColor(node)}
   }
   @context.componentProps = ${this.componentProps}
 

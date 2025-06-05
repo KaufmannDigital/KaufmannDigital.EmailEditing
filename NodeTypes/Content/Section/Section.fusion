@@ -1,21 +1,20 @@
 prototype(KaufmannDigital.EmailEditing:Content.Section) < prototype(KaufmannDigital.EmailEditing:ContentComponent.DualRendering) {
 
   componentProps = Neos.Fusion:DataStructure {
-    @context {
-      templateNode = KaufmannDigital.EmailEditing:TemplateNodeSelector
-    }
+
+    templateNode = KaufmannDigital.EmailEditing:TemplateNodeSelector
 
     backgroundUrl = Neos.Neos:ImageUri {
       asset = ${q(node).property('backgroundImage')}
     }
-    backgroundColor = ${q(node).property('backgroundColor') || q(templateNode).property('sectionBackgroundColor') || null}
+    backgroundColor = ${q(node).property('backgroundColor') || q(this.templateNode).property('sectionBackgroundColor') || null}
     fullWidth = ${q(node).property('backgroundFullWidth') || null}
-    backgroundRepeat = ${q(node).property('backgroundRepeat') || q(templateNode).property('sectionBackgroundRepeat') || null}
-    backgroundPosition = ${q(node).property('backgroundPosition') || q(templateNode).property('sectionBackgroundPosition') || null}
-    backgroundSize = ${q(node).property('backgroundSize') || q(templateNode).property('sectionBackgroundSize') || null}
-    backgroundPositionX = ${q(node).property('backgroundPositionX') || q(templateNode).property('sectionBackgroundPositionX') || null}
-    backgroundPositionY = ${q(node).property('backgroundPositionY') || q(templateNode).property('sectionBackgroundPositionY') || null}
-    padding = ${q(node).property('padding') || q(templateNode).property('sectionPadding') || null}
+    backgroundRepeat = ${q(node).property('backgroundRepeat') || q(this.templateNode).property('sectionBackgroundRepeat') || null}
+    backgroundPosition = ${q(node).property('backgroundPosition') || q(this.templateNode).property('sectionBackgroundPosition') || null}
+    backgroundSize = ${q(node).property('backgroundSize') || q(this.templateNode).property('sectionBackgroundSize') || null}
+    backgroundPositionX = ${q(node).property('backgroundPositionX') || q(this.templateNode).property('sectionBackgroundPositionX') || null}
+    backgroundPositionY = ${q(node).property('backgroundPositionY') || q(this.templateNode).property('sectionBackgroundPositionY') || null}
+    padding = ${q(node).property('padding') || q(this.templateNode).property('sectionPadding') || null}
   }
 
   @context.componentProps = ${this.componentProps}
