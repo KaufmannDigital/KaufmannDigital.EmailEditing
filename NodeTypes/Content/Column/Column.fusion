@@ -1,12 +1,10 @@
 prototype(KaufmannDigital.EmailEditing:Content.Column) < prototype(KaufmannDigital.EmailEditing:ContentComponent.DualRendering) {
 
   componentProps = Neos.Fusion:DataStructure {
-    @context {
-      templateNode = KaufmannDigital.EmailEditing:TemplateNodeSelector
-    }
+    templateNode = KaufmannDigital.EmailEditing:TemplateNodeSelector
 
-    backgroundColor = ${q(node).property('backgroundColor') || q(templateNode).property('columnBackgroundColor') || null}
-    padding = ${q(node).property('padding') || q(templateNode).property('columnPadding') || null}
+    backgroundColor = ${q(node).property('backgroundColor') || q(this.templateNode).property('columnBackgroundColor') || null}
+    padding = ${q(node).property('padding') || q(this.templateNode).property('columnPadding') || null}
     width = ${q(node).property('width') || '100%'}
   }
 
