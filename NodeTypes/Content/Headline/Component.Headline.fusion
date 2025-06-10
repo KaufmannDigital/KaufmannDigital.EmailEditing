@@ -14,9 +14,11 @@ prototype(KaufmannDigital.EmailEditing:Component.Headline) < prototype(Neos.Fusi
   backgroundColor = null
   headline = null
   cssClass = null
+  id = null
 
 
   renderer = afx`
+    <mj-raw @if.condition={props.id}><div id={props.id}></div></mj-raw>
     <mj-text
       color={props.fontColor}
       font-family={props.fontFamily}

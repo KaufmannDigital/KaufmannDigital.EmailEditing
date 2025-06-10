@@ -17,6 +17,7 @@ prototype(KaufmannDigital.EmailEditing:Content.Headline) < prototype(KaufmannDig
       }
     }
 
+    id = ${node.identifier}
     fontColor = ${q(node).property('fontColor') || q(templateNode).property('headlineFontColor') || null}
     fontFamily = ${q(node).property('fontFamily') || q(templateNode).property('headlineFontFamily') || null}
     fontSize = ${q(node).property('fontSize') || q(templateNode).property('headlineFontSize') || null}
