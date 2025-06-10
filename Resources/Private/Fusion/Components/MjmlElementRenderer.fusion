@@ -2,7 +2,7 @@ prototype(KaufmannDigital.EmailEditing:MjmlElementRenderer) < prototype(Neos.Fus
   @class = 'KaufmannDigital\\EmailEditing\\Fusion\\FusionObjects\\MjmlElementRendererImplementation'
 
   maxWidth = ${q(this.templateNode).property('width')}
-  backgroundColor = ${q(this.templateNode).property('backgroundColor')}
+  backgroundColor = ${node ? FallbackValue.contentBackgroundColor(node) : '#FFFFFF'}
 
   mjmlSource = ''
 }
