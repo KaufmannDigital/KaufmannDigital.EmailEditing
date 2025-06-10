@@ -1,0 +1,7 @@
+prototype(KaufmannDigital.EmailEditing:MjmlComponent) < prototype(Neos.Fusion:Component) {
+
+    mjmlRenderer = ''
+    additionalStyles = Neos.Fusion:DataStructure
+
+    renderer.@process.append = ${'<mj-raw><style type="text/css">' + Array.join(props.additionalStyles, '') +'</style></mj-raw>' + value}
+}
