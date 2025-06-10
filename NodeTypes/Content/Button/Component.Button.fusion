@@ -1,4 +1,4 @@
-prototype(KaufmannDigital.EmailEditing:Component.Button) < prototype(Neos.Fusion:Component) {
+prototype(KaufmannDigital.EmailEditing:Component.Button) < prototype(KaufmannDigital.EmailEditing:MjmlComponent) {
 
   href = null
   padding = ''
@@ -6,6 +6,7 @@ prototype(KaufmannDigital.EmailEditing:Component.Button) < prototype(Neos.Fusion
   color = 'white'
   backgroundColor = '#414141'
   align = 'left'
+  cssClass = null
 
 
   renderer = afx`
@@ -29,6 +30,7 @@ prototype(KaufmannDigital.EmailEditing:Component.Button) < prototype(Neos.Fusion
       rel={props.rel}
       target={props.target}
       title={props.title}
+      css-class={props.cssClass}
     >
       <mj-raw>{props.label}</mj-raw>
     </mj-button>
