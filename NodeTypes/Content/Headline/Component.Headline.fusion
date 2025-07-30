@@ -1,4 +1,4 @@
-prototype(KaufmannDigital.EmailEditing:Component.Headline) < prototype(Neos.Fusion:Component) {
+prototype(KaufmannDigital.EmailEditing:Component.Headline) < prototype(KaufmannDigital.EmailEditing:MjmlComponent) {
 
   color = null
   fontFamily = null
