@@ -1,6 +1,6 @@
 prototype(KaufmannDigital.EmailEditing:Component.Headline) < prototype(KaufmannDigital.EmailEditing:MjmlComponent) {
 
-  color = null
+  fontColor = null
   fontFamily = null
   fontSize = null
   fontStyle = null
