@@ -14,6 +14,7 @@ class FallbackValueHelper implements ProtectedContextAwareInterface {
         $q = new FlowQuery([$node]);
         //Check parent contents
 
+        //Column
         $parentBackgroundNode = $q->parents('[instanceof KaufmannDigital.EmailEditing:Content.Column][backgroundColor!=""]')->get(0);
         if ($parentBackgroundNode instanceof NodeInterface
             && !empty($parentBackgroundNode->getProperty('backgroundColor'))
@@ -21,6 +22,15 @@ class FallbackValueHelper implements ProtectedContextAwareInterface {
             return $parentBackgroundNode->getProperty('backgroundColor');
         }
 
+        //Section
+        $parentBackgroundNode = $q->parents('[instanceof KaufmannDigital.EmailEditing:Content.Section][backgroundColor!=""]')->get(0);
+        if ($parentBackgroundNode instanceof NodeInterface
+            && !empty($parentBackgroundNode->getProperty('backgroundColor'))
+        ) {
+            return $parentBackgroundNode->getProperty('backgroundColor');
+        }
+
+        //Email
         $emailNode = $q->parents('[instanceof Neos.Neos:Document]')->get(0);
         if ($emailNode->getNodeType()->getName() === 'KaufmannDigital.EmailEditing:Document.Email') {
             $emailNode = $emailNode->getProperty('emailLayout');
