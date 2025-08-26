@@ -9,6 +9,7 @@ prototype(KaufmannDigital.EmailEditing:Content.Image) < prototype(KaufmannDigita
       width = ${q(node).property('imageWidth')}
       padding = ${q(node).property('imagePadding')}
       align = ${q(node).property('align')}
+      href = ${node.context.inBackend ? null : q(node).property('href')}
     }
   }
 

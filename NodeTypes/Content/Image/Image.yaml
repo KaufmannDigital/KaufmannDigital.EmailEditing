@@ -36,3 +36,12 @@
         reloadIfChanged: true
         inspector:
           group: image
+    href:
+      type: string
+      defaultValue: ''
+      ui:
+        label: 'Link (URL)'
+        reloadIfChanged: true
+        inspector:
+          editor: 'Neos.Neos/Inspector/Editors/LinkEditor'
+          group: image
