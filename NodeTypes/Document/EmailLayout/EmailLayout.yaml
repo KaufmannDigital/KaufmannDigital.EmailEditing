@@ -27,6 +27,9 @@
         columns:
           label: 'Spalten'
           icon: 'columns'
+        buttons:
+          label: 'Buttons'
+          icon: 'link'
   childNodes:
     header:
       type: 'Neos.Neos:ContentCollection'
@@ -493,4 +496,22 @@
         reloadPageIfChanged: true
         inspector:
           group: columns
+    #endregion
+
+    #region buttons
+    buttonBackgroundColor:
+      type: string
+      ui:
+        label: 'Hintergrundfarbe'
+        reloadPageIfChanged: true
+        inspector:
+          group: buttons
+
+    buttonTextColor:
+      type: string
+      ui:
+        label: 'Textfarbe'
+        reloadPageIfChanged: true
+        inspector:
+          group: buttons
     #endregion
