@@ -6,20 +6,18 @@
     fontStyle:
       type: string
       ui:
-        label: 'Schriftschnitt'
+        label: i18n
         reloadIfChanged: true
         inspector:
           group: textOptions
-          inspector:
-            group: textOptions
-            editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
-            editorOptions:
-              placeholder: 'Bitte wählen...'
-              allowEmpty: true
-              values:
-                'normal':
-                  label: 'Normal'
-                'italic':
-                  label: 'Italic'
-                'oblique':
-                  label: 'Oblique'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            placeholder: i18n
+            allowEmpty: true
+            values:
+              'normal':
+                label: 'Normal'
+              'italic':
+                label: 'Italic'
+              'oblique':
+                label: 'Oblique'

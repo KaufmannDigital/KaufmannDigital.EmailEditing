@@ -3,20 +3,20 @@
     'Neos.Neos:Content': true
     'KaufmannDigital.EmailEditing:Mixin.Position.Align': true
   ui:
-    label: 'Bild'
+    label: i18n
     icon: 'icon-image'
     group: emailEditing
     inlineEditable: true
     inspector:
       groups:
         image:
-          label: 'Bild'
+          label: i18n
           icon: 'icon-image'
   properties:
     image:
       type: 'Neos\Media\Domain\Model\ImageInterface'
       ui:
-        label: 'Bild'
+        label: i18n
         reloadIfChanged: true
         inspector:
           group: image
@@ -24,7 +24,7 @@
       type: string
       defaultValue: ''
       ui:
-        label: 'Bild-Breite'
+        label: i18n
         reloadIfChanged: true
         inspector:
           group: image
@@ -32,7 +32,7 @@
       type: string
       defaultValue: ''
       ui:
-        label: 'Padding'
+        label: i18n
         reloadIfChanged: true
         inspector:
           group: image
@@ -40,7 +40,7 @@
       type: string
       defaultValue: ''
       ui:
-        label: 'Link (URL)'
+        label: i18n
         reloadIfChanged: true
         inspector:
           editor: 'Neos.Neos/Inspector/Editors/LinkEditor'

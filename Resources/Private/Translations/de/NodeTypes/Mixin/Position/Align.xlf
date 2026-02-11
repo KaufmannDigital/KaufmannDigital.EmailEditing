@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file original="" product-name="KaufmannDigital.EmailEditing" source-language="en" target-language="de" datatype="plaintext">
+        <body>
+            <trans-unit id="properties.align" xml:space="preserve">
+                <source>Alignment</source>
+                <target>Ausrichtung</target>
+            </trans-unit>
+            <trans-unit id="properties.align.selectBoxEditor.placeholder" xml:space="preserve">
+                <source>Please choose...</source>
+                <target>Bitte wählen...</target>
+            </trans-unit>
+            <trans-unit id="properties.align.selectBoxEditor.values.left" xml:space="preserve">
+                <source>Left</source>
+                <target>Links</target>
+            </trans-unit>
+            <trans-unit id="properties.align.selectBoxEditor.values.right" xml:space="preserve">
+                <source>Right</source>
+                <target>Rechts</target>
+            </trans-unit>
+            <trans-unit id="properties.align.selectBoxEditor.values.center" xml:space="preserve">
+                <source>Center</source>
+                <target>Zentriert</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

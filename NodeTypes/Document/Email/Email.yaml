@@ -2,14 +2,14 @@
   superTypes:
     'Neos.Neos:Document': true
   ui:
-    label: 'Email'
+    label: i18n
     icon: 'envelope'
     group: emailEditing
     position: 20
     inspector:
       groups:
         email:
-          label: 'E-Mail'
+          label: i18n
           icon: 'envelope'
   childNodes:
     main:
@@ -22,7 +22,7 @@
     emailLayout:
       type: reference
       ui:
-        label: 'E-Mail Layout'
+        label: i18n
         reloadPageIfChanged: true
         showInCreationDialog: true
         inspector:

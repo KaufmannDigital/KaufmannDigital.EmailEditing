@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file original="" product-name="KaufmannDigital.EmailEditing" source-language="en" target-language="de" datatype="plaintext">
+        <body>
+            <trans-unit id="properties.textTransform" xml:space="preserve">
+                <source>Text Transform</source>
+                <target>Text-Transformation</target>
+            </trans-unit>
+            <trans-unit id="properties.textTransform.selectBoxEditor.placeholder" xml:space="preserve">
+                <source>Please choose...</source>
+                <target>Bitte wählen...</target>
+            </trans-unit>
+            <trans-unit id="properties.textTransform.selectBoxEditor.values.uppercase" xml:space="preserve">
+                <source>Uppercase</source>
+                <target>Großbuchstaben</target>
+            </trans-unit>
+            <trans-unit id="properties.textTransform.selectBoxEditor.values.lowercase" xml:space="preserve">
+                <source>Lowercase</source>
+                <target>Kleinbuchstaben</target>
+            </trans-unit>
+            <trans-unit id="properties.textTransform.selectBoxEditor.values.capitalize" xml:space="preserve">
+                <source>Capitalize</source>
+                <target>Erster Buchstabe Groß</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

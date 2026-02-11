@@ -8,7 +8,7 @@
       type: string
       defaultValue: 'auto'
       ui:
-        label: 'Hintergrundgröße'
+        label: i18n
         reloadIfChanged: true
         inspector:
           group: background

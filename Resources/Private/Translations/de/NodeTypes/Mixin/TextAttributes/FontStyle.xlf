@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file original="" product-name="KaufmannDigital.EmailEditing" source-language="en" target-language="de" datatype="plaintext">
+        <body>
+            <trans-unit id="properties.fontStyle" xml:space="preserve">
+                <source>Font Style</source>
+                <target>Schriftschnitt</target>
+            </trans-unit>
+            <trans-unit id="properties.fontStyle.selectBoxEditor.placeholder" xml:space="preserve">
+                <source>Please choose...</source>
+                <target>Bitte wählen...</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

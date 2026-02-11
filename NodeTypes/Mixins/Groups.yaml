@@ -4,14 +4,14 @@
     inspector:
       groups:
         textOptions:
-          label: 'Text'
+          label: i18n
           icon: 'fas fa-heading'
         positionOptions:
-          label: 'Position'
+          label: i18n
           icon: 'fas fa-heading'
         background:
-          label: 'Hintergrund'
+          label: i18n
           icon: 'fas fa-image'
         linking:
-          label: 'Verlinkung'
+          label: i18n
           icon: 'fas fa-link'

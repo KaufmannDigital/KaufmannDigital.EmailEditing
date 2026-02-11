@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file original="" product-name="KaufmannDigital.EmailEditing" source-language="en" target-language="de" datatype="plaintext">
+        <body>
+            <trans-unit id="properties.backgroundRepeat" xml:space="preserve">
+                <source>Background Repeat</source>
+                <target>Hintergrund Wiederholung</target>
+            </trans-unit>
+            <trans-unit id="properties.backgroundRepeat.selectBoxEditor.values.repeat" xml:space="preserve">
+                <source>Repeat</source>
+                <target>Wiederholen</target>
+            </trans-unit>
+            <trans-unit id="properties.backgroundRepeat.selectBoxEditor.values.no-repeat" xml:space="preserve">
+                <source>No Repeat</source>
+                <target>Nicht wiederholen</target>
+            </trans-unit>
+            <trans-unit id="properties.backgroundRepeat.selectBoxEditor.values.repeat-x" xml:space="preserve">
+                <source>Repeat Horizontal</source>
+                <target>Wiederholung horizontal</target>
+            </trans-unit>
+            <trans-unit id="properties.backgroundRepeat.selectBoxEditor.values.repeat-y" xml:space="preserve">
+                <source>Repeat Vertical</source>
+                <target>Wiederholung vertikal</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

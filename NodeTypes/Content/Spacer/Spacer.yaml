@@ -2,21 +2,21 @@
   superTypes:
     'Neos.Neos:Content': true
   ui:
-    label: 'Spacer'
+    label: i18n
     icon: 'fas fa-arrows-alt-v'
     group: emailEditing
     inlineEditable: true
     inspector:
       groups:
         spacerOptions:
-          label: 'Spacer (in px)'
+          label: i18n
           icon: 'fas fa-arrows-alt-v'
   properties:
     height:
       type: integer
       defaultValue: 20
       ui:
-        label: 'Höhe'
+        label: i18n
         reloadIfChanged: true
         inspector:
           group: spacerOptions

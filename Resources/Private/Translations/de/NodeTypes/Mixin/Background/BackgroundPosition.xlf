@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file original="" product-name="KaufmannDigital.EmailEditing" source-language="en" target-language="de" datatype="plaintext">
+        <body>
+            <trans-unit id="properties.backgroundPosition" xml:space="preserve">
+                <source>Background Position</source>
+                <target>Hintergrund-Position</target>
+            </trans-unit>
+            <trans-unit id="properties.backgroundPositionX" xml:space="preserve">
+                <source>Background Position (X-Axis)</source>
+                <target>Hintergrund-Position (X-Achse)</target>
+            </trans-unit>
+            <trans-unit id="properties.backgroundPositionY" xml:space="preserve">
+                <source>Background Position (Y-Axis)</source>
+                <target>Hintergrund-Position (Y-Achse)</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

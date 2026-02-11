@@ -15,7 +15,7 @@
       'KaufmannDigital.EmailEditing:Content.Image': true
       'KaufmannDigital.EmailEditing:Content.Spacer': true
   ui:
-    label: 'Column'
+    label: i18n
     icon: 'box'
     group: emailEditing
     position: 20

@@ -7,9 +7,9 @@
       type: 'Neos\Media\Domain\Model\ImageInterface'
       defaultValue: ''
       ui:
-        label: 'Hintergrundbild'
+        label: i18n
         help:
-          message: 'Bild, welches im Hintergrund der Section flächenfüllend liegt.'
+          message: i18n
         reloadIfChanged: true
         inspector:
           group: background

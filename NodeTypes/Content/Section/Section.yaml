@@ -20,7 +20,7 @@
         column1:
           type: 'KaufmannDigital.EmailEditing:Content.Column'
   ui:
-    label: 'Section'
+    label: i18n
     icon: 'box'
     group: emailEditing
     position: 20

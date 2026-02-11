@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file original="" product-name="KaufmannDigital.EmailEditing" source-language="en" target-language="de" datatype="plaintext">
+        <body>
+            <trans-unit id="ui.label" xml:space="preserve">
+                <source>Image</source>
+                <target>Bild</target>
+            </trans-unit>
+            <trans-unit id="groups.image" xml:space="preserve">
+                <source>Image</source>
+                <target>Bild</target>
+            </trans-unit>
+            <trans-unit id="properties.image" xml:space="preserve">
+                <source>Image</source>
+                <target>Bild</target>
+            </trans-unit>
+            <trans-unit id="properties.imageWidth" xml:space="preserve">
+                <source>Image Width</source>
+                <target>Bild-Breite</target>
+            </trans-unit>
+            <trans-unit id="properties.imagePadding" xml:space="preserve">
+                <source>Padding</source>
+                <target>Padding</target>
+            </trans-unit>
+            <trans-unit id="properties.href" xml:space="preserve">
+                <source>Link (URL)</source>
+                <target>Link (URL)</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

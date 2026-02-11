@@ -7,18 +7,18 @@
       type: string
       defaultValue: 'left'
       ui:
-        label: 'Ausrichtung'
+        label: i18n
         reloadIfChanged: true
         inspector:
           group: positionOptions
           editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
           editorOptions:
-            placeholder: 'Bitte wählen...'
+            placeholder: i18n
             allowEmpty: true
             values:
               'left':
-                label: 'Links'
+                label: i18n
               'right':
-                label: 'Rechts'
+                label: i18n
               'center':
-                label: 'Zentriert'
+                label: i18n

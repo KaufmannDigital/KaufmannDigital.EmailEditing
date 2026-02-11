@@ -6,10 +6,9 @@
     letterSpacing:
       type: string
       ui:
-        label: 'Letter-Spacing'
+        label: i18n
         help:
-          message: 'letter-spacing (CSS) in px oder em'
+          message: i18n
         reloadIfChanged: true
         inspector:
           group: textOptions
-

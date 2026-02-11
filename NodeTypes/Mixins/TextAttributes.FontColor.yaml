@@ -6,7 +6,7 @@
     fontColor:
       type: string
       ui:
-        label: 'Schriftfarbe'
+        label: i18n
         reloadIfChanged: true
         inspector:
           group: textOptions

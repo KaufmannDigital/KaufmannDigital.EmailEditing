@@ -6,9 +6,9 @@
     fontFamily:
       type: string
       ui:
-        label: 'Schriftfamilie'
+        label: i18n
         help:
-          message: 'Die Font-Family für diesen Text inklusive Fallbacks in CSS-Schreibweise. Zum Beispiel: "Ubuntu, Helvetica, Arial, sans-serif"'
+          message: i18n
         reloadIfChanged: true
         inspector:
           group: textOptions

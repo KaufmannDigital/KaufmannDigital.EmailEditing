@@ -6,7 +6,7 @@
     fontSize:
       type: string
       ui:
-        label: 'Schritgröße'
+        label: i18n
         reloadIfChanged: true
         inspector:
           group: textOptions

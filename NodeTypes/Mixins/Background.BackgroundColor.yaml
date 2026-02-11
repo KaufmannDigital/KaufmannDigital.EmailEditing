@@ -6,7 +6,7 @@
     backgroundColor:
       type: string
       ui:
-        label: 'Hintergrundfarbe'
+        label: i18n
         reloadIfChanged: true
         inspector:
           group: background
