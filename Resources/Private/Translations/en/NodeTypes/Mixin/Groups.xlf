@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file original="" product-name="KaufmannDigital.EmailEditing" source-language="en" datatype="plaintext">
+        <body>
+            <trans-unit id="groups.textOptions" xml:space="preserve">
+                <source>Text</source>
+            </trans-unit>
+            <trans-unit id="groups.positionOptions" xml:space="preserve">
+                <source>Position</source>
+            </trans-unit>
+            <trans-unit id="groups.background" xml:space="preserve">
+                <source>Background</source>
+            </trans-unit>
+            <trans-unit id="groups.linking" xml:space="preserve">
+                <source>Linking</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

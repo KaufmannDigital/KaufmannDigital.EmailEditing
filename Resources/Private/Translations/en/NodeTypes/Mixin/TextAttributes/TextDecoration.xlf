@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file original="" product-name="KaufmannDigital.EmailEditing" source-language="en" datatype="plaintext">
+        <body>
+            <trans-unit id="properties.textDecoration" xml:space="preserve">
+                <source>Text Decoration</source>
+            </trans-unit>
+            <trans-unit id="properties.textDecoration.selectBoxEditor.placeholder" xml:space="preserve">
+                <source>Please choose...</source>
+            </trans-unit>
+            <trans-unit id="properties.textDecoration.selectBoxEditor.values.none" xml:space="preserve">
+                <source>None</source>
+            </trans-unit>
+            <trans-unit id="properties.textDecoration.selectBoxEditor.values.underline" xml:space="preserve">
+                <source>Underline</source>
+            </trans-unit>
+            <trans-unit id="properties.textDecoration.selectBoxEditor.values.overline" xml:space="preserve">
+                <source>Overline</source>
+            </trans-unit>
+            <trans-unit id="properties.textDecoration.selectBoxEditor.values.line-through" xml:space="preserve">
+                <source>Strikethrough</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

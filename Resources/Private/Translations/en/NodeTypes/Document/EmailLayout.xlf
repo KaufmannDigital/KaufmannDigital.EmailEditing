@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file original="" product-name="KaufmannDigital.EmailEditing" source-language="en" datatype="plaintext">
+        <body>
+            <trans-unit id="ui.label" xml:space="preserve">
+                <source>Email Layout</source>
+            </trans-unit>
+            <trans-unit id="groups.emailLayout" xml:space="preserve">
+                <source>Email Layout</source>
+            </trans-unit>
+            <trans-unit id="groups.headlines" xml:space="preserve">
+                <source>Headlines</source>
+            </trans-unit>
+            <trans-unit id="groups.texts" xml:space="preserve">
+                <source>Texts</source>
+            </trans-unit>
+            <trans-unit id="groups.sections" xml:space="preserve">
+                <source>Sections</source>
+            </trans-unit>
+            <trans-unit id="groups.columns" xml:space="preserve">
+                <source>Columns</source>
+            </trans-unit>
+            <trans-unit id="groups.buttons" xml:space="preserve">
+                <source>Buttons</source>
+            </trans-unit>
+            <trans-unit id="properties.logo" xml:space="preserve">
+                <source>Logo</source>
+            </trans-unit>
+            <trans-unit id="properties.width" xml:space="preserve">
+                <source>Width</source>
+            </trans-unit>
+            <trans-unit id="properties.backgroundColor" xml:space="preserve">
+                <source>Background Color</source>
+            </trans-unit>
+            <trans-unit id="properties.headlineFontColor" xml:space="preserve">
+                <source>Font Color</source>
+            </trans-unit>
+            <trans-unit id="properties.headlineFontFamily" xml:space="preserve">
+                <source>Font Family</source>
+            </trans-unit>
+            <trans-unit id="properties.headlineFontFamily.ui.help.message" xml:space="preserve">
+                <source>The font-family for this text including fallbacks in CSS notation. For example: "Ubuntu, Helvetica, Arial, sans-serif"</source>
+            </trans-unit>
+            <trans-unit id="properties.headlineFontSize" xml:space="preserve">
+                <source>Font Size</source>
+            </trans-unit>
+            <trans-unit id="properties.headlineFontStyle" xml:space="preserve">
+                <source>Font Style</source>
+            </trans-unit>
+            <trans-unit id="properties.headlineFontStyle.selectBoxEditor.placeholder" xml:space="preserve">
+                <source>Please choose...</source>
+            </trans-unit>
+            <trans-unit id="properties.headlineFontWeight" xml:space="preserve">
+                <source>Font Weight</source>
+            </trans-unit>
+            <trans-unit id="properties.headlineFontWeight.ui.help.message" xml:space="preserve">
+                <source>Font-Weight (CSS).</source>
+            </trans-unit>
+            <trans-unit id="properties.headlineLineHeight" xml:space="preserve">
+                <source>Line Height</source>
+            </trans-unit>
+            <trans-unit id="properties.headlineLineHeight.ui.help.message" xml:space="preserve">
+                <source>line-height (CSS) as a numeric value.</source>
+            </trans-unit>
+            <trans-unit id="properties.headlineLetterSpacing" xml:space="preserve">
+                <source>Letter Spacing</source>
+            </trans-unit>
+            <trans-unit id="properties.headlineLetterSpacing.ui.help.message" xml:space="preserve">
+                <source>letter-spacing (CSS) in px or em</source>
+            </trans-unit>
+            <trans-unit id="properties.headlineTextDecoration" xml:space="preserve">
+                <source>Text Decoration</source>
+            </trans-unit>
+            <trans-unit id="properties.headlineTextDecoration.ui.help.message" xml:space="preserve">
+                <source>text-decoration (CSS) in CSS notation.</source>
+            </trans-unit>
+            <trans-unit id="properties.headlineTextDecoration.selectBoxEditor.placeholder" xml:space="preserve">
+                <source>Please choose...</source>
+            </trans-unit>
+            <trans-unit id="properties.headlineTextDecoration.selectBoxEditor.values.none" xml:space="preserve">
+                <source>None</source>
+            </trans-unit>
+            <trans-unit id="properties.headlineTextDecoration.selectBoxEditor.values.underline" xml:space="preserve">
+                <source>Underline</source>
+            </trans-unit>
+            <trans-unit id="properties.headlineTextDecoration.selectBoxEditor.values.overline" xml:space="preserve">
+                <source>Overline</source>
+            </trans-unit>
+            <trans-unit id="properties.headlineTextDecoration.selectBoxEditor.values.line-through" xml:space="preserve">
+                <source>Strikethrough</source>
+            </trans-unit>
+            <trans-unit id="properties.headlineTextTransform" xml:space="preserve">
+                <source>Text Transform</source>
+            </trans-unit>
+            <trans-unit id="properties.headlineTextTransform.ui.help.message" xml:space="preserve">
+                <source>text-transform (CSS) in CSS notation.</source>
+            </trans-unit>
+            <trans-unit id="properties.headlineTextTransform.selectBoxEditor.placeholder" xml:space="preserve">
+                <source>Please choose...</source>
+            </trans-unit>
+            <trans-unit id="properties.headlineTextTransform.selectBoxEditor.values.uppercase" xml:space="preserve">
+                <source>Uppercase</source>
+            </trans-unit>
+            <trans-unit id="properties.headlineTextTransform.selectBoxEditor.values.lowercase" xml:space="preserve">
+                <source>Lowercase</source>
+            </trans-unit>
+            <trans-unit id="properties.headlineTextTransform.selectBoxEditor.values.capitalize" xml:space="preserve">
+                <source>Capitalize</source>
+            </trans-unit>
+            <trans-unit id="properties.headlineTextAlign" xml:space="preserve">
+                <source>Text Alignment</source>
+            </trans-unit>
+            <trans-unit id="properties.headlineTextAlign.ui.help.message" xml:space="preserve">
+                <source>text-align (CSS) in CSS notation.</source>
+            </trans-unit>
+            <trans-unit id="properties.headlineTextAlign.selectBoxEditor.placeholder" xml:space="preserve">
+                <source>Please choose...</source>
+            </trans-unit>
+            <trans-unit id="properties.headlineTextAlign.selectBoxEditor.values.left" xml:space="preserve">
+                <source>Left</source>
+            </trans-unit>
+            <trans-unit id="properties.headlineTextAlign.selectBoxEditor.values.right" xml:space="preserve">
+                <source>Right</source>
+            </trans-unit>
+            <trans-unit id="properties.headlineTextAlign.selectBoxEditor.values.center" xml:space="preserve">
+                <source>Center</source>
+            </trans-unit>
+            <trans-unit id="properties.headlineTextAlign.selectBoxEditor.values.justify" xml:space="preserve">
+                <source>Justify</source>
+            </trans-unit>
+            <trans-unit id="properties.headlinePadding" xml:space="preserve">
+                <source>Spacing</source>
+            </trans-unit>
+            <trans-unit id="properties.headlinePadding.ui.help.message" xml:space="preserve">
+                <source>padding (CSS). Accepts up to 4 values separated by spaces. e.g. "10px", "10px 20px", "10px 20px 30px", "10px 20px 30px 40px"</source>
+            </trans-unit>
+            <trans-unit id="properties.textFontColor" xml:space="preserve">
+                <source>Font Color</source>
+            </trans-unit>
+            <trans-unit id="properties.textFontFamily" xml:space="preserve">
+                <source>Font Family</source>
+            </trans-unit>
+            <trans-unit id="properties.textFontFamily.ui.help.message" xml:space="preserve">
+                <source>The font-family for this text including fallbacks in CSS notation. For example: "Ubuntu, Helvetica, Arial, sans-serif"</source>
+            </trans-unit>
+            <trans-unit id="properties.textFontSize" xml:space="preserve">
+                <source>Font Size</source>
+            </trans-unit>
+            <trans-unit id="properties.textFontStyle" xml:space="preserve">
+                <source>Font Style</source>
+            </trans-unit>
+            <trans-unit id="properties.textFontStyle.selectBoxEditor.placeholder" xml:space="preserve">
+                <source>Please choose...</source>
+            </trans-unit>
+            <trans-unit id="properties.textFontWeight" xml:space="preserve">
+                <source>Font Weight</source>
+            </trans-unit>
+            <trans-unit id="properties.textFontWeight.ui.help.message" xml:space="preserve">
+                <source>Font-Weight (CSS).</source>
+            </trans-unit>
+            <trans-unit id="properties.textLineHeight" xml:space="preserve">
+                <source>Line Height</source>
+            </trans-unit>
+            <trans-unit id="properties.textLineHeight.ui.help.message" xml:space="preserve">
+                <source>line-height (CSS) as a numeric value.</source>
+            </trans-unit>
+            <trans-unit id="properties.textLetterSpacing" xml:space="preserve">
+                <source>Letter Spacing</source>
+            </trans-unit>
+            <trans-unit id="properties.textLetterSpacing.ui.help.message" xml:space="preserve">
+                <source>letter-spacing (CSS) in px or em</source>
+            </trans-unit>
+            <trans-unit id="properties.textTextDecoration" xml:space="preserve">
+                <source>Text Decoration</source>
+            </trans-unit>
+            <trans-unit id="properties.textTextDecoration.ui.help.message" xml:space="preserve">
+                <source>text-decoration (CSS) in CSS notation.</source>
+            </trans-unit>
+            <trans-unit id="properties.textTextDecoration.selectBoxEditor.placeholder" xml:space="preserve">
+                <source>Please choose...</source>
+            </trans-unit>
+            <trans-unit id="properties.textTextDecoration.selectBoxEditor.values.none" xml:space="preserve">
+                <source>None</source>
+            </trans-unit>
+            <trans-unit id="properties.textTextDecoration.selectBoxEditor.values.underline" xml:space="preserve">
+                <source>Underline</source>
+            </trans-unit>
+            <trans-unit id="properties.textTextDecoration.selectBoxEditor.values.overline" xml:space="preserve">
+                <source>Overline</source>
+            </trans-unit>
+            <trans-unit id="properties.textTextDecoration.selectBoxEditor.values.line-through" xml:space="preserve">
+                <source>Strikethrough</source>
+            </trans-unit>
+            <trans-unit id="properties.textTextTransform" xml:space="preserve">
+                <source>Text Transform</source>
+            </trans-unit>
+            <trans-unit id="properties.textTextTransform.ui.help.message" xml:space="preserve">
+                <source>text-transform (CSS) in CSS notation.</source>
+            </trans-unit>
+            <trans-unit id="properties.textTextTransform.selectBoxEditor.placeholder" xml:space="preserve">
+                <source>Please choose...</source>
+            </trans-unit>
+            <trans-unit id="properties.textTextTransform.selectBoxEditor.values.uppercase" xml:space="preserve">
+                <source>Uppercase</source>
+            </trans-unit>
+            <trans-unit id="properties.textTextTransform.selectBoxEditor.values.lowercase" xml:space="preserve">
+                <source>Lowercase</source>
+            </trans-unit>
+            <trans-unit id="properties.textTextTransform.selectBoxEditor.values.capitalize" xml:space="preserve">
+                <source>Capitalize</source>
+            </trans-unit>
+            <trans-unit id="properties.textTextAlign" xml:space="preserve">
+                <source>Text Alignment</source>
+            </trans-unit>
+            <trans-unit id="properties.textTextAlign.ui.help.message" xml:space="preserve">
+                <source>text-align (CSS) in CSS notation.</source>
+            </trans-unit>
+            <trans-unit id="properties.textTextAlign.selectBoxEditor.placeholder" xml:space="preserve">
+                <source>Please choose...</source>
+            </trans-unit>
+            <trans-unit id="properties.textTextAlign.selectBoxEditor.values.left" xml:space="preserve">
+                <source>Left</source>
+            </trans-unit>
+            <trans-unit id="properties.textTextAlign.selectBoxEditor.values.right" xml:space="preserve">
+                <source>Right</source>
+            </trans-unit>
+            <trans-unit id="properties.textTextAlign.selectBoxEditor.values.center" xml:space="preserve">
+                <source>Center</source>
+            </trans-unit>
+            <trans-unit id="properties.textTextAlign.selectBoxEditor.values.justify" xml:space="preserve">
+                <source>Justify</source>
+            </trans-unit>
+            <trans-unit id="properties.textPadding" xml:space="preserve">
+                <source>Spacing</source>
+            </trans-unit>
+            <trans-unit id="properties.textPadding.ui.help.message" xml:space="preserve">
+                <source>padding (CSS). Accepts up to 4 values separated by spaces. e.g. "10px", "10px 20px", "10px 20px 30px", "10px 20px 30px 40px"</source>
+            </trans-unit>
+            <trans-unit id="properties.sectionBackgroundColor" xml:space="preserve">
+                <source>Background Color</source>
+            </trans-unit>
+            <trans-unit id="properties.sectionBackgroundRepeat" xml:space="preserve">
+                <source>Background Repeat</source>
+            </trans-unit>
+            <trans-unit id="properties.sectionBackgroundRepeat.selectBoxEditor.values.repeat" xml:space="preserve">
+                <source>Repeat</source>
+            </trans-unit>
+            <trans-unit id="properties.sectionBackgroundRepeat.selectBoxEditor.values.no-repeat" xml:space="preserve">
+                <source>No Repeat</source>
+            </trans-unit>
+            <trans-unit id="properties.sectionBackgroundRepeat.selectBoxEditor.values.repeat-x" xml:space="preserve">
+                <source>Repeat Horizontal</source>
+            </trans-unit>
+            <trans-unit id="properties.sectionBackgroundRepeat.selectBoxEditor.values.repeat-y" xml:space="preserve">
+                <source>Repeat Vertical</source>
+            </trans-unit>
+            <trans-unit id="properties.sectionBackgroundPosition" xml:space="preserve">
+                <source>Background Position</source>
+            </trans-unit>
+            <trans-unit id="properties.sectionBackgroundPositionX" xml:space="preserve">
+                <source>Background Position (X-Axis)</source>
+            </trans-unit>
+            <trans-unit id="properties.sectionBackgroundPositionY" xml:space="preserve">
+                <source>Background Position (Y-Axis)</source>
+            </trans-unit>
+            <trans-unit id="properties.sectionBackgroundSize" xml:space="preserve">
+                <source>Background Size</source>
+            </trans-unit>
+            <trans-unit id="properties.sectionPadding" xml:space="preserve">
+                <source>Padding</source>
+            </trans-unit>
+            <trans-unit id="properties.sectionPadding.ui.help.message" xml:space="preserve">
+                <source>padding (CSS). Accepts up to 4 values separated by spaces. e.g. "10px", "10px 20px", "10px 20px 30px", "10px 20px 30px 40px"</source>
+            </trans-unit>
+            <trans-unit id="properties.columnPadding" xml:space="preserve">
+                <source>Padding</source>
+            </trans-unit>
+            <trans-unit id="properties.columnPadding.ui.help.message" xml:space="preserve">
+                <source>padding (CSS). Accepts up to 4 values separated by spaces. e.g. "10px", "10px 20px", "10px 20px 30px", "10px 20px 30px 40px"</source>
+            </trans-unit>
+            <trans-unit id="properties.columnBackgroundColor" xml:space="preserve">
+                <source>Background Color</source>
+            </trans-unit>
+            <trans-unit id="properties.buttonBackgroundColor" xml:space="preserve">
+                <source>Background Color</source>
+            </trans-unit>
+            <trans-unit id="properties.buttonTextColor" xml:space="preserve">
+                <source>Text Color</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

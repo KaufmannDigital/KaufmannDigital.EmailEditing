@@ -7,7 +7,7 @@
       type: boolean
       defaultValue: false
       ui:
-        label: 'Hintergrund auf voller Breite'
+        label: i18n
         reloadIfChanged: true
         inspector:
           group: background

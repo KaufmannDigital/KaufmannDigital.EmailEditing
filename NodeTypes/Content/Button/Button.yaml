@@ -6,25 +6,23 @@
     'KaufmannDigital.EmailEditing:Mixin.TextAttributes.FontColor': true
     'KaufmannDigital.EmailEditing:Mixin.Position.Align': true
   ui:
-    label: 'Button'
+    label: i18n
     icon: 'icon-link'
     group: emailEditing
   properties:
     buttonLabel:
       type: string
-      defaultValue: 'Button'
       ui:
         inlineEditable: true
         inline:
           editorOptions:
-            placeholder: 'Label hier eintippen...'
+            placeholder: i18n
             autoparagraph: false
     target:
       type: string
       defaultValue: ''
       ui:
-        label: 'Link-Ziel'
+        label: i18n
         inspector:
           group: linking
           editor: 'Neos.Neos/Inspector/Editors/LinkEditor'
-

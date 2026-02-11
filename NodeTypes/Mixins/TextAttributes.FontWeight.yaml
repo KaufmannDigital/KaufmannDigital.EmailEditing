@@ -6,10 +6,9 @@
     fontWeight:
       type: integer
       ui:
-        label: 'Schrift-Dicke'
+        label: i18n
         help:
-          message: 'Font-Weight (CSS). Zum Beispiel "bolder" oder "500"'
+          message: i18n
         reloadIfChanged: true
         inspector:
           group: textOptions
-

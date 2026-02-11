@@ -7,7 +7,7 @@
       type: string
       defaultValue: 'repeat'
       ui:
-        label: 'Hintergrund Wiederholung'
+        label: i18n
         reloadIfChanged: true
         inspector:
           group: 'background'
@@ -15,15 +15,14 @@
           editorOptions:
             values:
               repeat:
-                label: 'Wiederholen'
+                label: i18n
                 value: 'repeat'
               no-repeat:
-                label: 'Nicht wiederholen'
+                label: i18n
                 value: 'no-repeat'
               repeat-x:
-                label: 'Wiederholung horizontal'
+                label: i18n
                 value: 'repeat-x'
               repeat-y:
-                label: 'Wiederholung vertikal'
+                label: i18n
                 value: 'repeat-y'
-

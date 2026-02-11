@@ -7,7 +7,7 @@
       type: string
       defaultValue: 'top center'
       ui:
-        label: 'Hintergrund-Position'
+        label: i18n
         reloadIfChanged: true
         inspector:
           group: background
@@ -15,7 +15,7 @@
     backgroundPositionX:
       type: string
       ui:
-        label: 'Hintergrund-Position (X-Achse)'
+        label: i18n
         reloadIfChanged: true
         inspector:
           group: background
@@ -23,7 +23,7 @@
     backgroundPositionY:
       type: string
       ui:
-        label: 'Hintergrund-Position (Y-Achse)'
+        label: i18n
         reloadIfChanged: true
         inspector:
           group: background

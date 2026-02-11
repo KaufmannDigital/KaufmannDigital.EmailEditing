@@ -6,9 +6,9 @@
     padding:
       type: string
       ui:
-        label: 'Padding'
+        label: i18n
         help:
-          message: 'padding (CSS). Akzeptiert bis zu 4 Werte mit Leerzeichen getrennt. z.B. "10px", "10px 20px", "10px 20px 30px", "10px 20px 30px 40px"'
+          message: i18n
         reloadIfChanged: true
         inspector:
           group: positionOptions

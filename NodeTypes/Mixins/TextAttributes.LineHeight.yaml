@@ -6,10 +6,9 @@
     lineHeight:
       type: string
       ui:
-        label: 'Zeilenabstand'
+        label: i18n
         help:
-          message: 'line-height (CSS) als numerischer Wert.'
+          message: i18n
         reloadIfChanged: true
         inspector:
           group: textOptions
-

@@ -6,20 +6,20 @@
     textDecoration:
       type: string
       ui:
-        label: 'Text-Decoration'
+        label: i18n
         reloadIfChanged: true
         inspector:
           group: textOptions
           editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
           editorOptions:
-            placeholder: 'Bitte wählen...'
+            placeholder: i18n
             allowEmpty: true
             values:
               'none':
-                label: 'keine'
+                label: i18n
               'underline':
-                label: 'Unterstrichen'
+                label: i18n
               'overline':
-                label: 'Überstrichen'
+                label: i18n
               'line-through':
-                label: 'Durchgestrichen'
+                label: i18n

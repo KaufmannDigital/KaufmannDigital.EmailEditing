@@ -19,4 +19,4 @@
         inlineEditable: true
         inline:
           editorOptions:
-            placeholder: 'Headline pflegen...'
+            placeholder: i18n

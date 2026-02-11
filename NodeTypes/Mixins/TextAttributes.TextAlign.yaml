@@ -6,20 +6,20 @@
     textAlign:
       type: string
       ui:
-        label: 'Text-Ausrichtung'
+        label: i18n
         reloadIfChanged: true
         inspector:
           group: textOptions
           editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
           editorOptions:
-            placeholder: 'Bitte wählen...'
+            placeholder: i18n
             allowEmpty: true
             values:
               'left':
-                label: 'Linksbündig'
+                label: i18n
               'right':
-                label: 'Rechtsbündig'
+                label: i18n
               'center':
-                label: 'Zentriert'
+                label: i18n
               'justify':
-                label: 'Blocksatz'
+                label: i18n

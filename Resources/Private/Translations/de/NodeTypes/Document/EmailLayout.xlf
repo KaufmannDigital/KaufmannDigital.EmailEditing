@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file original="" product-name="KaufmannDigital.EmailEditing" source-language="en" target-language="de" datatype="plaintext">
+        <body>
+            <trans-unit id="ui.label" xml:space="preserve">
+                <source>Email Layout</source>
+                <target>E-Mail Layout</target>
+            </trans-unit>
+            <trans-unit id="groups.emailLayout" xml:space="preserve">
+                <source>Email Layout</source>
+                <target>E-Mail Layout</target>
+            </trans-unit>
+            <trans-unit id="groups.headlines" xml:space="preserve">
+                <source>Headlines</source>
+                <target>Überschriften</target>
+            </trans-unit>
+            <trans-unit id="groups.texts" xml:space="preserve">
+                <source>Texts</source>
+                <target>Texte</target>
+            </trans-unit>
+            <trans-unit id="groups.sections" xml:space="preserve">
+                <source>Sections</source>
+                <target>Sections</target>
+            </trans-unit>
+            <trans-unit id="groups.columns" xml:space="preserve">
+                <source>Columns</source>
+                <target>Spalten</target>
+            </trans-unit>
+            <trans-unit id="groups.buttons" xml:space="preserve">
+                <source>Buttons</source>
+                <target>Buttons</target>
+            </trans-unit>
+            <trans-unit id="properties.logo" xml:space="preserve">
+                <source>Logo</source>
+                <target>Logo</target>
+            </trans-unit>
+            <trans-unit id="properties.width" xml:space="preserve">
+                <source>Width</source>
+                <target>Breite</target>
+            </trans-unit>
+            <trans-unit id="properties.backgroundColor" xml:space="preserve">
+                <source>Background Color</source>
+                <target>Hintergrundfarbe</target>
+            </trans-unit>
+            <trans-unit id="properties.headlineFontColor" xml:space="preserve">
+                <source>Font Color</source>
+                <target>Schriftfarbe</target>
+            </trans-unit>
+            <trans-unit id="properties.headlineFontFamily" xml:space="preserve">
+                <source>Font Family</source>
+                <target>Schriftfamilie</target>
+            </trans-unit>
+            <trans-unit id="properties.headlineFontFamily.ui.help.message" xml:space="preserve">
+                <source>The font-family for this text including fallbacks in CSS notation. For example: "Ubuntu, Helvetica, Arial, sans-serif"</source>
+                <target>Die Font-Family für diesen Text inklusive Fallbacks in CSS-Schreibweise. Zum Beispiel: "Ubuntu, Helvetica, Arial, sans-serif"</target>
+            </trans-unit>
+            <trans-unit id="properties.headlineFontSize" xml:space="preserve">
+                <source>Font Size</source>
+                <target>Schriftgröße</target>
+            </trans-unit>
+            <trans-unit id="properties.headlineFontStyle" xml:space="preserve">
+                <source>Font Style</source>
+                <target>Schriftschnitt</target>
+            </trans-unit>
+            <trans-unit id="properties.headlineFontStyle.selectBoxEditor.placeholder" xml:space="preserve">
+                <source>Please choose...</source>
+                <target>Bitte wählen...</target>
+            </trans-unit>
+            <trans-unit id="properties.headlineFontWeight" xml:space="preserve">
+                <source>Font Weight</source>
+                <target>Schrift-Dicke</target>
+            </trans-unit>
+            <trans-unit id="properties.headlineFontWeight.ui.help.message" xml:space="preserve">
+                <source>Font-Weight (CSS).</source>
+                <target>Font-Weight (CSS).</target>
+            </trans-unit>
+            <trans-unit id="properties.headlineLineHeight" xml:space="preserve">
+                <source>Line Height</source>
+                <target>Zeilenabstand</target>
+            </trans-unit>
+            <trans-unit id="properties.headlineLineHeight.ui.help.message" xml:space="preserve">
+                <source>line-height (CSS) as a numeric value.</source>
+                <target>line-height (CSS) als numerischer Wert.</target>
+            </trans-unit>
+            <trans-unit id="properties.headlineLetterSpacing" xml:space="preserve">
+                <source>Letter Spacing</source>
+                <target>Letter-Spacing</target>
+            </trans-unit>
+            <trans-unit id="properties.headlineLetterSpacing.ui.help.message" xml:space="preserve">
+                <source>letter-spacing (CSS) in px or em</source>
+                <target>letter-spacing (CSS) in px oder em</target>
+            </trans-unit>
+            <trans-unit id="properties.headlineTextDecoration" xml:space="preserve">
+                <source>Text Decoration</source>
+                <target>Text-Decoration</target>
+            </trans-unit>
+            <trans-unit id="properties.headlineTextDecoration.ui.help.message" xml:space="preserve">
+                <source>text-decoration (CSS) in CSS notation.</source>
+                <target>text-decoration (CSS) in CSS-Schreibweise.</target>
+            </trans-unit>
+            <trans-unit id="properties.headlineTextDecoration.selectBoxEditor.placeholder" xml:space="preserve">
+                <source>Please choose...</source>
+                <target>Bitte wählen...</target>
+            </trans-unit>
+            <trans-unit id="properties.headlineTextDecoration.selectBoxEditor.values.none" xml:space="preserve">
+                <source>None</source>
+                <target>keine</target>
+            </trans-unit>
+            <trans-unit id="properties.headlineTextDecoration.selectBoxEditor.values.underline" xml:space="preserve">
+                <source>Underline</source>
+                <target>Unterstrichen</target>
+            </trans-unit>
+            <trans-unit id="properties.headlineTextDecoration.selectBoxEditor.values.overline" xml:space="preserve">
+                <source>Overline</source>
+                <target>Überstrichen</target>
+            </trans-unit>
+            <trans-unit id="properties.headlineTextDecoration.selectBoxEditor.values.line-through" xml:space="preserve">
+                <source>Strikethrough</source>
+                <target>Durchgestrichen</target>
+            </trans-unit>
+            <trans-unit id="properties.headlineTextTransform" xml:space="preserve">
+                <source>Text Transform</source>
+                <target>Text-Transformation</target>
+            </trans-unit>
+            <trans-unit id="properties.headlineTextTransform.ui.help.message" xml:space="preserve">
+                <source>text-transform (CSS) in CSS notation.</source>
+                <target>text-transform (CSS) in CSS-Schreibweise.</target>
+            </trans-unit>
+            <trans-unit id="properties.headlineTextTransform.selectBoxEditor.placeholder" xml:space="preserve">
+                <source>Please choose...</source>
+                <target>Bitte wählen...</target>
+            </trans-unit>
+            <trans-unit id="properties.headlineTextTransform.selectBoxEditor.values.uppercase" xml:space="preserve">
+                <source>Uppercase</source>
+                <target>Großbuchstaben</target>
+            </trans-unit>
+            <trans-unit id="properties.headlineTextTransform.selectBoxEditor.values.lowercase" xml:space="preserve">
+                <source>Lowercase</source>
+                <target>Kleinbuchstaben</target>
+            </trans-unit>
+            <trans-unit id="properties.headlineTextTransform.selectBoxEditor.values.capitalize" xml:space="preserve">
+                <source>Capitalize</source>
+                <target>Erster Buchstabe Groß</target>
+            </trans-unit>
+            <trans-unit id="properties.headlineTextAlign" xml:space="preserve">
+                <source>Text Alignment</source>
+                <target>Text-Ausrichtung</target>
+            </trans-unit>
+            <trans-unit id="properties.headlineTextAlign.ui.help.message" xml:space="preserve">
+                <source>text-align (CSS) in CSS notation.</source>
+                <target>text-align (CSS) in CSS-Schreibweise.</target>
+            </trans-unit>
+            <trans-unit id="properties.headlineTextAlign.selectBoxEditor.placeholder" xml:space="preserve">
+                <source>Please choose...</source>
+                <target>Bitte wählen...</target>
+            </trans-unit>
+            <trans-unit id="properties.headlineTextAlign.selectBoxEditor.values.left" xml:space="preserve">
+                <source>Left</source>
+                <target>Linksbündig</target>
+            </trans-unit>
+            <trans-unit id="properties.headlineTextAlign.selectBoxEditor.values.right" xml:space="preserve">
+                <source>Right</source>
+                <target>Rechtsbündig</target>
+            </trans-unit>
+            <trans-unit id="properties.headlineTextAlign.selectBoxEditor.values.center" xml:space="preserve">
+                <source>Center</source>
+                <target>Zentriert</target>
+            </trans-unit>
+            <trans-unit id="properties.headlineTextAlign.selectBoxEditor.values.justify" xml:space="preserve">
+                <source>Justify</source>
+                <target>Blocksatz</target>
+            </trans-unit>
+            <trans-unit id="properties.headlinePadding" xml:space="preserve">
+                <source>Spacing</source>
+                <target>Abstände</target>
+            </trans-unit>
+            <trans-unit id="properties.headlinePadding.ui.help.message" xml:space="preserve">
+                <source>padding (CSS). Accepts up to 4 values separated by spaces. e.g. "10px", "10px 20px", "10px 20px 30px", "10px 20px 30px 40px"</source>
+                <target>padding (CSS). Akzeptiert bis zu 4 Werte mit Leerzeichen getrennt. z.B. "10px", "10px 20px", "10px 20px 30px", "10px 20px 30px 40px"</target>
+            </trans-unit>
+            <trans-unit id="properties.textFontColor" xml:space="preserve">
+                <source>Font Color</source>
+                <target>Schriftfarbe</target>
+            </trans-unit>
+            <trans-unit id="properties.textFontFamily" xml:space="preserve">
+                <source>Font Family</source>
+                <target>Schriftfamilie</target>
+            </trans-unit>
+            <trans-unit id="properties.textFontFamily.ui.help.message" xml:space="preserve">
+                <source>The font-family for this text including fallbacks in CSS notation. For example: "Ubuntu, Helvetica, Arial, sans-serif"</source>
+                <target>Die Font-Family für diesen Text inklusive Fallbacks in CSS-Schreibweise. Zum Beispiel: "Ubuntu, Helvetica, Arial, sans-serif"</target>
+            </trans-unit>
+            <trans-unit id="properties.textFontSize" xml:space="preserve">
+                <source>Font Size</source>
+                <target>Schriftgröße</target>
+            </trans-unit>
+            <trans-unit id="properties.textFontStyle" xml:space="preserve">
+                <source>Font Style</source>
+                <target>Schriftschnitt</target>
+            </trans-unit>
+            <trans-unit id="properties.textFontStyle.selectBoxEditor.placeholder" xml:space="preserve">
+                <source>Please choose...</source>
+                <target>Bitte wählen...</target>
+            </trans-unit>
+            <trans-unit id="properties.textFontWeight" xml:space="preserve">
+                <source>Font Weight</source>
+                <target>Schrift-Dicke</target>
+            </trans-unit>
+            <trans-unit id="properties.textFontWeight.ui.help.message" xml:space="preserve">
+                <source>Font-Weight (CSS).</source>
+                <target>Font-Weight (CSS).</target>
+            </trans-unit>
+            <trans-unit id="properties.textLineHeight" xml:space="preserve">
+                <source>Line Height</source>
+                <target>Zeilenabstand</target>
+            </trans-unit>
+            <trans-unit id="properties.textLineHeight.ui.help.message" xml:space="preserve">
+                <source>line-height (CSS) as a numeric value.</source>
+                <target>line-height (CSS) als numerischer Wert.</target>
+            </trans-unit>
+            <trans-unit id="properties.textLetterSpacing" xml:space="preserve">
+                <source>Letter Spacing</source>
+                <target>Letter-Spacing</target>
+            </trans-unit>
+            <trans-unit id="properties.textLetterSpacing.ui.help.message" xml:space="preserve">
+                <source>letter-spacing (CSS) in px or em</source>
+                <target>letter-spacing (CSS) in px oder em</target>
+            </trans-unit>
+            <trans-unit id="properties.textTextDecoration" xml:space="preserve">
+                <source>Text Decoration</source>
+                <target>Text-Decoration</target>
+            </trans-unit>
+            <trans-unit id="properties.textTextDecoration.ui.help.message" xml:space="preserve">
+                <source>text-decoration (CSS) in CSS notation.</source>
+                <target>text-decoration (CSS) in CSS-Schreibweise.</target>
+            </trans-unit>
+            <trans-unit id="properties.textTextDecoration.selectBoxEditor.placeholder" xml:space="preserve">
+                <source>Please choose...</source>
+                <target>Bitte wählen...</target>
+            </trans-unit>
+            <trans-unit id="properties.textTextDecoration.selectBoxEditor.values.none" xml:space="preserve">
+                <source>None</source>
+                <target>keine</target>
+            </trans-unit>
+            <trans-unit id="properties.textTextDecoration.selectBoxEditor.values.underline" xml:space="preserve">
+                <source>Underline</source>
+                <target>Unterstrichen</target>
+            </trans-unit>
+            <trans-unit id="properties.textTextDecoration.selectBoxEditor.values.overline" xml:space="preserve">
+                <source>Overline</source>
+                <target>Überstrichen</target>
+            </trans-unit>
+            <trans-unit id="properties.textTextDecoration.selectBoxEditor.values.line-through" xml:space="preserve">
+                <source>Strikethrough</source>
+                <target>Durchgestrichen</target>
+            </trans-unit>
+            <trans-unit id="properties.textTextTransform" xml:space="preserve">
+                <source>Text Transform</source>
+                <target>Text-Transformation</target>
+            </trans-unit>
+            <trans-unit id="properties.textTextTransform.ui.help.message" xml:space="preserve">
+                <source>text-transform (CSS) in CSS notation.</source>
+                <target>text-transform (CSS) in CSS-Schreibweise.</target>
+            </trans-unit>
+            <trans-unit id="properties.textTextTransform.selectBoxEditor.placeholder" xml:space="preserve">
+                <source>Please choose...</source>
+                <target>Bitte wählen...</target>
+            </trans-unit>
+            <trans-unit id="properties.textTextTransform.selectBoxEditor.values.uppercase" xml:space="preserve">
+                <source>Uppercase</source>
+                <target>Großbuchstaben</target>
+            </trans-unit>
+            <trans-unit id="properties.textTextTransform.selectBoxEditor.values.lowercase" xml:space="preserve">
+                <source>Lowercase</source>
+                <target>Kleinbuchstaben</target>
+            </trans-unit>
+            <trans-unit id="properties.textTextTransform.selectBoxEditor.values.capitalize" xml:space="preserve">
+                <source>Capitalize</source>
+                <target>Erster Buchstabe Groß</target>
+            </trans-unit>
+            <trans-unit id="properties.textTextAlign" xml:space="preserve">
+                <source>Text Alignment</source>
+                <target>Text-Ausrichtung</target>
+            </trans-unit>
+            <trans-unit id="properties.textTextAlign.ui.help.message" xml:space="preserve">
+                <source>text-align (CSS) in CSS notation.</source>
+                <target>text-align (CSS) in CSS-Schreibweise.</target>
+            </trans-unit>
+            <trans-unit id="properties.textTextAlign.selectBoxEditor.placeholder" xml:space="preserve">
+                <source>Please choose...</source>
+                <target>Bitte wählen...</target>
+            </trans-unit>
+            <trans-unit id="properties.textTextAlign.selectBoxEditor.values.left" xml:space="preserve">
+                <source>Left</source>
+                <target>Linksbündig</target>
+            </trans-unit>
+            <trans-unit id="properties.textTextAlign.selectBoxEditor.values.right" xml:space="preserve">
+                <source>Right</source>
+                <target>Rechtsbündig</target>
+            </trans-unit>
+            <trans-unit id="properties.textTextAlign.selectBoxEditor.values.center" xml:space="preserve">
+                <source>Center</source>
+                <target>Zentriert</target>
+            </trans-unit>
+            <trans-unit id="properties.textTextAlign.selectBoxEditor.values.justify" xml:space="preserve">
+                <source>Justify</source>
+                <target>Blocksatz</target>
+            </trans-unit>
+            <trans-unit id="properties.textPadding" xml:space="preserve">
+                <source>Spacing</source>
+                <target>Abstände</target>
+            </trans-unit>
+            <trans-unit id="properties.textPadding.ui.help.message" xml:space="preserve">
+                <source>padding (CSS). Accepts up to 4 values separated by spaces. e.g. "10px", "10px 20px", "10px 20px 30px", "10px 20px 30px 40px"</source>
+                <target>padding (CSS). Akzeptiert bis zu 4 Werte mit Leerzeichen getrennt. z.B. "10px", "10px 20px", "10px 20px 30px", "10px 20px 30px 40px"</target>
+            </trans-unit>
+            <trans-unit id="properties.sectionBackgroundColor" xml:space="preserve">
+                <source>Background Color</source>
+                <target>Hintergrundfarbe</target>
+            </trans-unit>
+            <trans-unit id="properties.sectionBackgroundRepeat" xml:space="preserve">
+                <source>Background Repeat</source>
+                <target>Hintergrund Wiederholung</target>
+            </trans-unit>
+            <trans-unit id="properties.sectionBackgroundRepeat.selectBoxEditor.values.repeat" xml:space="preserve">
+                <source>Repeat</source>
+                <target>Wiederholen</target>
+            </trans-unit>
+            <trans-unit id="properties.sectionBackgroundRepeat.selectBoxEditor.values.no-repeat" xml:space="preserve">
+                <source>No Repeat</source>
+                <target>Nicht wiederholen</target>
+            </trans-unit>
+            <trans-unit id="properties.sectionBackgroundRepeat.selectBoxEditor.values.repeat-x" xml:space="preserve">
+                <source>Repeat Horizontal</source>
+                <target>Wiederholung horizontal</target>
+            </trans-unit>
+            <trans-unit id="properties.sectionBackgroundRepeat.selectBoxEditor.values.repeat-y" xml:space="preserve">
+                <source>Repeat Vertical</source>
+                <target>Wiederholung vertikal</target>
+            </trans-unit>
+            <trans-unit id="properties.sectionBackgroundPosition" xml:space="preserve">
+                <source>Background Position</source>
+                <target>Hintergrund-Position</target>
+            </trans-unit>
+            <trans-unit id="properties.sectionBackgroundPositionX" xml:space="preserve">
+                <source>Background Position (X-Axis)</source>
+                <target>Hintergrund-Position (X-Achse)</target>
+            </trans-unit>
+            <trans-unit id="properties.sectionBackgroundPositionY" xml:space="preserve">
+                <source>Background Position (Y-Axis)</source>
+                <target>Hintergrund-Position (Y-Achse)</target>
+            </trans-unit>
+            <trans-unit id="properties.sectionBackgroundSize" xml:space="preserve">
+                <source>Background Size</source>
+                <target>Hintergrundgröße</target>
+            </trans-unit>
+            <trans-unit id="properties.sectionPadding" xml:space="preserve">
+                <source>Padding</source>
+                <target>Padding</target>
+            </trans-unit>
+            <trans-unit id="properties.sectionPadding.ui.help.message" xml:space="preserve">
+                <source>padding (CSS). Accepts up to 4 values separated by spaces. e.g. "10px", "10px 20px", "10px 20px 30px", "10px 20px 30px 40px"</source>
+                <target>padding (CSS). Akzeptiert bis zu 4 Werte mit Leerzeichen getrennt. z.B. "10px", "10px 20px", "10px 20px 30px", "10px 20px 30px 40px"</target>
+            </trans-unit>
+            <trans-unit id="properties.columnPadding" xml:space="preserve">
+                <source>Padding</source>
+                <target>Padding</target>
+            </trans-unit>
+            <trans-unit id="properties.columnPadding.ui.help.message" xml:space="preserve">
+                <source>padding (CSS). Accepts up to 4 values separated by spaces. e.g. "10px", "10px 20px", "10px 20px 30px", "10px 20px 30px 40px"</source>
+                <target>padding (CSS). Akzeptiert bis zu 4 Werte mit Leerzeichen getrennt. z.B. "10px", "10px 20px", "10px 20px 30px", "10px 20px 30px 40px"</target>
+            </trans-unit>
+            <trans-unit id="properties.columnBackgroundColor" xml:space="preserve">
+                <source>Background Color</source>
+                <target>Hintergrundfarbe</target>
+            </trans-unit>
+            <trans-unit id="properties.buttonBackgroundColor" xml:space="preserve">
+                <source>Background Color</source>
+                <target>Hintergrundfarbe</target>
+            </trans-unit>
+            <trans-unit id="properties.buttonTextColor" xml:space="preserve">
+                <source>Text Color</source>
+                <target>Textfarbe</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

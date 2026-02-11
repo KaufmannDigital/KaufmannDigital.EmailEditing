@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file original="" product-name="KaufmannDigital.EmailEditing" source-language="en" target-language="de" datatype="plaintext">
+        <body>
+            <trans-unit id="properties.fontWeight" xml:space="preserve">
+                <source>Font Weight</source>
+                <target>Schrift-Dicke</target>
+            </trans-unit>
+            <trans-unit id="properties.fontWeight.ui.help.message" xml:space="preserve">
+                <source>Font-Weight (CSS). For example "bolder" or "500"</source>
+                <target>Font-Weight (CSS). Zum Beispiel "bolder" oder "500"</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

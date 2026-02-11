@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file original="" product-name="KaufmannDigital.EmailEditing" source-language="en" datatype="plaintext">
+        <body>
+            <trans-unit id="properties.fontFamily" xml:space="preserve">
+                <source>Font Family</source>
+            </trans-unit>
+            <trans-unit id="properties.fontFamily.ui.help.message" xml:space="preserve">
+                <source>The font-family for this text including fallbacks in CSS notation. For example: "Ubuntu, Helvetica, Arial, sans-serif"</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file original="" product-name="KaufmannDigital.EmailEditing" source-language="en" target-language="de" datatype="plaintext">
+        <body>
+            <trans-unit id="ui.label" xml:space="preserve">
+                <source>Spacer</source>
+                <target>Abstand</target>
+            </trans-unit>
+            <trans-unit id="groups.spacerOptions" xml:space="preserve">
+                <source>Spacer (in px)</source>
+                <target>Abstand (in px)</target>
+            </trans-unit>
+            <trans-unit id="properties.height" xml:space="preserve">
+                <source>Height</source>
+                <target>Höhe</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

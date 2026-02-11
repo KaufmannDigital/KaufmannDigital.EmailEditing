@@ -14,7 +14,7 @@
     'KaufmannDigital.EmailEditing:Mixin.Attributes.Padding': true
     'KaufmannDigital.EmailEditing:Mixin.Background.BackgroundColor': true
   ui:
-    label: 'Text'
+    label: i18n
     icon: 'icon-file-alt'
     group: emailEditing
   properties:
@@ -24,7 +24,7 @@
         inlineEditable: true
         inline:
           editorOptions:
-            placeholder: 'Text pflegen...'
+            placeholder: i18n
             formatting:
               strong: true
               a: true

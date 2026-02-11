@@ -6,18 +6,18 @@
     textTransform:
       type: string
       ui:
-        label: 'Text-Transformation'
+        label: i18n
         reloadIfChanged: true
         inspector:
           group: textOptions
           editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
           editorOptions:
-            placeholder: 'Bitte wählen...'
+            placeholder: i18n
             allowEmpty: true
             values:
               'uppercase':
-                label: 'Großbuchstaben'
+                label: i18n
               'lowercase':
-                label: 'Kleinbuchstaben'
+                label: i18n
               'capitalize':
-                label: 'Erster Buchstabe Groß'
+                label: i18n

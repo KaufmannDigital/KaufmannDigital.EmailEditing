@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file original="" product-name="KaufmannDigital.EmailEditing" source-language="en" target-language="de" datatype="plaintext">
+        <body>
+            <trans-unit id="ui.label" xml:space="preserve">
+                <source>Divider</source>
+                <target>Trennlinie</target>
+            </trans-unit>
+            <trans-unit id="groups.dividerOptions" xml:space="preserve">
+                <source>Divider</source>
+                <target>Trennlinie</target>
+            </trans-unit>
+            <trans-unit id="properties.borderColor" xml:space="preserve">
+                <source>Border Color</source>
+                <target>Linienfarbe</target>
+            </trans-unit>
+            <trans-unit id="properties.borderStyle" xml:space="preserve">
+                <source>Border Style</source>
+                <target>Linien-Art</target>
+            </trans-unit>
+            <trans-unit id="properties.borderWidth" xml:space="preserve">
+                <source>Border Width</source>
+                <target>Linien-Dicke</target>
+            </trans-unit>
+            <trans-unit id="properties.borderStyle.selectBoxEditor.placeholder" xml:space="preserve">
+                <source>Please choose...</source>
+                <target>Bitte wählen...</target>
+            </trans-unit>
+            <trans-unit id="properties.borderStyle.selectBoxEditor.values.solid" xml:space="preserve">
+                <source>Solid</source>
+                <target>solide</target>
+            </trans-unit>
+            <trans-unit id="properties.borderStyle.selectBoxEditor.values.dotted" xml:space="preserve">
+                <source>Dotted</source>
+                <target>gepunktet</target>
+            </trans-unit>
+            <trans-unit id="properties.borderStyle.selectBoxEditor.values.dashed" xml:space="preserve">
+                <source>Dashed</source>
+                <target>gestrichelt</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>
