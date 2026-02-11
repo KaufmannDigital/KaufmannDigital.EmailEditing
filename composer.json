@@ -6,6 +6,9 @@
         "flowpack/nodetemplates": "^2.1.1",
         "spatie/mjml-php": "~1.2.0"
     },
+    "suggest": {
+        "kaufmanndigital/email-editing-cleverreach": "Send emails directly to CleverReach"
+    },
     "autoload": {
         "psr-4": {
             "KaufmannDigital\\EmailEditing\\": "Classes"
