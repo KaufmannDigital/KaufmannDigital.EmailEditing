@@ -12,3 +12,7 @@
       'KaufmannDigital.EmailEditing:Document.EmailsFolder': true
       'KaufmannDigital.EmailEditing:Document.EmailLayout': true
       'KaufmannDigital.EmailEditing:Document.Email': true
+
+  properties:
+    _hiddenInIndex:
+      defaultValue: TRUE

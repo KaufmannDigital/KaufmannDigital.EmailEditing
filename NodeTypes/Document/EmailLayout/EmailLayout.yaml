@@ -44,6 +44,9 @@
           '*': false
           'KaufmannDigital.EmailEditing:Content.Section': true
   properties:
+    _hiddenInIndex:
+      defaultValue: TRUE
+
     #region Layout
     logo:
       type: 'Neos\Media\Domain\Model\ImageInterface'

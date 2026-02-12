@@ -19,6 +19,9 @@
           '*': false
           'KaufmannDigital.EmailEditing:Content.Section': true
   properties:
+    _hiddenInIndex:
+      defaultValue: TRUE
+
     emailLayout:
       type: reference
       ui:
