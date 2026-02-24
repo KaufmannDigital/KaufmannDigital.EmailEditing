@@ -4,7 +4,8 @@
     "require": {
         "neos/neos": "^8.3.0",
         "flowpack/nodetemplates": "^2.1.1",
-        "spatie/mjml-php": "~1.2.0"
+        "spatie/mjml-php": "~1.2.0",
+        "kaufmanndigital/email-editing-installer": "~1.0.0"
     },
     "suggest": {
         "kaufmanndigital/email-editing-cleverreach": "Send emails directly to CleverReach"
