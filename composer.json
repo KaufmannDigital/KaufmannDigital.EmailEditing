@@ -14,11 +14,5 @@
         "psr-4": {
             "KaufmannDigital\\EmailEditing\\": "Classes"
         }
-    },
-    "extra": {
-        "neos/flow": {
-            "post-install": "\\KaufmannDigital\\EmailEditing\\Composer\\ComposerScripts::mjmlNpmInitialisation",
-            "post-update": "\\KaufmannDigital\\EmailEditing\\Composer\\ComposerScripts::mjmlNpmInitialisation"
-        }
     }
 }
