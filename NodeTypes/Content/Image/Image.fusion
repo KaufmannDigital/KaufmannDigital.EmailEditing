@@ -4,6 +4,7 @@ prototype(KaufmannDigital.EmailEditing:Content.Image) < prototype(KaufmannDigita
     componentProps = Neos.Fusion:DataStructure {
       imageUrl = Neos.Neos:ImageUri {
         asset = ${q(node).property('image')}
+        @if.condition = ${q(node).property('image')}
       }
 
       width = ${q(node).property('imageWidth')}

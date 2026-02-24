@@ -6,6 +6,7 @@ prototype(KaufmannDigital.EmailEditing:Content.Section) < prototype(KaufmannDigi
 
     backgroundUrl = Neos.Neos:ImageUri {
       asset = ${q(node).property('backgroundImage')}
+      @if.condition = ${q(node).property('backgroundImage')}
     }
     backgroundColor = ${q(node).property('backgroundColor') || q(this.templateNode).property('sectionBackgroundColor') || null}
     fullWidth = ${q(node).property('backgroundFullWidth') || null}
@@ -78,4 +79,3 @@ prototype(KaufmannDigital.EmailEditing:Content.Section) < prototype(KaufmannDigi
     }
   }
 }
-
