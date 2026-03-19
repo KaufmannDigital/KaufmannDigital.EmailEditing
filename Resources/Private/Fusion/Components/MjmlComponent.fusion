@@ -3,5 +3,9 @@ prototype(KaufmannDigital.EmailEditing:MjmlComponent) < prototype(Neos.Fusion:Co
     mjmlRenderer = ''
     additionalStyles = Neos.Fusion:DataStructure
 
-    renderer.@process.append = ${'<mj-raw><style type="text/css">' + Array.join(props.additionalStyles, '') +'</style></mj-raw>' + value}
+
+    renderer.@process.append = Neos.Fusion:Value {
+        value = ${'<mj-raw><style type="text/css">' + Array.join(props.additionalStyles, '') +'</style></mj-raw>' + value}
+        @if.condition = ${Array.length(props.additionalStyles) > 0}
+    }
 }
