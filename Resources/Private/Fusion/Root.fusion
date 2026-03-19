@@ -26,13 +26,3 @@ MJMLRenderer = Neos.Fusion:Component {
         closingBodyTag = '</mj-body>'
     }
 }
-
-prototype(KaufmannDigital.EmailEditing:MjmlNodeRenderer) < prototype(Neos.Fusion:Loop) {
-    items = ${[]}
-    itemName = 'node'
-    itemRenderer = Neos.Fusion:Renderer {
-        type = ${node.nodeType.name}
-        @context.mjmlRenderMode = true
-        @context.documentNode = ${emailNode}
-    }
-}
