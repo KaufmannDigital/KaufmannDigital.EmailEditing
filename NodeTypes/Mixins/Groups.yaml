@@ -6,12 +6,13 @@
         textOptions:
           label: i18n
           icon: 'fas fa-heading'
-        positionOptions:
-          label: i18n
-          icon: 'fas fa-heading'
         background:
           label: i18n
           icon: 'fas fa-image'
         linking:
           label: i18n
           icon: 'fas fa-link'
+        positionOptions:
+          label: i18n
+          icon: 'fas fa-heading'
+          position: 'end'

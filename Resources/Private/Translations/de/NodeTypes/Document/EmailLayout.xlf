@@ -30,11 +30,7 @@
                 <source>Buttons</source>
                 <target>Buttons</target>
             </trans-unit>
-            <trans-unit id="properties.logo" xml:space="preserve">
-                <source>Logo</source>
-                <target>Logo</target>
-            </trans-unit>
-            <trans-unit id="properties.width" xml:space="preserve">
+<trans-unit id="properties.width" xml:space="preserve">
                 <source>Width</source>
                 <target>Breite</target>
             </trans-unit>

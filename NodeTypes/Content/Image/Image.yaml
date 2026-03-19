@@ -1,6 +1,7 @@
 'KaufmannDigital.EmailEditing:Content.Image':
   superTypes:
     'Neos.Neos:Content': true
+    'KaufmannDigital.EmailEditing:Mixin.EmailContent': true
     'KaufmannDigital.EmailEditing:Mixin.Position.Align': true
   ui:
     label: i18n
@@ -13,12 +14,26 @@
           label: i18n
           icon: 'icon-image'
   properties:
+    align:
+      ui:
+        inspector:
+          group: image
+          position: end
     image:
       type: 'Neos\Media\Domain\Model\ImageInterface'
       ui:
         label: i18n
         reloadIfChanged: true
         inspector:
+          group: image
+    href:
+      type: string
+      defaultValue: ''
+      ui:
+        label: i18n
+        reloadIfChanged: true
+        inspector:
+          editor: 'Neos.Neos/Inspector/Editors/LinkEditor'
           group: image
     imageWidth:
       type: string
@@ -35,13 +50,4 @@
         label: i18n
         reloadIfChanged: true
         inspector:
-          group: image
-    href:
-      type: string
-      defaultValue: ''
-      ui:
-        label: i18n
-        reloadIfChanged: true
-        inspector:
-          editor: 'Neos.Neos/Inspector/Editors/LinkEditor'
           group: image

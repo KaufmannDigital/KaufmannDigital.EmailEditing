@@ -1,6 +1,7 @@
 'KaufmannDigital.EmailEditing:Content.Divider':
   superTypes:
     'Neos.Neos:Content': true
+    'KaufmannDigital.EmailEditing:Mixin.EmailContent': true
     'KaufmannDigital.EmailEditing:Mixin.Attributes.Padding': true
   ui:
     label: i18n

@@ -8,9 +8,12 @@
     position: 20
     inspector:
       groups:
+        document:
+          collapsed: true
         email:
           label: i18n
           icon: 'envelope'
+          position: 10
   childNodes:
     main:
       type: 'Neos.Neos:ContentCollection'

@@ -12,24 +12,38 @@
     group: emailEditing
     inspector:
       groups:
+        document:
+          collapsed: true
         emailLayout:
           label: i18n
           icon: 'envelope'
-        headlines:
-          label: i18n
-          icon: 'heading'
-        texts:
-          label: i18n
-          icon: 'font'
+          position: 10
+          collapsed: true
         sections:
           label: i18n
           icon: 'box'
+          position: 20
+          collapsed: true
         columns:
           label: i18n
           icon: 'columns'
+          position: 30
+          collapsed: true
+        headlines:
+          label: i18n
+          icon: 'heading'
+          position: 40
+          collapsed: true
+        texts:
+          label: i18n
+          icon: 'font'
+          position: 50
+          collapsed: true
         buttons:
           label: i18n
           icon: 'link'
+          position: 60
+          collapsed: true
   childNodes:
     header:
       type: 'Neos.Neos:ContentCollection'
@@ -48,14 +62,6 @@
       defaultValue: TRUE
 
     #region Layout
-    logo:
-      type: 'Neos\Media\Domain\Model\ImageInterface'
-      ui:
-        label: i18n
-        reloadIfChanged: true
-        inspector:
-          group: emailLayout
-
     width:
       type: string
       defaultValue: '600px'

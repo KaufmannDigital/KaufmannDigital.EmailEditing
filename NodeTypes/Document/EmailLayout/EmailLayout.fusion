@@ -1,9 +1,5 @@
 prototype(KaufmannDigital.EmailEditing:Document.EmailLayout) < prototype(Neos.Fusion:Component) {
 
-  logoUrl = Neos.Neos:ImageUri {
-    asset = ${q(node).property('logo')}
-  }
-
   renderer = KaufmannDigital.EmailEditing:Component.NewsletterPage {
 
     header = Neos.Neos:ContentCollection {
