@@ -1,0 +1,10 @@
+'KaufmannDigital.EmailEditing:Mixin.EmailContent':
+  abstract: true
+  properties:
+    _nodeType: &nogroup
+      ui:
+        inspector:
+          group: ~
+
+    _hiddenBeforeDateTime: *nogroup
+    _hiddenAfterDateTime: *nogroup
