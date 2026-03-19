@@ -10,4 +10,6 @@
   properties:
     fontSize:
       defaultValue: '24px'
+      ui:
+        reloadIfChanged: true
 

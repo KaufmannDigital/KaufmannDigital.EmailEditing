@@ -23,6 +23,7 @@
       defaultValue: ''
       ui:
         label: i18n
+        reloadIfChanged: true
         inspector:
           group: linking
           editor: 'Neos.Neos/Inspector/Editors/LinkEditor'
