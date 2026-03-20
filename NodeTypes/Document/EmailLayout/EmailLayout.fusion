@@ -7,12 +7,22 @@ prototype(KaufmannDigital.EmailEditing:Document.EmailLayout) < prototype(Neos.Fu
       attributes.class = 'header'
     }
 
-    // todo: make this pretty and add translation
-    content = '<div style="padding: 50px; width: 100%; margin: 0 auto; text-align: center;">content goes here...</div>'
+    content = afx`
+      <div style={"padding: 40px 0; text-align: center; font-family: Arial, sans-serif; color: #888; border: 2px dashed #ccc; margin: 20px auto; width: " + q(documentNode).property('width') + ";"}>
+        <p style="margin: 0 0 8px; font-size: 18px;">{I18n.translate('KaufmannDigital.EmailEditing:NodeTypes.Document.EmailLayout:ui.contentPlaceholder.title')}</p>
+        <p style="margin: 0; font-size: 13px;">{I18n.translate('KaufmannDigital.EmailEditing:NodeTypes.Document.EmailLayout:ui.contentPlaceholder.description')}</p>
+      </div>
+    `
 
     footer = Neos.Neos:ContentCollection {
       nodePath = 'footer'
       attributes.class = 'footer'
     }
   }
+
+
+  @process.addLoadDebugScript = afx`
+    {value}
+    <Flowpack.Neos.Debug:Fragment.Scripts/>
+  `
 }

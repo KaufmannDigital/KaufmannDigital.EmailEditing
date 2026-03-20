@@ -1,0 +1,11 @@
+prototype(KaufmannDigital.EmailEditing:MjmlHead) < prototype(Neos.Fusion:Component) {
+
+    //Neos.Fusion:Tag's inside
+    headTags = Neos.Fusion:Join
+
+
+    renderer = Neos.Fusion:Tag {
+        tagName = 'mj-head'
+        content = ${props.headTags}
+    }
+}

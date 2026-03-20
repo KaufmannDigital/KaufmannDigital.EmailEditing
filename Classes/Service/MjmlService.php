@@ -32,6 +32,8 @@ class MjmlService
 
         $fusionView->assignMultiple([
             'emailNode' => $liveNode,
+            'documentNode' => $liveNode,
+            'MJMLRenderingMode' => true
         ]);
 
         $rendered = $fusionView->render();

@@ -19,6 +19,7 @@ prototype(KaufmannDigital.EmailEditing:ContentComponent.DualRendering) < prototy
 
     renderer = ''
 
+    @context.templateNode = KaufmannDigital.EmailEditing:TemplateNodeSelector
     @cache {
       mode = 'cached'
       entryIdentifier {
@@ -26,7 +27,8 @@ prototype(KaufmannDigital.EmailEditing:ContentComponent.DualRendering) < prototy
       }
       entryTags {
         1 = ${Neos.Caching.nodeTag(node)}
-        3 = ${Neos.Caching.nodeTag(q(node).parents('[instanceof Neos.Neos:Content]').get())} //To trigger re-redingering, if backgroundColor changes
+        2 = ${Neos.Caching.nodeTag(q(node).parents('[instanceof Neos.Neos:Content]').get())} //To trigger re-redingering, if backgroundColor changes
+        3 = ${Neos.Caching.nodeTag(templateNode)}
       }
     }
 

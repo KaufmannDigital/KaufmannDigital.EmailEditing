@@ -15,8 +15,8 @@
                 <target>Hintergrund</target>
             </trans-unit>
             <trans-unit id="groups.linking" xml:space="preserve">
-                <source>Linking</source>
-                <target>Verlinkung</target>
+                <source>Links</source>
+                <target>Links</target>
             </trans-unit>
         </body>
     </file>

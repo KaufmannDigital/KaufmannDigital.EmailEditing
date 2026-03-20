@@ -21,6 +21,14 @@ class MjmlElementRendererImplementation extends AbstractFusionObject
     /**
      * @return string
      */
+    public function getMjmlHead()
+    {
+        return $this->fusionValue('mjmlHead');
+    }
+
+    /**
+     * @return string
+     */
     public function getMjmlSource()
     {
         return $this->fusionValue('mjmlSource');
@@ -50,6 +58,7 @@ class MjmlElementRendererImplementation extends AbstractFusionObject
 
         $mjml = '
             <mjml>
+                ' . $this->getMjmlHead() .'
                 <mj-body width="' . $this->getMaxWidth() . '" background-color="' . $this->getBackgroundColor() . '">
                 ' . $mjmlSource . '
                 </mj-body>

@@ -1,6 +1,7 @@
 'KaufmannDigital.EmailEditing:Document.EmailLayout':
   superTypes:
     'Neos.Neos:Document': true
+    'KaufmannDigital.EmailEditing:Mixin.LinkAttributes': true
   constraints:
     nodeTypes:
       '*': false

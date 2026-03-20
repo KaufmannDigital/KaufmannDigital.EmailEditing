@@ -12,7 +12,7 @@
                 <source>Background</source>
             </trans-unit>
             <trans-unit id="groups.linking" xml:space="preserve">
-                <source>Linking</source>
+                <source>Links</source>
             </trans-unit>
         </body>
     </file>

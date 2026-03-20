@@ -14,6 +14,7 @@ prototype(KaufmannDigital.EmailEditing:Component.Text) < prototype(Neos.Fusion:C
   padding = null
   backgroundColor = null
   cssClass = null
+  cssClass.@process.append = ${value ? value + ' mj-text' : 'mj-text'}
 
   renderer = afx`
     <mj-text

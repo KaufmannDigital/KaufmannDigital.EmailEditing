@@ -4,6 +4,8 @@ include: **/*.fusion
 MJMLRenderer = Neos.Fusion:Component {
     renderer = Neos.Fusion:Join {
 
+        head = KaufmannDigital.EmailEditing:MjmlHead
+
         bodyTag = Neos.Fusion:Tag {
             tagName = 'mj-body'
             attributes.width = ${q(q(emailNode).property('emailLayout')).property('width')}

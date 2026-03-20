@@ -1,0 +1,33 @@
+prototype(KaufmannDigital.EmailEditing:MjmlHead) {
+    linkTemplateNode = KaufmannDigital.EmailEditing:TemplateNodeSelector
+
+    linkColor = ${q(this.linkTemplateNode).property('linkColor')}
+    linkDecoration = ${q(this.linkTemplateNode).property('linkDecoration')}
+    linkFontWeight = ${q(this.linkTemplateNode).property('linkFontWeight')}
+
+    @context.linkBaseStyle = ${(this.linkColor ? 'color:' + this.linkColor + ';' : '') + (this.linkDecoration ? 'text-decoration:' + this.linkDecoration + ';' : '') + (this.linkFontWeight ? 'font-weight:' + this.linkFontWeight + ';' : '')}
+
+    headTags.textLinkStyles = Neos.Fusion:Tag {
+        tagName = 'mj-style'
+        attributes.inline = 'inline'
+        attributes.inline.@if.mjmlRendering = ${MJMLRenderingMode == true}
+        content = ${'
+            .mj-text a {
+                ' + linkBaseStyle + '
+            }
+        '}
+
+        @if.hasStyle = ${linkBaseStyle}
+    }
+
+
+    // Alternative using the MJML-Selector appling style directly inle. But for this case, the above works the best.
+//    headTags.mj-html-attributes.content = afx`
+//        <mj-selector path=".mj-text a">
+//            <mj-html-attribute name="style">
+//                {linkBaseStyle}
+//            </mj-html-attribute>
+//        </mj-selector>
+//    `
+//
+}

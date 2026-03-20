@@ -1,34 +1,17 @@
 prototype(KaufmannDigital.EmailEditing:Content.Text) < prototype(KaufmannDigital.EmailEditing:ContentComponent.DualRendering) {
 
   componentProps = Neos.Fusion:DataStructure {
-    @context {
-      templateNode = Neos.Fusion:Case {
-        onEmailPage {
-          condition = ${documentNode.nodeType.name == 'KaufmannDigital.EmailEditing:Document.Email'}
-          renderer = ${q(documentNode).property('emailLayout')}
-        }
-        onTemplatePage {
-          condition = ${documentNode.nodeType.name == 'KaufmannDigital.EmailEditing:Document.EmailLayout'}
-          renderer = ${documentNode}
-        }
-        default {
-          condition = true
-          renderer = null
-        }
-      }
-    }
-
-    fontColor = ${q(node).property('fontColor') || q(templateNode).property('textFontColor') || null}
-    fontFamily = ${q(node).property('fontFamily') || q(templateNode).property('textFontFamily') || null}
-    fontSize = ${q(node).property('fontSize') || q(templateNode).property('textFontSize') || null}
-    fontStyle = ${q(node).property('fontStyle') || q(templateNode).property('textFontStyle') || null}
-    fontWeight = ${q(node).property('fontWeight') || q(templateNode).property('textFontWeight') || null}
-    lineHeight = ${q(node).property('lineHeight') || q(templateNode).property('textLineHeight') || null}
-    letterSpacing = ${q(node).property('letterSpacing') || q(templateNode).property('textLetterSpacing') || null}
-    textDecoration = ${q(node).property('textDecoration') || q(templateNode).property('textTextDecoration') || null}
-    textTransform = ${q(node).property('textTransform') || q(templateNode).property('textTextTransform') || null}
-    textAlign = ${q(node).property('textAlign') || q(templateNode).property('textTextAlign') || null}
-    padding = ${q(node).property('padding') || q(templateNode).property('textPadding') || null}
+    fontColor = ${FallbackValue.determineValue(node, 'fontColor', 'textFontColor')}
+    fontFamily = ${FallbackValue.determineValue(node, 'fontFamily', 'textFontFamily')}
+    fontSize = ${FallbackValue.determineValue(node, 'fontSize', 'textFontSize')}
+    fontStyle = ${FallbackValue.determineValue(node, 'fontStyle', 'textFontStyle')}
+    fontWeight = ${FallbackValue.determineValue(node, 'fontWeight', 'textFontWeight')}
+    lineHeight = ${FallbackValue.determineValue(node, 'lineHeight', 'textLineHeight')}
+    letterSpacing = ${FallbackValue.determineValue(node, 'letterSpacing', 'textLetterSpacing')}
+    textDecoration = ${FallbackValue.determineValue(node, 'textDecoration', 'textTextDecoration')}
+    textTransform = ${FallbackValue.determineValue(node, 'textTransform', 'textTextTransform')}
+    textAlign = ${FallbackValue.determineValue(node, 'textAlign', 'textTextAlign')}
+    padding = ${FallbackValue.determineValue(node, 'padding', 'textPadding')}
     backgroundColor = ${FallbackValue.contentBackgroundColor(node)}
   }
   @context.componentProps = ${this.componentProps}

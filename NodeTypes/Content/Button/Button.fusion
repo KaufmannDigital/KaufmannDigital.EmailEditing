@@ -2,12 +2,10 @@ prototype(KaufmannDigital.EmailEditing:Content.Button) < prototype(KaufmannDigit
 
   @context {
     componentProps = Neos.Fusion:DataStructure {
-      templateNode = KaufmannDigital.EmailEditing:TemplateNodeSelector
-
       padding = ${q(node).property('padding')}
       padding.@if.notEmpty = ${q(node).property('padding')}
-      backgroundColor = ${q(node).property('backgroundColor') || q(this.templateNode).property('buttonBackgroundColor') || '#414141'}
-      color = ${q(node).property('fontColor') || q(this.templateNode).property('buttonTextColor') || '#FFFFFF'}
+      backgroundColor = ${FallbackValue.determineValue(node, 'backgroundColor', 'buttonBackgroundColor') || '#414141'}
+      color = ${FallbackValue.determineValue(node, 'fontColor', 'buttonTextColor') || '#FFFFFF'}
       align = ${q(node).property('align') || 'left'}
       href = ${!node.context.inBackend ? (q(node).property('target') || '') : null}
       href.@process.convertUris = Neos.Neos:ConvertUris

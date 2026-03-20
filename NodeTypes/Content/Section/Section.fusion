@@ -2,20 +2,18 @@ prototype(KaufmannDigital.EmailEditing:Content.Section) < prototype(KaufmannDigi
 
   componentProps = Neos.Fusion:DataStructure {
 
-    templateNode = KaufmannDigital.EmailEditing:TemplateNodeSelector
-
     backgroundUrl = Neos.Neos:ImageUri {
       asset = ${q(node).property('backgroundImage')}
       @if.condition = ${q(node).property('backgroundImage')}
     }
-    backgroundColor = ${q(node).property('backgroundColor') || q(this.templateNode).property('sectionBackgroundColor') || null}
+    backgroundColor = ${FallbackValue.determineValue(node, 'backgroundColor', 'sectionBackgroundColor')}
     fullWidth = ${q(node).property('backgroundFullWidth') || null}
-    backgroundRepeat = ${q(node).property('backgroundRepeat') || q(this.templateNode).property('sectionBackgroundRepeat') || null}
-    backgroundPosition = ${q(node).property('backgroundPosition') || q(this.templateNode).property('sectionBackgroundPosition') || null}
-    backgroundSize = ${q(node).property('backgroundSize') || q(this.templateNode).property('sectionBackgroundSize') || null}
-    backgroundPositionX = ${q(node).property('backgroundPositionX') || q(this.templateNode).property('sectionBackgroundPositionX') || null}
-    backgroundPositionY = ${q(node).property('backgroundPositionY') || q(this.templateNode).property('sectionBackgroundPositionY') || null}
-    padding = ${q(node).property('padding') || q(this.templateNode).property('sectionPadding') || null}
+    backgroundRepeat = ${FallbackValue.determineValue(node, 'backgroundRepeat', 'sectionBackgroundRepeat')}
+    backgroundPosition = ${FallbackValue.determineValue(node, 'backgroundPosition', 'sectionBackgroundPosition')}
+    backgroundSize = ${FallbackValue.determineValue(node, 'backgroundSize', 'sectionBackgroundSize')}
+    backgroundPositionX = ${FallbackValue.determineValue(node, 'backgroundPositionX', 'sectionBackgroundPositionX')}
+    backgroundPositionY = ${FallbackValue.determineValue(node, 'backgroundPositionY', 'sectionBackgroundPositionY')}
+    padding = ${FallbackValue.determineValue(node, 'padding', 'sectionPadding')}
   }
 
   @context.componentProps = ${this.componentProps}
@@ -58,6 +56,7 @@ prototype(KaufmannDigital.EmailEditing:Content.Section) < prototype(KaufmannDigi
       padding = ${componentProps.padding}
       padding.@if.isSet = ${componentProps.padding}
 
+      box-sizing = 'border-box'
       width = ${q(node).property('backgroundFullWidth') ? '100%' : 'var(--max-width)'}
     }
 

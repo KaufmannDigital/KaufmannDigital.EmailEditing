@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file original="" product-name="KaufmannDigital.EmailEditing" source-language="en" target-language="de" datatype="plaintext">
+        <body>
+            <trans-unit id="properties.linkColor" xml:space="preserve">
+                <source>Link Color</source>
+                <target>Link-Farbe</target>
+            </trans-unit>
+            <trans-unit id="properties.linkColor.ui.help.message" xml:space="preserve">
+                <source>Text color of links (CSS color value). For example "#0066cc" or "rgb(0, 102, 204)".</source>
+                <target>Textfarbe von Links (CSS-Farbwert). Zum Beispiel "#0066cc" oder "rgb(0, 102, 204)".</target>
+            </trans-unit>
+            <trans-unit id="properties.linkDecoration" xml:space="preserve">
+                <source>Link Decoration</source>
+                <target>Link-Decoration</target>
+            </trans-unit>
+            <trans-unit id="properties.linkDecoration.ui.help.message" xml:space="preserve">
+                <source>Text decoration of links (CSS text-decoration). For example "underline" or "none".</source>
+                <target>Textdekoration von Links (CSS text-decoration). Zum Beispiel "underline" oder "none".</target>
+            </trans-unit>
+            <trans-unit id="properties.linkDecoration.selectBoxEditor.placeholder" xml:space="preserve">
+                <source>Please choose...</source>
+                <target>Bitte wählen...</target>
+            </trans-unit>
+            <trans-unit id="properties.linkDecoration.selectBoxEditor.values.none" xml:space="preserve">
+                <source>None</source>
+                <target>keine</target>
+            </trans-unit>
+            <trans-unit id="properties.linkDecoration.selectBoxEditor.values.underline" xml:space="preserve">
+                <source>Underline</source>
+                <target>Unterstrichen</target>
+            </trans-unit>
+            <trans-unit id="properties.linkDecoration.selectBoxEditor.values.overline" xml:space="preserve">
+                <source>Overline</source>
+                <target>Überstrichen</target>
+            </trans-unit>
+            <trans-unit id="properties.linkDecoration.selectBoxEditor.values.line-through" xml:space="preserve">
+                <source>Strikethrough</source>
+                <target>Durchgestrichen</target>
+            </trans-unit>
+            <trans-unit id="properties.linkFontWeight" xml:space="preserve">
+                <source>Link Font Weight</source>
+                <target>Link-Schriftstärke</target>
+            </trans-unit>
+            <trans-unit id="properties.linkFontWeight.ui.help.message" xml:space="preserve">
+                <source>Font weight of links (CSS font-weight). For example "400" (normal), "700" (bold) or "900" (black).</source>
+                <target>Schriftstärke von Links (CSS font-weight). Zum Beispiel "400" (normal), "700" (fett) oder "900" (schwarz).</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

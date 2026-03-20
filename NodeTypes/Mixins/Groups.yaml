@@ -12,6 +12,7 @@
         linking:
           label: i18n
           icon: 'fas fa-link'
+          position: 'end'
         positionOptions:
           label: i18n
           icon: 'fas fa-heading'

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file original="" product-name="KaufmannDigital.EmailEditing" source-language="en" datatype="plaintext">
+        <body>
+            <trans-unit id="properties.linkColor" xml:space="preserve">
+                <source>Link Color</source>
+            </trans-unit>
+            <trans-unit id="properties.linkColor.ui.help.message" xml:space="preserve">
+                <source>Text color of links (CSS color value). For example "#0066cc" or "rgb(0, 102, 204)".</source>
+            </trans-unit>
+            <trans-unit id="properties.linkDecoration" xml:space="preserve">
+                <source>Link Decoration</source>
+            </trans-unit>
+            <trans-unit id="properties.linkDecoration.ui.help.message" xml:space="preserve">
+                <source>Text decoration of links (CSS text-decoration). For example "underline" or "none".</source>
+            </trans-unit>
+            <trans-unit id="properties.linkDecoration.selectBoxEditor.placeholder" xml:space="preserve">
+                <source>Please choose...</source>
+            </trans-unit>
+            <trans-unit id="properties.linkDecoration.selectBoxEditor.values.none" xml:space="preserve">
+                <source>None</source>
+            </trans-unit>
+            <trans-unit id="properties.linkDecoration.selectBoxEditor.values.underline" xml:space="preserve">
+                <source>Underline</source>
+            </trans-unit>
+            <trans-unit id="properties.linkDecoration.selectBoxEditor.values.overline" xml:space="preserve">
+                <source>Overline</source>
+            </trans-unit>
+            <trans-unit id="properties.linkDecoration.selectBoxEditor.values.line-through" xml:space="preserve">
+                <source>Strikethrough</source>
+            </trans-unit>
+            <trans-unit id="properties.linkFontWeight" xml:space="preserve">
+                <source>Link Font Weight</source>
+            </trans-unit>
+            <trans-unit id="properties.linkFontWeight.ui.help.message" xml:space="preserve">
+                <source>Font weight of links (CSS font-weight). For example "400" (normal), "700" (bold) or "900" (black).</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

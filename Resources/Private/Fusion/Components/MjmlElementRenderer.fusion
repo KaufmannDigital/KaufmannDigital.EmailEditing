@@ -1,8 +1,10 @@
 prototype(KaufmannDigital.EmailEditing:MjmlElementRenderer) < prototype(Neos.Fusion:Component) {
   @class = 'KaufmannDigital\\EmailEditing\\Fusion\\FusionObjects\\MjmlElementRendererImplementation'
 
+  templateNode = KaufmannDigital.EmailEditing:TemplateNodeSelector
   maxWidth = ${q(this.templateNode).property('width')}
   backgroundColor = ${node ? FallbackValue.contentBackgroundColor(node) : '#FFFFFF'}
 
+  mjmlHead = KaufmannDigital.EmailEditing:MjmlHead
   mjmlSource = ''
 }

@@ -45,9 +45,29 @@ class FallbackValueHelper implements ProtectedContextAwareInterface {
 
     }
 
+    public function determineValue(NodeInterface $node, string $localPropertyName, string $layoutPropertyName)
+    {
+        $localPropertyValue = $node->getProperty($localPropertyName);
+        if ($localPropertyValue !== null && $localPropertyValue !== '') { //empty() would match 0 (to reset paddings etc.) as empty
+            return $localPropertyValue;
+        }
+
+        $q = new FlowQuery([$node]);
+        $emailNode = $q->parents('[instanceof Neos.Neos:Document]')->get(0);
+        if ($emailNode->getNodeType()->getName() === 'KaufmannDigital.EmailEditing:Document.Email') {
+            $emailNode = $emailNode->getProperty('emailLayout');
+        }
+
+        $layoutPropertyValue = $emailNode->getProperty($layoutPropertyName);
+        if ($layoutPropertyValue !== null && $layoutPropertyValue !== '') {
+            return $layoutPropertyValue;
+        }
+
+        return null;
+    }
+
     public function allowsCallOfMethod($methodName): true
     {
         return true;
     }
 }
-

@@ -1,35 +1,18 @@
 prototype(KaufmannDigital.EmailEditing:Content.Headline) < prototype(KaufmannDigital.EmailEditing:ContentComponent.DualRendering) {
   componentProps = Neos.Fusion:DataStructure {
-    @context {
-      templateNode = Neos.Fusion:Case {
-        onEmailPage {
-          condition = ${documentNode.nodeType.name == 'KaufmannDigital.EmailEditing:Document.Email'}
-          renderer = ${q(documentNode).property('emailLayout')}
-        }
-        onTemplatePage {
-          condition = ${documentNode.nodeType.name == 'KaufmannDigital.EmailEditing:Document.EmailLayout'}
-          renderer = ${documentNode}
-        }
-        default {
-          condition = true
-          renderer = null
-        }
-      }
-    }
-
     id = ${node.identifier}
-    fontColor = ${q(node).property('fontColor') || q(templateNode).property('headlineFontColor') || null}
-    fontFamily = ${q(node).property('fontFamily') || q(templateNode).property('headlineFontFamily') || null}
-    fontSize = ${q(node).property('fontSize') || q(templateNode).property('headlineFontSize') || null}
-    fontStyle = ${q(node).property('fontStyle') || q(templateNode).property('headlineFontStyle') || null}
-    fontWeight = ${q(node).property('fontWeight') || q(templateNode).property('headlineFontWeight') || null}
-    lineHeight = ${q(node).property('lineHeight') || q(templateNode).property('headlineLineHeight') || null}
-    letterSpacing = ${q(node).property('letterSpacing') ||  q(templateNode).property('headlineLetterSpacing') ||null}
-    textDecoration = ${q(node).property('textDecoration') ||  q(templateNode).property('headlineTextDecoration') || null}
-    textTransform = ${q(node).property('textTransform') || q(templateNode).property('headlineTextTransform') || null}
-    textAlign = ${q(node).property('textAlign') || q(templateNode).property('headlineTextAlign') || null}
-    padding = ${q(node).property('padding') || q(templateNode).property('headlinePadding') || null}
-    backgroundColor = ${q(node).property('backgroundColor') || q(q(node).parents('[instanceof KaufmannDigital.EmailEditing:Content.Column][backgroundColor!=""]').get(0)).property('backgroundColor') || q(templateNode).property('columnBackgroundColor') || null}
+    fontColor = ${FallbackValue.determineValue(node, 'fontColor', 'headlineFontColor')}
+    fontFamily = ${FallbackValue.determineValue(node, 'fontFamily', 'headlineFontFamily')}
+    fontSize = ${FallbackValue.determineValue(node, 'fontSize', 'headlineFontSize')}
+    fontStyle = ${FallbackValue.determineValue(node, 'fontStyle', 'headlineFontStyle')}
+    fontWeight = ${FallbackValue.determineValue(node, 'fontWeight', 'headlineFontWeight')}
+    lineHeight = ${FallbackValue.determineValue(node, 'lineHeight', 'headlineLineHeight')}
+    letterSpacing = ${FallbackValue.determineValue(node, 'letterSpacing', 'headlineLetterSpacing')}
+    textDecoration = ${FallbackValue.determineValue(node, 'textDecoration', 'headlineTextDecoration')}
+    textTransform = ${FallbackValue.determineValue(node, 'textTransform', 'headlineTextTransform')}
+    textAlign = ${FallbackValue.determineValue(node, 'textAlign', 'headlineTextAlign')}
+    padding = ${FallbackValue.determineValue(node, 'padding', 'headlinePadding')}
+    backgroundColor = ${FallbackValue.contentBackgroundColor(node)}
   }
   @context.componentProps = ${this.componentProps}
 
