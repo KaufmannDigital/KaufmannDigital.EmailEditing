@@ -81,5 +81,5 @@ composer require kaufmanndigital/email-editing-cleverreach
 ## CSS Building
 
 ```sh
-sass --watch DistributionPackages/EmailEditing/Resources/Private/Scss/EmailEditing.scss DistributionPackages/EmailEditing/Resources/Public/Styles/EmailEditing.css
+sass --watch Resources/Private/Scss/EmailEditing.scss Resources/Public/Styles/EmailEditing.css
 ```
