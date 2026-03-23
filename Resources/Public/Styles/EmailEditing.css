@@ -14,6 +14,7 @@ body.email-editing-page {
 
 .email-column {
   margin: 0 auto;
+  box-sizing: border-box;
 }
 
 /*# sourceMappingURL=EmailEditing.css.map */
