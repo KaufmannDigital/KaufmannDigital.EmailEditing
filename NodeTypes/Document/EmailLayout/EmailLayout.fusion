@@ -19,10 +19,4 @@ prototype(KaufmannDigital.EmailEditing:Document.EmailLayout) < prototype(Neos.Fu
       attributes.class = 'footer'
     }
   }
-
-
-  @process.addLoadDebugScript = afx`
-    {value}
-    <Flowpack.Neos.Debug:Fragment.Scripts/>
-  `
 }
