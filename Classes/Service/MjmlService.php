@@ -41,6 +41,10 @@ class MjmlService
         #TODO: Maybe better switch to ContentCollectionRenderer, to prevent div getting generated?
         $rendered = str_replace(['<div class="neos-contentcollection">', '</div>'], '', $rendered);
 
-        return sprintf('<mjml>%s</mjml>', $rendered);
+        $mjml = sprintf('<mjml>%s</mjml>', $rendered);
+
+        @file_put_contents(FLOW_PATH_DATA .'Logs/last-generated.mjml', $mjml);
+
+        return $mjml;
     }
 }
