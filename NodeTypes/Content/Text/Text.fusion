@@ -1,7 +1,7 @@
 prototype(KaufmannDigital.EmailEditing:Content.Text) < prototype(KaufmannDigital.EmailEditing:ContentComponent.DualRendering) {
 
   componentProps = Neos.Fusion:DataStructure {
-    fontColor = ${FallbackValue.determineValue(node, 'fontColor', 'textFontColor')}
+    fontColor = ${FallbackValue.determineContentValue(node, 'fontColor', 'textFontColor')}
     fontFamily = ${FallbackValue.determineValue(node, 'fontFamily', 'textFontFamily')}
     fontSize = ${FallbackValue.determineValue(node, 'fontSize', 'textFontSize')}
     fontStyle = ${FallbackValue.determineValue(node, 'fontStyle', 'textFontStyle')}
