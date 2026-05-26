@@ -6,6 +6,22 @@
                 <source>Section</source>
                 <target>Section</target>
             </trans-unit>
+            <trans-unit id="properties.textFontColor" xml:space="preserve">
+                <source>Text font color</source>
+                <target>Textfarbe</target>
+            </trans-unit>
+            <trans-unit id="properties.textFontColor.ui.help.message" xml:space="preserve">
+                <source>Overrides the text color for all text elements within this section. Useful when the section background differs from the global background.</source>
+                <target>Überschreibt die Schriftfarbe für alle Textelemente in dieser Section. Hilfreich, wenn der Hintergrund dieser Section von der globalen Hintergrundfarbe abweicht.</target>
+            </trans-unit>
+            <trans-unit id="properties.headlineFontColor" xml:space="preserve">
+                <source>Headline font color</source>
+                <target>Überschriftenfarbe</target>
+            </trans-unit>
+            <trans-unit id="properties.headlineFontColor.ui.help.message" xml:space="preserve">
+                <source>Overrides the headline color for all headline elements within this section. Useful when the section background differs from the global section background.</source>
+                <target>Überschreibt die Schriftfarbe für alle Überschriften in dieser Section. Hilfreich, wenn der Hintergrund dieser Section von der globalen Hintergrundfarbe abweicht.</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>

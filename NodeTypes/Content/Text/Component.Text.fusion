@@ -1,7 +1,7 @@
 prototype(KaufmannDigital.EmailEditing:Component.Text) < prototype(Neos.Fusion:Component) {
 
   content = null
-  fontColor = ${FallbackValue.getFallbackValue(node, 'textFontColor')}
+  fontColor = ${FallbackValue.contentFontColor(node, 'textFontColor')}
   fontFamily = ${FallbackValue.getFallbackValue(node, 'textFontFamily')}
   fontSize = ${FallbackValue.getFallbackValue(node, 'textFontSize')}
   fontStyle = ${FallbackValue.getFallbackValue(node, 'textFontStyle')}
