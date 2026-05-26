@@ -1,5 +1,9 @@
 prototype(KaufmannDigital.EmailEditing:ContentComponent.DualRendering) < prototype(Neos.Neos:ContentComponent) {
 
+  @context.emailTemplateNode = KaufmannDigital.EmailEditing:TemplateNodeSelector
+  @context.emailTemplateWidth = ${String.replace(q(emailTemplateNode).property('width') || '600px', 'px', '')}
+  @context.emailOuterPadding = 20
+
   mjmlRendering = Neos.Fusion:Component {
     renderer = '#Renderer is not defined#'
   }

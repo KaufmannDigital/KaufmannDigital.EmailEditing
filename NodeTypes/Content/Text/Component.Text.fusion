@@ -1,17 +1,17 @@
 prototype(KaufmannDigital.EmailEditing:Component.Text) < prototype(Neos.Fusion:Component) {
 
   content = null
-  fontColor = null
-  fontFamily = null
-  fontSize = null
-  fontStyle = null
-  fontWeight = null
-  lineHeight = null
-  letterSpacing = null
-  textDecoration = null
-  textTransform = null
-  textAlign = null
-  padding = null
+  fontColor = ${FallbackValue.getFallbackValue(node, 'textFontColor')}
+  fontFamily = ${FallbackValue.getFallbackValue(node, 'textFontFamily')}
+  fontSize = ${FallbackValue.getFallbackValue(node, 'textFontSize')}
+  fontStyle = ${FallbackValue.getFallbackValue(node, 'textFontStyle')}
+  fontWeight = ${FallbackValue.getFallbackValue(node, 'textFontWeight')}
+  lineHeight = ${FallbackValue.getFallbackValue(node, 'textLineHeight')}
+  letterSpacing = ${FallbackValue.getFallbackValue(node, 'textLetterSpacing')}
+  textDecoration = ${FallbackValue.getFallbackValue(node, 'textTextDecoration')}
+  textTransform = ${FallbackValue.getFallbackValue(node, 'textTextTransform')}
+  textAlign = ${FallbackValue.getFallbackValue(node, 'textTextAlign')}
+  padding = ${FallbackValue.getFallbackValue(node, 'textPadding')}
   backgroundColor = null
   cssClass = null
   cssClass.@process.append = ${value ? value + ' mj-text' : 'mj-text'}

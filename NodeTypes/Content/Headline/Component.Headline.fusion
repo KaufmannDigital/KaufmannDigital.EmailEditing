@@ -1,16 +1,17 @@
 prototype(KaufmannDigital.EmailEditing:Component.Headline) < prototype(KaufmannDigital.EmailEditing:MjmlComponent) {
 
-  fontColor = null
-  fontFamily = null
-  fontSize = null
-  fontStyle = null
-  fontWeight = null
-  lineHeight = null
-  letterSpacing = null
-  textDecoration = null
-  textTransform = null
+  fontColor = ${FallbackValue.getFallbackValue(node, 'headlineFontColor')}
+  fontFamily = ${FallbackValue.getFallbackValue(node, 'headlineFontFamily')}
+  fontSize = ${FallbackValue.getFallbackValue(node, 'headlineFontSize')}
+  fontStyle = ${FallbackValue.getFallbackValue(node, 'headlineFontStyle')}
+  fontWeight = ${FallbackValue.getFallbackValue(node, 'headlineFontWeight')}
+  lineHeight = ${FallbackValue.getFallbackValue(node, 'headlineLineHeight')}
+  letterSpacing = ${FallbackValue.getFallbackValue(node, 'headlineLetterSpacing')}
+  textDecoration = ${FallbackValue.getFallbackValue(node, 'headlineTextDecoration')}
+  textTransform = ${FallbackValue.getFallbackValue(node, 'headlineTextTransform')}
+  textAlign = ${FallbackValue.getFallbackValue(node, 'headlineTextAlign')}
   align = null
-  padding = null
+  padding = ${FallbackValue.getFallbackValue(node, 'headlinePadding')}
   backgroundColor = null
   headline = null
   cssClass = null

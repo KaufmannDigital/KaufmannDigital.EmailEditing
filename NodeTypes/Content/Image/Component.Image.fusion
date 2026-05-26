@@ -4,9 +4,17 @@ prototype(KaufmannDigital.EmailEditing:Component.Image) < prototype(Neos.Fusion:
   padding = null
   imageUrl = null
   href = null
+  borderRadius = null
   align = 'center'
 
   renderer = afx`
-    <mj-image align={props.align} width={props.width} padding={props.padding} src={props.imageUrl} href={props.href} />
+    <mj-image
+            align={props.align}
+            width={props.width}
+            padding={props.padding}
+            src={props.imageUrl}
+            href={props.href}
+            border-radius={props.borderRadius}
+    />
   `
 }

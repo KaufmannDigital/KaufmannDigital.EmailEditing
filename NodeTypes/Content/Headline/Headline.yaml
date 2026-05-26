@@ -8,9 +8,3 @@
     label: i18n
     icon: 'header'
     group: emailEditing
-  properties:
-    fontSize:
-      defaultValue: '24px'
-      ui:
-        reloadIfChanged: true
-

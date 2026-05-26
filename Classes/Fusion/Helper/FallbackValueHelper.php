@@ -7,7 +7,20 @@ use Neos\ContentRepository\Domain\Model\NodeInterface;
 use Neos\Eel\FlowQuery\FlowQuery;
 use Neos\Eel\ProtectedContextAwareInterface;
 
-class FallbackValueHelper implements ProtectedContextAwareInterface {
+class FallbackValueHelper implements ProtectedContextAwareInterface
+{
+
+
+    public function getFallbackValue(NodeInterface $contextNode, string $propertyName)
+    {
+        try {
+            $emailLayout = $this->getEmailLayoutByContextNode($contextNode);
+            return $emailLayout->getProperty($propertyName);
+
+        } catch (\Exception $exception) {
+            return null;
+        }
+    }
 
     public function contentBackgroundColor(NodeInterface $node)
     {
@@ -64,6 +77,27 @@ class FallbackValueHelper implements ProtectedContextAwareInterface {
         }
 
         return null;
+    }
+
+
+    private function getEmailLayoutByContextNode(NodeInterface $contextNode) : ?NodeInterface
+    {
+        try {
+            if ($contextNode->getNodeType()->isOfType('KaufmannDigital.EmailEditing:Document.EmailLayout')) {
+                return $contextNode;
+            } else if ($contextNode->getNodeType()->isOfType('KaufmannDigital.EmailEditing:Document.Email')) {
+                return $contextNode->getProperty('emailLayout');
+            } else {
+                $q = new FlowQuery([$contextNode]);
+                $documentNode = $q->parents('[instanceof KaufmannDigital.EmailEditing:Document.Email],[instanceof KaufmannDigital.EmailEditing:Document.EmailLayout]')->get(0);
+                if ($documentNode->getNodeType()->isOfType('KaufmannDigital.EmailEditing:Document.EmailLayout')) {
+                    return $documentNode;
+                }
+                return $documentNode->getProperty('emailLayout');
+            }
+        } catch (\Exception $exception) {
+            return null;
+        }
     }
 
     public function allowsCallOfMethod($methodName): true
