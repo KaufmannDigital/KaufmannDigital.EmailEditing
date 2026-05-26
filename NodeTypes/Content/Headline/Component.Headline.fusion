@@ -1,6 +1,6 @@
 prototype(KaufmannDigital.EmailEditing:Component.Headline) < prototype(KaufmannDigital.EmailEditing:MjmlComponent) {
 
-  fontColor = ${FallbackValue.getFallbackValue(node, 'headlineFontColor')}
+  fontColor = ${FallbackValue.contentFontColor(node, 'headlineFontColor')}
   fontFamily = ${FallbackValue.getFallbackValue(node, 'headlineFontFamily')}
   fontSize = ${FallbackValue.getFallbackValue(node, 'headlineFontSize')}
   fontStyle = ${FallbackValue.getFallbackValue(node, 'headlineFontStyle')}

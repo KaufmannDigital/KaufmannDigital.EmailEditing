@@ -6,6 +6,22 @@
                 <source>Column</source>
                 <target>Spalte</target>
             </trans-unit>
+            <trans-unit id="properties.textFontColor" xml:space="preserve">
+                <source>Text font color</source>
+                <target>Textfarbe</target>
+            </trans-unit>
+            <trans-unit id="properties.textFontColor.ui.help.message" xml:space="preserve">
+                <source>Overrides the text color for all text elements within this column. Takes priority over the section setting.</source>
+                <target>Überschreibt die Schriftfarbe für alle Textelemente in dieser Spalte. Hat Vorrang vor der Section-Einstellung.</target>
+            </trans-unit>
+            <trans-unit id="properties.headlineFontColor" xml:space="preserve">
+                <source>Headline font color</source>
+                <target>Überschriftenfarbe</target>
+            </trans-unit>
+            <trans-unit id="properties.headlineFontColor.ui.help.message" xml:space="preserve">
+                <source>Overrides the headline color for all headline elements within this column. Takes priority over the section setting.</source>
+                <target>Überschreibt die Schriftfarbe für alle Überschriften in dieser Spalte. Hat Vorrang vor der Section-Einstellung.</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>
