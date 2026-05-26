@@ -3,8 +3,8 @@ prototype(KaufmannDigital.EmailEditing:Component.Button) < prototype(KaufmannDig
   href = null
   padding = ''
   label = ''
-  color = 'white'
-  backgroundColor = '#414141'
+  color = ${FallbackValue.getFallbackValue(node, 'buttonTextColor') || 'white'}
+  backgroundColor = ${FallbackValue.getFallbackValue(node, 'buttonBackgroundColor') || '#414141'}
   align = 'left'
   cssClass = null
 

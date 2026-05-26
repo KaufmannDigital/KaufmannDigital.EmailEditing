@@ -1,8 +1,8 @@
 prototype(KaufmannDigital.EmailEditing:Component.Column) < prototype(Neos.Fusion:Component) {
   content = null
 
-  backgroundColor = null
-  padding = null
+  backgroundColor = ${FallbackValue.getFallbackValue(node, 'columnBackgroundColor')}
+  padding = ${FallbackValue.getFallbackValue(node, 'columnPadding')}
   width = '100%'
 
   renderer = afx`
@@ -10,6 +10,7 @@ prototype(KaufmannDigital.EmailEditing:Component.Column) < prototype(Neos.Fusion
       background-color={props.backgroundColor}
       padding={props.padding}
       width={props.width}
+      vertical-align="middle"
     >
       {props.content}
     </mj-column>

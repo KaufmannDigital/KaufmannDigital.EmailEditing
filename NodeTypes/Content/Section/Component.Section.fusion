@@ -2,16 +2,23 @@ prototype(KaufmannDigital.EmailEditing:Component.Section) < prototype(Neos.Fusio
 
   content = null
   backgroundUrl = null
-  backgroundColor = null
+  backgroundColor = ${FallbackValue.getFallbackValue(node, 'sectionBackgroundColor')}
   fullWidth = null
-  padding = null
+  padding = ${FallbackValue.getFallbackValue(node, 'sectionPadding')}
+  backgroundRepeat = ${FallbackValue.getFallbackValue(node, 'sectionBackgroundRepeat')}
+  backgroundPosition = ${FallbackValue.getFallbackValue(node, 'sectionBackgroundPosition')}
+  backgroundPositionX = ${FallbackValue.getFallbackValue(node, 'sectionBackgroundPositionX')}
+  backgroundPositionY = ${FallbackValue.getFallbackValue(node, 'sectionBackgroundPositionY')}
+  backgroundSize = ${FallbackValue.getFallbackValue(node, 'sectionBackgroundSize')}
 
   renderer = afx`
     <mj-section
       full-width={props.fullWidth ? 'full-width' : null}
-      background-position='center top'
-      background-size='cover'
-      background-repeat='no-repeat'
+      background-position={props.backgroundPosition}
+      background-size={props.backgroundSize}
+      background-repeat={props.backgroundRepeat}
+      background-url={props.backgroundUrl}
+      background-url.@if.condition={props.backgroundUrl}
       background-color={props.backgroundColor}
       background-color.@if.condition={props.backgroundColor}
       padding={props.padding ? props.padding : '0px'}
