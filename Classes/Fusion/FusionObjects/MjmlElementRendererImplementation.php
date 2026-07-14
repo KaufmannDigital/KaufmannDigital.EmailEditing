@@ -61,9 +61,7 @@ class MjmlElementRendererImplementation extends AbstractFusionObject
     {
         $mjmlSource = $this->getMjmlSource();
 
-      // mj-wrapper/mj-section/mj-hero are already valid direct mj-body children and apply their own
-      // padding internally; wrapping them in a synthetic mj-column would double that padding, since
-      // mj-column re-applies each child's own "padding" attribute to its own wrapping cell.
+      // mj-wrapper/mj-section/mj-hero are valid direct mj-body children.
       if (!preg_match('/^\s*<mj-(column|wrapper|section|hero)\b/', $mjmlSource)){
             $columnPadding = $this->getColumnPadding();
             $columnPaddingAttr = $columnPadding !== null ? ' padding="' . $columnPadding . '"' : '';
