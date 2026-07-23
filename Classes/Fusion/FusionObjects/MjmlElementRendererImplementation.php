@@ -60,7 +60,9 @@ class MjmlElementRendererImplementation extends AbstractFusionObject
     public function evaluate()
     {
         $mjmlSource = $this->getMjmlSource();
-        if (!str_contains($mjmlSource, '<mj-column')) {
+
+      // mj-wrapper/mj-section/mj-hero are valid direct mj-body children.
+      if (!preg_match('/^\s*<mj-(column|wrapper|section|hero)\b/', $mjmlSource)){
             $columnPadding = $this->getColumnPadding();
             $columnPaddingAttr = $columnPadding !== null ? ' padding="' . $columnPadding . '"' : '';
             $mjmlSource = '<mj-section full-width="full-width" padding="0"><mj-column' . $columnPaddingAttr . ' vertical-align="middle">' . $mjmlSource . '</mj-column></mj-section>';
