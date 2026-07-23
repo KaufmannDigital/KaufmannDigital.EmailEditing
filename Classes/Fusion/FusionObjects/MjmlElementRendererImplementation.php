@@ -84,8 +84,13 @@ class MjmlElementRendererImplementation extends AbstractFusionObject
             ->validationLevel(ValidationLevel::Skip)
             ->toHtml($mjml);
 
+        // Outlook-only rules are applyed conditionally
+        // (e.g. .mj-outlook-group-fix, which forces mj-group columns to width:100% and breaks side-by-side layout everywhere else).
+        // We remove them to don't get the styles for outlook applied, which breaks mj-group in all other browsers.
+        $htmlWithoutMsoConditionals = preg_replace('/<!--\[if[^\]]*mso[^\]]*\]>[\s\S]*?<!\[endif\]-->/', '', $html);
+
         preg_match('/<body[^>]*>([\s\S]*?)<\/body>/', $html, $bodyMatches);
-        preg_match_all('/<style[^>]*>([\s\S]*?)<\/style>/', $html, $styleMatches);
+        preg_match_all('/<style[^>]*>([\s\S]*?)<\/style>/', $htmlWithoutMsoConditionals, $styleMatches);
 
         $body = $bodyMatches[1];
 
