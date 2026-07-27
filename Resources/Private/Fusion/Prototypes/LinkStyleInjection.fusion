@@ -12,7 +12,7 @@ prototype(KaufmannDigital.EmailEditing:MjmlHead) {
         attributes.inline = 'inline'
         attributes.inline.@if.mjmlRendering = ${MJMLRenderingMode == true}
         content = ${'
-            .mj-text a {
+            .mj-text a, .mj-text a span {
                 ' + linkBaseStyle + '
             }
         '}
