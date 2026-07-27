@@ -5,6 +5,9 @@ prototype(KaufmannDigital.EmailEditing:Component.Button) < prototype(KaufmannDig
   label = ''
   color = ${FallbackValue.getFallbackValue(node, 'buttonTextColor') || 'white'}
   backgroundColor = ${FallbackValue.getFallbackValue(node, 'buttonBackgroundColor') || '#414141'}
+  borderRadius = ${FallbackValue.getFallbackValue(node, 'buttonBorderRadius') || 0}
+  fontWeight = ${FallbackValue.getFallbackValue(node, 'buttonFontWeight') || 400}
+  innerPadding = ${FallbackValue.getFallbackValue(node, 'buttonInnerPadding') || '10px 25px'}
   align = 'left'
   cssClass = null
 

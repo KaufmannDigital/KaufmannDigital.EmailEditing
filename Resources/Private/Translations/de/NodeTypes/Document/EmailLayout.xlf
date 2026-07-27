@@ -382,6 +382,18 @@
                 <source>Background Color</source>
                 <target>Hintergrundfarbe</target>
             </trans-unit>
+            <trans-unit id="properties.buttonBorderRadius" xml:space="preserve">
+                <source>Border Radius</source>
+                <target>Eckenradius</target>
+            </trans-unit>
+            <trans-unit id="properties.buttonFontWeight" xml:space="preserve">
+                <source>Font Weight</source>
+                <target>Schrift-Dicke</target>
+            </trans-unit>
+            <trans-unit id="properties.buttonInnerPadding" xml:space="preserve">
+                <source>Inner Padding</source>
+                <target>Innenabstand</target>
+            </trans-unit>
             <trans-unit id="properties.buttonTextColor" xml:space="preserve">
                 <source>Text Color</source>
                 <target>Textfarbe</target>

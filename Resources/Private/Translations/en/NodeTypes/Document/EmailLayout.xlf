@@ -287,6 +287,15 @@
             <trans-unit id="properties.buttonBackgroundColor" xml:space="preserve">
                 <source>Background Color</source>
             </trans-unit>
+            <trans-unit id="properties.buttonBorderRadius" xml:space="preserve">
+                <source>Border Radius</source>
+            </trans-unit>
+            <trans-unit id="properties.buttonFontWeight" xml:space="preserve">
+                <source>Font Weight</source>
+            </trans-unit>
+            <trans-unit id="properties.buttonInnerPadding" xml:space="preserve">
+                <source>Inner Padding</source>
+            </trans-unit>
             <trans-unit id="properties.buttonTextColor" xml:space="preserve">
                 <source>Text Color</source>
             </trans-unit>
