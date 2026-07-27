@@ -38,6 +38,10 @@
                 <source>Buttons</source>
                 <target>Buttons</target>
             </trans-unit>
+            <trans-unit id="groups.dividers" xml:space="preserve">
+                <source>Dividers</source>
+                <target>Trennlinien</target>
+            </trans-unit>
 <trans-unit id="properties.width" xml:space="preserve">
                 <source>Width</source>
                 <target>Breite</target>
@@ -382,9 +386,53 @@
                 <source>Background Color</source>
                 <target>Hintergrundfarbe</target>
             </trans-unit>
+            <trans-unit id="properties.buttonBorderRadius" xml:space="preserve">
+                <source>Border Radius</source>
+                <target>Eckenradius</target>
+            </trans-unit>
+            <trans-unit id="properties.buttonFontWeight" xml:space="preserve">
+                <source>Font Weight</source>
+                <target>Schrift-Dicke</target>
+            </trans-unit>
+            <trans-unit id="properties.buttonInnerPadding" xml:space="preserve">
+                <source>Inner Padding</source>
+                <target>Innenabstand</target>
+            </trans-unit>
             <trans-unit id="properties.buttonTextColor" xml:space="preserve">
                 <source>Text Color</source>
                 <target>Textfarbe</target>
+            </trans-unit>
+            <trans-unit id="properties.dividerBorderColor" xml:space="preserve">
+                <source>Border Color</source>
+                <target>Linienfarbe</target>
+            </trans-unit>
+            <trans-unit id="properties.dividerBorderStyle" xml:space="preserve">
+                <source>Border Style</source>
+                <target>Linien-Art</target>
+            </trans-unit>
+            <trans-unit id="properties.dividerBorderStyle.selectBoxEditor.placeholder" xml:space="preserve">
+                <source>Please choose...</source>
+                <target>Bitte wählen...</target>
+            </trans-unit>
+            <trans-unit id="properties.dividerBorderStyle.selectBoxEditor.values.solid" xml:space="preserve">
+                <source>Solid</source>
+                <target>solide</target>
+            </trans-unit>
+            <trans-unit id="properties.dividerBorderStyle.selectBoxEditor.values.dotted" xml:space="preserve">
+                <source>Dotted</source>
+                <target>gepunktet</target>
+            </trans-unit>
+            <trans-unit id="properties.dividerBorderStyle.selectBoxEditor.values.dashed" xml:space="preserve">
+                <source>Dashed</source>
+                <target>gestrichelt</target>
+            </trans-unit>
+            <trans-unit id="properties.dividerBorderWidth" xml:space="preserve">
+                <source>Border Width</source>
+                <target>Linien-Dicke</target>
+            </trans-unit>
+            <trans-unit id="properties.dividerPadding" xml:space="preserve">
+                <source>Spacing</source>
+                <target>Abstände</target>
             </trans-unit>
         </body>
     </file>

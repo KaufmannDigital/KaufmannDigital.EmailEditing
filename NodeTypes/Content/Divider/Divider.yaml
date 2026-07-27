@@ -16,15 +16,15 @@
   properties:
     borderColor:
       type: string
-      defaultValue: '#000000'
       ui:
         label: i18n
         reloadIfChanged: true
         inspector:
           group: dividerOptions
+          editorOptions:
+            placeholder: i18n
     borderStyle:
       type: string
-      defaultValue: 'solid'
       ui:
         label: i18n
         reloadIfChanged: true
@@ -33,6 +33,7 @@
           editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
           editorOptions:
             placeholder: i18n
+            allowEmpty: true
             values:
               'solid':
                 label: i18n
@@ -42,13 +43,17 @@
                 label: i18n
     borderWidth:
       type: integer
-      defaultValue: 4
       ui:
         label: i18n
         reloadIfChanged: true
         inspector:
           group: dividerOptions
+          editorOptions:
+            placeholder: i18n
     padding:
-      defaultValue: '5px 20px'
+      ui:
+        inspector:
+          editorOptions:
+            placeholder: i18n
 
 

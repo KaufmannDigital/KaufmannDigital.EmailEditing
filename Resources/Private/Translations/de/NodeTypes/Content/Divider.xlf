@@ -23,8 +23,8 @@
                 <target>Linien-Dicke</target>
             </trans-unit>
             <trans-unit id="properties.borderStyle.selectBoxEditor.placeholder" xml:space="preserve">
-                <source>Please choose...</source>
-                <target>Bitte wählen...</target>
+                <source>As configured in layout</source>
+                <target>Wie im Layout konfiguriert</target>
             </trans-unit>
             <trans-unit id="properties.borderStyle.selectBoxEditor.values.solid" xml:space="preserve">
                 <source>Solid</source>
@@ -37,6 +37,18 @@
             <trans-unit id="properties.borderStyle.selectBoxEditor.values.dashed" xml:space="preserve">
                 <source>Dashed</source>
                 <target>gestrichelt</target>
+            </trans-unit>
+            <trans-unit id="properties.borderColor.ui.inspector.editorOptions.placeholder" xml:space="preserve">
+                <source>As configured in layout</source>
+                <target>Wie im Layout konfiguriert</target>
+            </trans-unit>
+            <trans-unit id="properties.borderWidth.ui.inspector.editorOptions.placeholder" xml:space="preserve">
+                <source>As configured in layout</source>
+                <target>Wie im Layout konfiguriert</target>
+            </trans-unit>
+            <trans-unit id="properties.padding.ui.inspector.editorOptions.placeholder" xml:space="preserve">
+                <source>As configured in layout</source>
+                <target>Wie im Layout konfiguriert</target>
             </trans-unit>
         </body>
     </file>

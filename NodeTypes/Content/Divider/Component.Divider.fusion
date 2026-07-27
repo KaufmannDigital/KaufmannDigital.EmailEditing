@@ -1,9 +1,9 @@
 prototype(KaufmannDigital.EmailEditing:Component.Divider) < prototype(Neos.Fusion:Component) {
 
-  borderColor = null
-  borderStyle = null
-  borderWidth = null
-  padding = null
+  borderColor = ${FallbackValue.getFallbackValue(node, 'dividerBorderColor')}
+  borderStyle = ${FallbackValue.getFallbackValue(node, 'dividerBorderStyle')}
+  borderWidth = ${FallbackValue.getFallbackValue(node, 'dividerBorderWidth')}
+  padding = ${FallbackValue.getFallbackValue(node, 'dividerPadding')}
 
   renderer = afx`
     <mj-divider
