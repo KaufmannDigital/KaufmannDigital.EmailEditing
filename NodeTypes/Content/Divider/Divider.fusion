@@ -2,10 +2,10 @@ prototype(KaufmannDigital.EmailEditing:Content.Divider) < prototype(KaufmannDigi
 
   @context {
     componentProps = Neos.Fusion:DataStructure {
-      borderColor = ${q(node).property('borderColor') || null}
-      borderStyle = ${q(node).property('borderStyle') || null}
-      borderWidth = ${q(node).property('borderWidth') || null}
-      padding = ${q(node).property('padding') || null}
+      borderColor = ${FallbackValue.determineValue(node, 'borderColor', 'dividerBorderColor')}
+      borderStyle = ${FallbackValue.determineValue(node, 'borderStyle', 'dividerBorderStyle')}
+      borderWidth = ${FallbackValue.determineValue(node, 'borderWidth', 'dividerBorderWidth')}
+      padding = ${FallbackValue.determineValue(node, 'padding', 'dividerPadding')}
     }
   }
 

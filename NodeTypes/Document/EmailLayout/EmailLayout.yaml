@@ -45,6 +45,11 @@
           icon: 'link'
           position: 60
           collapsed: true
+        dividers:
+          label: i18n
+          icon: 'fas fa-grip-lines'
+          position: 70
+          collapsed: true
   childNodes:
     header:
       type: 'Neos.Neos:ContentCollection'
@@ -550,4 +555,52 @@
         reloadPageIfChanged: true
         inspector:
           group: buttons
+    #endregion
+
+    #region dividers
+    dividerBorderColor:
+      type: string
+      defaultValue: '#000000'
+      ui:
+        label: i18n
+        reloadPageIfChanged: true
+        inspector:
+          group: dividers
+
+    dividerBorderStyle:
+      type: string
+      defaultValue: 'solid'
+      ui:
+        label: i18n
+        reloadPageIfChanged: true
+        inspector:
+          group: dividers
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            placeholder: i18n
+            values:
+              'solid':
+                label: i18n
+              'dotted':
+                label: i18n
+              'dashed':
+                label: i18n
+
+    dividerBorderWidth:
+      type: integer
+      defaultValue: 4
+      ui:
+        label: i18n
+        reloadPageIfChanged: true
+        inspector:
+          group: dividers
+
+    dividerPadding:
+      type: string
+      defaultValue: '5px 20px'
+      ui:
+        label: i18n
+        reloadPageIfChanged: true
+        inspector:
+          group: dividers
     #endregion

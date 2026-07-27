@@ -29,7 +29,10 @@
             <trans-unit id="groups.buttons" xml:space="preserve">
                 <source>Buttons</source>
             </trans-unit>
-<trans-unit id="properties.width" xml:space="preserve">
+            <trans-unit id="groups.dividers" xml:space="preserve">
+                <source>Dividers</source>
+            </trans-unit>
+            <trans-unit id="properties.width" xml:space="preserve">
                 <source>Width</source>
             </trans-unit>
             <trans-unit id="properties.backgroundColor" xml:space="preserve">
@@ -298,6 +301,30 @@
             </trans-unit>
             <trans-unit id="properties.buttonTextColor" xml:space="preserve">
                 <source>Text Color</source>
+            </trans-unit>
+            <trans-unit id="properties.dividerBorderColor" xml:space="preserve">
+                <source>Border Color</source>
+            </trans-unit>
+            <trans-unit id="properties.dividerBorderStyle" xml:space="preserve">
+                <source>Border Style</source>
+            </trans-unit>
+            <trans-unit id="properties.dividerBorderStyle.selectBoxEditor.placeholder" xml:space="preserve">
+                <source>Please choose...</source>
+            </trans-unit>
+            <trans-unit id="properties.dividerBorderStyle.selectBoxEditor.values.solid" xml:space="preserve">
+                <source>Solid</source>
+            </trans-unit>
+            <trans-unit id="properties.dividerBorderStyle.selectBoxEditor.values.dotted" xml:space="preserve">
+                <source>Dotted</source>
+            </trans-unit>
+            <trans-unit id="properties.dividerBorderStyle.selectBoxEditor.values.dashed" xml:space="preserve">
+                <source>Dashed</source>
+            </trans-unit>
+            <trans-unit id="properties.dividerBorderWidth" xml:space="preserve">
+                <source>Border Width</source>
+            </trans-unit>
+            <trans-unit id="properties.dividerPadding" xml:space="preserve">
+                <source>Spacing</source>
             </trans-unit>
         </body>
     </file>
