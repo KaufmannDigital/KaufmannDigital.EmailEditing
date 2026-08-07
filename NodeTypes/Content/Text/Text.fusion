@@ -19,6 +19,10 @@ prototype(KaufmannDigital.EmailEditing:Content.Text) < prototype(KaufmannDigital
   htmlRendering {
     content = Neos.Neos:Editable {
       property = 'text'
+
+      prototype(Neos.Neos:ConvertUris) {
+        absolute = true
+      }
     }
 
     renderer = KaufmannDigital.EmailEditing:MjmlElementRenderer {
@@ -33,6 +37,9 @@ prototype(KaufmannDigital.EmailEditing:Content.Text) < prototype(KaufmannDigital
     renderer = KaufmannDigital.EmailEditing:Component.Text {
       @apply.componentProps = ${componentProps}
       content = ${q(node).property('text')}
+      content.@process.test = Neos.Neos:ConvertUris {
+        absolute = true
+      }
     }
   }
 }
