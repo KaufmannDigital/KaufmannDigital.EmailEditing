@@ -11,7 +11,8 @@ use Spatie\Mjml\Mjml;
 use Spatie\Mjml\ValidationLevel;
 
 /**
- * Converts MJML to HTML, either locally via Node.js (spatie/mjml-php) or via an MJML API server
+ * Converts MJML to HTML, either locally via Node.js (spatie/mjml-php) or via an HTTP API
+ * compatible to the official MJML API (https://mjml.io/api/documentation/)
  */
 #[Flow\Scope('singleton')]
 class MjmlConverter
@@ -36,7 +37,7 @@ class MjmlConverter
     protected function convertLocally(string $mjml): string
     {
         if (!class_exists(Mjml::class)) {
-            throw new MjmlConversionException('Local MJML conversion requires spatie/mjml-php. Install it or set KaufmannDigital.EmailEditing.mjmlRendering.converter.mode to "api".', 1761555601);
+            throw new MjmlConversionException('Local MJML conversion requires spatie/mjml-php (composer require spatie/mjml-php kaufmanndigital/email-editing-installer). Alternatively set KaufmannDigital.EmailEditing.mjmlRendering.converter.mode to "api".', 1761555601);
         }
 
         return Mjml::new()
@@ -57,21 +58,19 @@ class MjmlConverter
         $browser->setRequestEngine($engine);
         $browser->addAutomaticRequestHeader('Content-Type', 'application/json');
         $browser->addAutomaticRequestHeader('Accept', 'application/json');
-        if (!empty($apiSettings['token'])) {
-            $browser->addAutomaticRequestHeader('Authorization', 'Bearer ' . $apiSettings['token']);
+        if (!empty($apiSettings['applicationId']) || !empty($apiSettings['secretKey'])) {
+            $browser->addAutomaticRequestHeader('Authorization', 'Basic ' . base64_encode($apiSettings['applicationId'] . ':' . $apiSettings['secretKey']));
         }
 
-        $body = json_encode(['mjml' => $mjml, 'options' => ['validationLevel' => 'skip']], JSON_THROW_ON_ERROR);
-
         try {
-            $response = $browser->request($apiSettings['url'], 'POST', [], [], [], $body);
+            $response = $browser->request($apiSettings['url'], 'POST', [], [], [], json_encode(['mjml' => $mjml], JSON_THROW_ON_ERROR));
         } catch (\Throwable $exception) {
             throw new MjmlConversionException(sprintf('MJML API at "%s" is not reachable: %s', $apiSettings['url'], $exception->getMessage()), 1761555603, $exception);
         }
 
         $result = json_decode((string)$response->getBody(), true);
         if ($response->getStatusCode() !== 200 || !is_array($result) || !isset($result['html'])) {
-            throw new MjmlConversionException(sprintf('MJML API responded with status %d: %s', $response->getStatusCode(), is_array($result) ? ($result['error'] ?? 'unknown error') : 'invalid response'), 1761555604);
+            throw new MjmlConversionException(sprintf('MJML API responded with status %d: %s', $response->getStatusCode(), is_array($result) ? ($result['message'] ?? 'unknown error') : 'invalid response'), 1761555604);
         }
 
         return $result['html'];
