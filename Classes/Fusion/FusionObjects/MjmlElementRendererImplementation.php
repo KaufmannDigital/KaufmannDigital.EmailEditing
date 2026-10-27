@@ -1,11 +1,10 @@
 <?php
 namespace KaufmannDigital\EmailEditing\Fusion\FusionObjects;
 
+use KaufmannDigital\EmailEditing\Service\MjmlConverter;
 use Neos\Cache\Frontend\StringFrontend;
 use Neos\Flow\Annotations as Flow;
 use Neos\Fusion\FusionObjects\AbstractFusionObject;
-use Spatie\Mjml\Mjml;
-use Spatie\Mjml\ValidationLevel;
 
 
 class MjmlElementRendererImplementation extends AbstractFusionObject
@@ -16,6 +15,12 @@ class MjmlElementRendererImplementation extends AbstractFusionObject
      * @var StringFrontend $mjmlCache
      */
     protected $mjmlCache;
+
+    /**
+     * @Flow\Inject
+     * @var MjmlConverter
+     */
+    protected $mjmlConverter;
 
 
     /**
@@ -82,9 +87,7 @@ class MjmlElementRendererImplementation extends AbstractFusionObject
             return $this->mjmlCache->get($cacheKey);
         }
 
-        $html = Mjml::new()
-            ->validationLevel(ValidationLevel::Skip)
-            ->toHtml($mjml);
+        $html = $this->mjmlConverter->toHtml($mjml);
 
         // Outlook-only rules are applyed conditionally
         // (e.g. .mj-outlook-group-fix, which forces mj-group columns to width:100% and breaks side-by-side layout everywhere else).

@@ -5,10 +5,12 @@ namespace KaufmannDigital\EmailEditing\Fusion\Helper;
 
 use Neos\Eel\ProtectedContextAwareInterface;
 use Neos\Flow\Annotations as Flow;
-use Spatie\Mjml\Mjml;
-use Spatie\Mjml\ValidationLevel;
+use KaufmannDigital\EmailEditing\Service\MjmlConverter;
 
 class MjmlHelper implements ProtectedContextAwareInterface {
+
+    #[Flow\Inject]
+    protected MjmlConverter $mjmlConverter;
 
 
 
@@ -29,9 +31,7 @@ class MjmlHelper implements ProtectedContextAwareInterface {
         ';
 
 
-        $html = Mjml::new()
-            ->validationLevel(ValidationLevel::Skip)
-            ->toHtml($mjml);
+        $html = $this->mjmlConverter->toHtml($mjml);
 
 
 
@@ -60,9 +60,7 @@ class MjmlHelper implements ProtectedContextAwareInterface {
             \Neos\Flow\var_dump($mjml);
         }
 
-        $html = Mjml::new()
-            ->validationLevel(ValidationLevel::Skip)
-            ->toHtml($mjml);
+        $html = $this->mjmlConverter->toHtml($mjml);
 
         if ($debug) {
             \Neos\Flow\var_dump($html);

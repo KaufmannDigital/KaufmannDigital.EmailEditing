@@ -15,7 +15,7 @@ A Neos CMS package for building and managing responsive emails through the Neos 
 
 - Neos CMS >= 8.3
 - PHP >= 8.1
-- Node.js (required for MJML compilation)
+- Node.js (required for local MJML compilation) **or** an MJML API server (see [MJML Rendering](#mjml-rendering))
 
 ## Installation
 
@@ -26,6 +26,26 @@ composer require kaufmanndigital/email-editing
 ```
 
 MJML's Node.js dependencies are automatically installed via a Composer post-install hook.
+
+## MJML Rendering
+
+By default, MJML is compiled locally via Node.js (`spatie/mjml-php`). Alternatively, the compilation can be delegated
+to an MJML API server, so Node.js is not needed in the application container:
+
+```yaml
+KaufmannDigital:
+  EmailEditing:
+    mjmlRendering:
+      converter:
+        mode: 'api'
+        api:
+          url: 'http://mjml-server.system.svc.cluster.local/render'
+          token: ~      # Bearer token, if the server requires one
+          timeout: 30   # seconds
+```
+
+The API is expected to accept `POST {"mjml": "…", "options": {"validationLevel": "skip"}}` as JSON and to respond
+with `{"html": "…"}`.
 
 ## Usage
 
