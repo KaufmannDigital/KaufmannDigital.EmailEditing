@@ -511,6 +511,25 @@
         reloadPageIfChanged: true
         inspector:
           group: columns
+
+    columnVerticalAlign:
+      type: string
+      defaultValue: 'top'
+      ui:
+        label: i18n
+        reloadPageIfChanged: true
+        inspector:
+          group: columns
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            placeholder: i18n
+            values:
+              'top':
+                label: i18n
+              'middle':
+                label: i18n
+              'bottom':
+                label: i18n
     #endregion
 
     #region buttons

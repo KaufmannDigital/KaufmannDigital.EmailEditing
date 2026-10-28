@@ -5,6 +5,24 @@
             <trans-unit id="ui.label" xml:space="preserve">
                 <source>Column</source>
             </trans-unit>
+            <trans-unit id="properties.verticalAlign" xml:space="preserve">
+                <source>Vertical Alignment</source>
+            </trans-unit>
+            <trans-unit id="properties.verticalAlign.ui.help.message" xml:space="preserve">
+                <source>Vertical alignment of this column within the section. If empty, the value of the email layout is used.</source>
+            </trans-unit>
+            <trans-unit id="properties.verticalAlign.selectBoxEditor.placeholder" xml:space="preserve">
+                <source>Please choose...</source>
+            </trans-unit>
+            <trans-unit id="properties.verticalAlign.selectBoxEditor.values.top" xml:space="preserve">
+                <source>Top</source>
+            </trans-unit>
+            <trans-unit id="properties.verticalAlign.selectBoxEditor.values.middle" xml:space="preserve">
+                <source>Middle</source>
+            </trans-unit>
+            <trans-unit id="properties.verticalAlign.selectBoxEditor.values.bottom" xml:space="preserve">
+                <source>Bottom</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>
