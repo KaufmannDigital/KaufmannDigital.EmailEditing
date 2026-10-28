@@ -4,7 +4,6 @@ prototype(KaufmannDigital.EmailEditing:MjmlElementRenderer) < prototype(Neos.Fus
   templateNode = KaufmannDigital.EmailEditing:TemplateNodeSelector
   maxWidth = ${q(this.templateNode).property('width')}
   backgroundColor = ${node ? FallbackValue.contentBackgroundColor(node) : '#FFFFFF'}
-  columnPadding = ${q(this.templateNode).property('columnPadding')}
 
   mjmlHead = KaufmannDigital.EmailEditing:MjmlHead
   mjmlSource = ''

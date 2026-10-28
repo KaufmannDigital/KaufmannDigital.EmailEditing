@@ -54,23 +54,14 @@ class MjmlElementRendererImplementation extends AbstractFusionObject
         return $this->fusionValue('backgroundColor') ?? '#ffffff';
     }
 
-    /**
-     * @return string|null
-     */
-    public function getColumnPadding(): ?string
-    {
-        return $this->fusionValue('columnPadding');
-    }
-
     public function evaluate()
     {
         $mjmlSource = $this->getMjmlSource();
 
       // mj-wrapper/mj-section/mj-hero are valid direct mj-body children.
       if (!preg_match('/^\s*<mj-(column|wrapper|section|hero)\b/', $mjmlSource)){
-            $columnPadding = $this->getColumnPadding();
-            $columnPaddingAttr = $columnPadding !== null ? ' padding="' . $columnPadding . '"' : '';
-            $mjmlSource = '<mj-section full-width="full-width" padding="0"><mj-column' . $columnPaddingAttr . ' vertical-align="middle">' . $mjmlSource . '</mj-column></mj-section>';
+            // No padding here: the surrounding column already applies its padding in the backend rendering
+            $mjmlSource = '<mj-section full-width="full-width" padding="0"><mj-column vertical-align="middle">' . $mjmlSource . '</mj-column></mj-section>';
         }
 
         $mjml = '
