@@ -5,3 +5,15 @@ KaufmannDigital:
         'Neos.Fusion': 'resource://Neos.Fusion/Private/Fusion'
         'Neos.Neos': 'resource://Neos.Neos/Private/Fusion'
         'KaufmannDigital.EmailEditing': 'resource://KaufmannDigital.EmailEditing/Private/Fusion'
+      converter:
+        # 'local': MJML via Node.js (requires spatie/mjml-php)
+        # 'api': via an API compatible to the official MJML API (https://mjml.io/api/documentation/), no Node.js needed
+        mode: 'local'
+        api:
+          # e.g. 'https://api.mjml.io/v1/render' or a self-hosted, compatible server
+          url: ~
+          # HTTP Basic Auth credentials (Application ID / Secret Key), if the API requires them
+          applicationId: ~
+          secretKey: ~
+          # Request timeout in seconds
+          timeout: 30
