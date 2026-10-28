@@ -87,7 +87,7 @@ Note that the email content is sent to the configured API.
 In the Neos backend, create an **Email Layout** document inside an **Email Folder**. The layout defines:
 
 - **Header & Footer** — Shared content areas rendered on every email using this layout
-- **Global Styling** — Default typography (headlines, body text), background colors, button styles, section/column spacing
+- **Global Styling** — Default typography (headlines, body text), background colors, button styles, section/column spacing, column vertical alignment
 
 ### 2. Create an Email
 

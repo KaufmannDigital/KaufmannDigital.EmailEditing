@@ -4,6 +4,7 @@ prototype(KaufmannDigital.EmailEditing:Content.Column) < prototype(KaufmannDigit
     backgroundColor = ${FallbackValue.determineValue(node, 'backgroundColor', 'columnBackgroundColor')}
     padding = ${FallbackValue.determineValue(node, 'padding', 'columnPadding')}
     width = ${q(node).property('width') || '100%'}
+    verticalAlign = ${FallbackValue.determineValue(node, 'verticalAlign', 'columnVerticalAlign') || 'top'}
   }
 
   @context.componentProps = ${this.componentProps}
@@ -26,6 +27,8 @@ prototype(KaufmannDigital.EmailEditing:Content.Column) < prototype(KaufmannDigit
 
       padding = ${componentProps.padding}
       padding.@if.isSet = ${componentProps.padding}
+
+      align-self = ${componentProps.verticalAlign == 'middle' ? 'center' : (componentProps.verticalAlign == 'bottom' ? 'flex-end' : 'flex-start')}
     }
 
     content = Neos.Neos:ContentCollection

@@ -22,6 +22,30 @@
                 <source>Overrides the headline color for all headline elements within this column. Takes priority over the section setting.</source>
                 <target>Überschreibt die Schriftfarbe für alle Überschriften in dieser Spalte. Hat Vorrang vor der Section-Einstellung.</target>
             </trans-unit>
+            <trans-unit id="properties.verticalAlign" xml:space="preserve">
+                <source>Vertical Alignment</source>
+                <target>Vertikale Ausrichtung</target>
+            </trans-unit>
+            <trans-unit id="properties.verticalAlign.ui.help.message" xml:space="preserve">
+                <source>Vertical alignment of this column within the section. If empty, the value of the email layout is used.</source>
+                <target>Vertikale Ausrichtung dieser Spalte innerhalb der Section. Wenn leer, wird der Wert aus dem E-Mail-Layout verwendet.</target>
+            </trans-unit>
+            <trans-unit id="properties.verticalAlign.selectBoxEditor.placeholder" xml:space="preserve">
+                <source>Please choose...</source>
+                <target>Bitte wählen...</target>
+            </trans-unit>
+            <trans-unit id="properties.verticalAlign.selectBoxEditor.values.top" xml:space="preserve">
+                <source>Top</source>
+                <target>Oben</target>
+            </trans-unit>
+            <trans-unit id="properties.verticalAlign.selectBoxEditor.values.middle" xml:space="preserve">
+                <source>Middle</source>
+                <target>Mitte</target>
+            </trans-unit>
+            <trans-unit id="properties.verticalAlign.selectBoxEditor.values.bottom" xml:space="preserve">
+                <source>Bottom</source>
+                <target>Unten</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>

@@ -287,6 +287,21 @@
             <trans-unit id="properties.columnBackgroundColor" xml:space="preserve">
                 <source>Background Color</source>
             </trans-unit>
+            <trans-unit id="properties.columnVerticalAlign" xml:space="preserve">
+                <source>Vertical Alignment</source>
+            </trans-unit>
+            <trans-unit id="properties.columnVerticalAlign.selectBoxEditor.placeholder" xml:space="preserve">
+                <source>Please choose...</source>
+            </trans-unit>
+            <trans-unit id="properties.columnVerticalAlign.selectBoxEditor.values.top" xml:space="preserve">
+                <source>Top</source>
+            </trans-unit>
+            <trans-unit id="properties.columnVerticalAlign.selectBoxEditor.values.middle" xml:space="preserve">
+                <source>Middle</source>
+            </trans-unit>
+            <trans-unit id="properties.columnVerticalAlign.selectBoxEditor.values.bottom" xml:space="preserve">
+                <source>Bottom</source>
+            </trans-unit>
             <trans-unit id="properties.buttonBackgroundColor" xml:space="preserve">
                 <source>Background Color</source>
             </trans-unit>
