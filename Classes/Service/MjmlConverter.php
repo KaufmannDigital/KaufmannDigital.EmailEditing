@@ -37,7 +37,7 @@ class MjmlConverter
     protected function convertLocally(string $mjml): string
     {
         if (!class_exists(Mjml::class)) {
-            throw new MjmlConversionException('Local MJML conversion requires spatie/mjml-php (composer require spatie/mjml-php kaufmanndigital/email-editing-installer). Alternatively set KaufmannDigital.EmailEditing.mjmlRendering.converter.mode to "api".', 1761555601);
+            throw new MjmlConversionException('Local MJML conversion requires spatie/mjml-php (composer require kaufmanndigital/email-editing-installer:^2.0). Alternatively set KaufmannDigital.EmailEditing.mjmlRendering.converter.mode to "api".', 1761555601);
         }
 
         return Mjml::new()

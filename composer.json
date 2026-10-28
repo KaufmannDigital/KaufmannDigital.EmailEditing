@@ -6,8 +6,7 @@
         "flowpack/nodetemplates": "^2.1.1"
     },
     "suggest": {
-        "spatie/mjml-php": "^1.3 - Required for local MJML rendering via Node.js (converter mode 'local')",
-        "kaufmanndigital/email-editing-installer": "^1.0 - Installs the Node.js dependencies of spatie/mjml-php automatically",
+        "kaufmanndigital/email-editing-installer": "^2.0 - Required for local MJML rendering via Node.js (converter mode 'local'), installs spatie/mjml-php and its Node.js dependencies",
         "kaufmanndigital/email-editing-cleverreach": "Send emails directly to CleverReach"
     },
     "conflict": {
